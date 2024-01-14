@@ -1,0 +1,39 @@
+baseURL = 'https://ivarsidorsson.work/'
+languageCode = 'en-us'
+title = 'Ivar Sidorsson'
+
+[[params.social]]
+name = "Mail"
+icon = "mail"
+url = "mailto:ivar.sidorsson@pm.me"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/ivar-sidorsson-05583825b/"
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+url = "https://github.com/fluffy-kalashnikov"
+
+# [[params.social]]
+# name = "GitLab"
+# icon = "gitlab"
+# url = "https://gitlab.com/fluffy-kalashnikov"
+
+
+[[menus.main]]
+name = 'about'
+pageRef = '/about'
+weight = 15
+
+[[menus.main]]
+name = 'contact'
+pageRef = '/contact'
+weight = 30
+
+[[menus.main]]
+name = 'cv'
+pageRef = '/cv'
+weight = 45

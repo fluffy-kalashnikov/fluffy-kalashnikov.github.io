@@ -1,0 +1,8 @@
+<h1><a href="{{ .Site.Home.Permalink }}">IVAR SIDORSSON</a>
+{{ with .Site.Menus.main }}
+    {{ range . }}
+        <a href="{{.URL}}">{{ .Name }}</a>
+    {{ end }}
+{{ end }}
+</h1>
+<hr>

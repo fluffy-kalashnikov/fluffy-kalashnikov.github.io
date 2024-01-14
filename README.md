@@ -1,1 +1,1 @@
-Personal website for portfolio, contacts and more.
+Personal website for portfolio, contacts and more. Made using [Hugo](https://gohugo.io).
