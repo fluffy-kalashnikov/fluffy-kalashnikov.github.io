@@ -18,3 +18,21 @@ body {
   width: min(800px, 100vw);
   padding: 0;
 }
+
+body h1 {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+body h1 ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  gap: 20px;
+}
+
+footer nav {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
