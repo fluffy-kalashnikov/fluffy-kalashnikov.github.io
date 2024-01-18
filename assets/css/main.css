@@ -12,11 +12,17 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   font-family: 'JetBrains Mono', 'monospace';
   margin: 0px;
-  width: min(800px, 100vw);
   padding: 0;
+}
+
+main {
+  max-width: 650px;
+  min-height: 100vh;
 }
 
 body h1 {
