@@ -2,11 +2,11 @@
 title = 'contact'
 date = 2024-01-07T19:13:40+01:00
 draft = false
-type = 'info'
+type = 'me'
 +++
 
 Feel free to contact me. My preferred method of communication
-is through email.
+is email.
 {{<linebreak>}}
 {{<linebreak>}}
 _I am part of The Game Assembly’s internship program. As per

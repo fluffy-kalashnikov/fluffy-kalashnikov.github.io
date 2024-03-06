@@ -2,7 +2,7 @@
 title = 'about'
 date = 2024-01-07T19:13:33+01:00
 draft = false
-type = 'info'
+type = 'me'
 +++
 
 Hi, I'm a game programmer primarily specializing in graphics

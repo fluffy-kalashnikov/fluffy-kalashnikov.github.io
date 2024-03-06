@@ -2,7 +2,7 @@
 title = 'cv'
 date = 2024-01-07T19:13:23+01:00
 draft = false
-type = 'info'
+type = 'me'
 +++
 
 ## Skills

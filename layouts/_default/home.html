@@ -1,9 +1,25 @@
 {{ define "main" }}
   {{ .Content }}
-  {{ range site.RegularPages }}
-  <article>
+  {{ range .Site.RegularPages }}
+    {{ if ne .Type "me" }}
+    <section>
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <div>
+        <p>{{ .Summary }}</p>
+        <img src="/screenshot-placeholder.webp" alt=""/>  
+      </div>
+    </section>
+    {{ end }}  
+
+
+
+
+  {{/*  <section>
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  </article>
+    <div>
+      <p>{{ .Summary }}</p>
+      <img src="/screenshot-placeholder.webp" alt=""/>  
+    </div>
+  </section>  */}}
   {{ end }}
 {{ end }}
