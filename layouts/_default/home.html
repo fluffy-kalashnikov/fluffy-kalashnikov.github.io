@@ -6,20 +6,9 @@
       <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
       <div>
         <p>{{ .Summary }}</p>
-        <img src="/screenshot-placeholder.webp" alt=""/>  
+        <img src="{{ path.Join .File.Dir .Params.screenshot }}" alt="{{ .Params.screenshot }}"/>  
       </div>
     </section>
-    {{ end }}  
-
-
-
-
-  {{/*  <section>
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    <div>
-      <p>{{ .Summary }}</p>
-      <img src="/screenshot-placeholder.webp" alt=""/>  
-    </div>
-  </section>  */}}
+    {{ end }}
   {{ end }}
 {{ end }}

@@ -2,6 +2,7 @@
 title = 'Eggscapism'
 date = 2024-01-07T18:57:34+01:00
 draft = true
+screenshot = 'screenshot-egg.webp'
 +++
 
 Eggscapism is a narrative puzzler roughly 2 minutes in length. It was my fifth project 
