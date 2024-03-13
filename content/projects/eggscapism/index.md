@@ -1,7 +1,7 @@
 +++
 title = 'Eggscapism'
 date = 2024-01-07T18:57:34+01:00
-draft = true
+draft = false
 screenshot = 'egg.webp'
 +++
 

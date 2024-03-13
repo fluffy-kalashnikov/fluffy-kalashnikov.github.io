@@ -36,12 +36,6 @@ input, button, textarea, select {
 }
 
 
-/*
-TODO
-  make width of content always be maximized
-*/
-
-
 html {
   background-color: var(--mono-color);
   box-sizing: border-box;
@@ -57,7 +51,7 @@ html {
 
 body {
   line-height: 1.9;
-  max-width: 850px;
+  max-width: 1044px;
   padding: 8px;
   width: 100%;
   --webkit-font-smoothing: antialiased;
@@ -108,7 +102,7 @@ section div {
   gap: 10px 20px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1044px) {
   header div {
     align-items: baseline;
     flex-direction: row;
@@ -119,7 +113,7 @@ section div {
   }
   section img {
     object-fit: scale-down;
-    max-width: 256px;
+    max-width: 512px;
   }
 }
 

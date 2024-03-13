@@ -1,7 +1,8 @@
 +++
 title = 'Spite - Plague Purge'
 date = 2024-01-07T18:57:41+01:00
-draft = true
+draft = false
+screenshot = 'placeholder.webp'
 +++
 
 _Spite - Plague Purge_ was my sixth game project at [The Game Assembly](https://thegameassembly.com) and heavily inspired by Diablo III. 

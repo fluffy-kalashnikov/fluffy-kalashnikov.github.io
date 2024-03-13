@@ -6,7 +6,7 @@
       <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
       <div>
         <p>{{ .Summary }}</p>
-        <img src="{{ path.Join .File.Dir .Params.screenshot }}" alt="{{ .Params.screenshot }}"/>  
+        <img src="{{ path.Join .File.Dir .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy"/>  
       </div>
     </section>
     {{ end }}
