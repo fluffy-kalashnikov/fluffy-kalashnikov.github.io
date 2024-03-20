@@ -1,16 +1,15 @@
 <div>
     <h1>
-        <a href="{{ .Site.Home.Permalink }}">IVAR SIDORSSON</a>
+        <a class="header2" href="{{ .Site.Home.Permalink }}">IVAR SIDORSSON</a>
     </h1>
     <h3>
         <ul>
-            {{ with .Site.Menus.main }}
+        {{ with .Site.Menus.main }}
             {{ range . }}
-            <li>
-                <a href="{{.URL}}">{{ .Name }}</a>
-            </li>
+            <li><a class="header2" href="{{.URL}}">{{ .Name }}</a></li>
             {{ end }}
         {{ end }}
+        <li><a class="header2" href="/Ivar Sidorsson Resume.pdf">resume</a></li>
         </ul>
     </h3>
 </div>

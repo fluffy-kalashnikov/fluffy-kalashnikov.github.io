@@ -3,7 +3,7 @@
   {{ range .Site.RegularPages }}
     {{ if ne .Type "me" }}
     <section>
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      <h2><a class="header1" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
       <div>
         <p>{{ .Summary }}</p>
         <img src="{{ path.Join .File.Dir .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy"/>  

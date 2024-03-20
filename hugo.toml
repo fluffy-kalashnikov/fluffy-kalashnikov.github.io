@@ -32,8 +32,3 @@ weight = 15
 name = 'contact'
 pageRef = '/contact'
 weight = 30
-
-[[menus.main]]
-name = 'cv'
-pageRef = '/cv'
-weight = 45
