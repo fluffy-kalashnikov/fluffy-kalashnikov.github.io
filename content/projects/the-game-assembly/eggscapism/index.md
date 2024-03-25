@@ -9,4 +9,4 @@ Eggscapism is a narrative puzzler roughly 2 minutes in length. It was my fifth p
 at [The Game Assembly](https://thegameassembly.com), and it was the first project where 
 we used our own game engines made from scratch. The main purpose of the project was to
 establish a proper pipeline to make a game with the new game engine.
-![Screenshot of the main room with a huge egg.](screenshot-egg.webp)
+![Screenshot of the main room with a huge egg.](egg.webp)

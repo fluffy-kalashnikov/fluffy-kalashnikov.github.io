@@ -71,14 +71,19 @@ html {
   justify-content: center;
   min-height: 100vh;
   overflow: scroll;
-  padding: 8px;
 }
 
 body {
   max-width: var(--desktop-content-size);
   padding: 8px;
+  margin: var(--padding2);
   width: 100%;
   --webkit-font-smoothing: antialiased;
+}
+
+main {
+  /* margin-top: var(--padding2); */
+  min-height: calc(100vh - var(--padding2))
 }
 
 a {
@@ -146,13 +151,6 @@ section div {
   }
 }
 
-main {
-  display: flex;
-  margin-top: var(--padding);
-  flex-direction: column;
-  gap: var(--padding4) 0px;
-}
-
 footer {
-  margin: auto var(--padding) var(--padding) var(--padding);
+  margin-top: var(--padding2)
 }

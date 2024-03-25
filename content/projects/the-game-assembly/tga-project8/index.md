@@ -1,7 +1,7 @@
 +++
 title = 'TGA Project 8'
 date = 2024-01-07T18:57:47+01:00
-draft = true
+draft = false
 screenshot = 'placeholder.webp'
 +++
 

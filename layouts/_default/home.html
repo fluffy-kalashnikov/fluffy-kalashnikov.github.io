@@ -1,6 +1,11 @@
+{{ define "header" }}
+{{ end }}
 {{ define "main" }}
-  {{ .Content }}
-  {{ range .Site.RegularPages }}
+  <div>
+    {{ .Content }}
+  </div>
+  <div>
+    {{ range .Site.RegularPages }}
     {{ if ne .Type "me" }}
     <section>
       <h2><a class="header1" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
@@ -10,5 +15,6 @@
       </div>
     </section>
     {{ end }}
-  {{ end }}
+    {{ end }}
+  </div>
 {{ end }}

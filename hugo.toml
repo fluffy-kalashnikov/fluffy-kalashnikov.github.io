@@ -21,14 +21,3 @@ url = "https://github.com/fluffy-kalashnikov"
 # name = "GitLab"
 # icon = "gitlab"
 # url = "https://gitlab.com/fluffy-kalashnikov"
-
-
-[[menus.main]]
-name = 'about'
-pageRef = '/about'
-weight = 15
-
-[[menus.main]]
-name = 'contact'
-pageRef = '/contact'
-weight = 30
