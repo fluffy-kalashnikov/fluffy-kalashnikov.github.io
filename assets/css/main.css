@@ -24,7 +24,6 @@ TODO
   - [x] formalize padding
   - [x] color links
   - [ ] add tag support
-  - [ ] add horizontal lines in project view
 */
 
 
@@ -65,7 +64,6 @@ html {
   background-color: var(--color-bg);
   box-sizing: border-box;
   color: var(--color-fg);
-  display: flex;
   font-family: 'JetBrains Mono', 'monospace';
   line-height: 1.9;
   justify-content: center;
@@ -76,7 +74,7 @@ html {
 body {
   max-width: var(--desktop-content-size);
   padding: 8px;
-  margin: var(--padding2);
+  margin: 0 auto;
   width: 100%;
   --webkit-font-smoothing: antialiased;
 }
