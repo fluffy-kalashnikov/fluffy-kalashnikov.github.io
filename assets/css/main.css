@@ -71,8 +71,6 @@ html {
 
 body {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
   gap: var(--padd2);
   margin: var(--padd2) auto;
   max-width: var(--desktop-content-size);
@@ -82,10 +80,7 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
   gap: var(--padd2);
-  /* min-height: calc(100vh - var(--padding2)) */
 }
 
 a {
@@ -110,22 +105,35 @@ img {
 
 .project-summary-list {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
   gap: var(--padd1);
 }
 
-.project-summary div {
-  display: flex;
-  flex-direction: column;
-  gap: 10px var(--padd2);
+.project-summary {
+  column-gap: var(--padd1);
+  display: grid;
+  grid-template-columns: 512px 512px;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+    "header header"
+    "description screenshot";
+}
+.project-summary h2 {
+  grid-area: header;
+}
+.project-summary p {
+  grid-area: description;
+}
+.project-summary img {
+  grid-area: screenshot;
 }
 
-@media screen and (min-width: 1044px) {
-  .project-summary div {
-    flex-direction: row;
-  }
-  .project-summary img {
-    max-width: 512px;
+@media screen and (max-width: 1044px) {
+  .project-summary {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "description"
+    "screenshot";
   }
 }
