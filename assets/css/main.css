@@ -7,6 +7,7 @@
 }
 * {
   margin: 0;
+  padding: 0;
   overflow-wrap: break-word;
 }
 img, picture, video, canvas, svg {
@@ -44,12 +45,10 @@ TODO
   --color-fg: #ebdbb2;
 
   --border-radius: 10px;
-  --padding: 3rem;
-  --padding2: calc(var(--padding) * 2);
-  --padding4: calc(var(--padding2) * 2);
-  --padding8: calc(var(--padding4) * 2);
+  --padd1: 1.5rem;
+  --padd2: 3rem;
   --desktop-image-size: 512px;
-  --desktop-content-size: calc(var(--desktop-image-size) * 2 + var(--padding))
+  --desktop-content-size: calc(var(--destop-image-sizek) * 2 + var(--padd2))
 }
 
 @font-face {
@@ -66,22 +65,27 @@ html {
   color: var(--color-fg);
   font-family: 'JetBrains Mono', 'monospace';
   line-height: 1.9;
-  justify-content: center;
   min-height: 100vh;
   overflow: scroll;
 }
 
 body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: var(--padd2);
+  margin: var(--padd2) auto;
   max-width: var(--desktop-content-size);
-  padding: 8px;
-  margin: 0 auto;
-  width: 100%;
+  width: calc(100% - var(--padd2));
   --webkit-font-smoothing: antialiased;
 }
 
 main {
-  /* margin-top: var(--padding2); */
-  min-height: calc(100vh - var(--padding2))
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: var(--padd2);
+  /* min-height: calc(100vh - var(--padding2)) */
 }
 
 a {
@@ -104,51 +108,24 @@ img {
   text-decoration: none;
 }
 
-.border-top {
-  border-top: 1px solid var(--color-fg);
-}
-.border-bottom {
-  border-bottom: 1px solid var(--color-fg);
+.project-summary-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: var(--padd1);
 }
 
-/** header begin */
-header div {
-  align-items: center;
+.project-summary div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-header div h3 ul {
-  align-items: baseline;
-  display: flex;
-  gap: var(--padding);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-section div {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  gap: 10px var(--padding);
+  gap: 10px var(--padd2);
 }
 
 @media screen and (min-width: 1044px) {
-  header div {
-    align-items: baseline;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  section div {
+  .project-summary div {
     flex-direction: row;
   }
-  section img {
+  .project-summary img {
     max-width: 512px;
   }
-}
-
-footer {
-  margin-top: var(--padding2)
 }

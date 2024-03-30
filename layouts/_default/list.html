@@ -1,8 +1,11 @@
 {{ define "main" }}
-  <h2>{{ .Title }}</h2>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a class="header1" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <section>
+    <h2><a class="header1" href="{{ .Site.Home.Permalink }}">{{ .Title }}</a></h2>
+    {{ .Content }}  
+  </section>
+  <section>
+    {{ range .Pages }}
+      {{ partial "project-summary.html" . }}
+    {{ end }}
+  </section>
 {{ end }}
