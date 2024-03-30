@@ -48,7 +48,7 @@ TODO
   --padd1: 1.5rem;
   --padd2: 3rem;
   --desktop-image-size: 512px;
-  --desktop-content-size: calc(var(--destop-image-sizek) * 2 + var(--padd2))
+  --desktop-content-size: calc(var(--desktop-image-size) * 2 + var(--padd2))
 }
 
 @font-face {
