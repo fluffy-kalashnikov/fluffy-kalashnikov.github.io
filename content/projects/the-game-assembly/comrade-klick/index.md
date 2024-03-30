@@ -2,7 +2,7 @@
 title = 'comrade-klick'
 date = 2024-01-07T18:58:06+01:00
 draft = false
-screenshot = 'placeholder.webp'
+screenshot = '/projects/the-game-assembly/comrade-klick/placeholder.webp'
 +++
 
 [_comrade-klick_](https://github.com/fluffy-kalashnikov/comrade-klick) was my 

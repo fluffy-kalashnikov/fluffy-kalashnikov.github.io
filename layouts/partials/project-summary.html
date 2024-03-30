@@ -1,5 +1,5 @@
 <article class="project-summary">
     <h2><a class="header1" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     <p>{{ .Summary }}</p>
-    <img src="{{ path.Join .File.Dir .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy"/>  
+    <img src="{{ path.Join .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy"/>  
 </article>
