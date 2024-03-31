@@ -1,6 +1,9 @@
 {{ define "main" }}
-  <article>
-    <h2><a class="header1" href="{{ .Parent.RelPermalink }}">{{ .Title }}</a></h2>
-    {{ .Content }}
-  </article>
+    <section>
+      <h1><a class="header1" href="{{ .Parent.RelPermalink }}">{{ .Title }}</a></h1>
+      {{ partial "tags.html" . }}  
+    </section>
+    <article>
+      {{ .Content }}
+    </article>
 {{ end }}

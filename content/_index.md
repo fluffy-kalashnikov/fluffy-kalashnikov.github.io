@@ -5,4 +5,4 @@ draft = false
 +++
 
 Hi, I'm Ivar Sidorsson. I'm a [graphics programmer](/Ivar%20Sidorsson%20Resume.pdf).
-![Rotating cube](home.webp)
+![Zelda](zelda.webp)

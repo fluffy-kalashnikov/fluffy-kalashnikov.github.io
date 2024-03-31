@@ -105,21 +105,20 @@ img {
   display: grid;
   gap: var(--padd2);
 }
-
 .project-summary {
   display: grid;
   grid-template-columns: 512px 512px;
   grid-template-rows: auto;
   grid-template-areas: 
-  "header tags"
-  "description screenshot";
+    "header tags"
+    "description screenshot";
   justify-content: space-between;
 }
-
 .project-summary h2 {
   grid-area: header;
 }
 .project-summary section {
+  align-self: end;
   grid-area: tags;
 }
 .project-summary p {
