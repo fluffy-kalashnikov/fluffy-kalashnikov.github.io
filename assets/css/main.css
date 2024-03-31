@@ -47,8 +47,6 @@ TODO
   --border-radius: 10px;
   --padd1: 1.5rem;
   --padd2: 3rem;
-  --desktop-image-size: 512px;
-  --desktop-content-size: calc(var(--desktop-image-size) * 2 + var(--padd2))
 }
 
 @font-face {
@@ -73,7 +71,7 @@ body {
   display: grid;
   gap: var(--padd2);
   margin: var(--padd2) auto;
-  max-width: var(--desktop-content-size);
+  max-width: 1044px;
   width: calc(100% - var(--padd2));
   --webkit-font-smoothing: antialiased;
 }
@@ -141,4 +139,10 @@ img {
       "description"
       "screenshot";
   }
+}
+
+footer {
+  display: grid;
+  gap: var(--padd1);
+  text-align: center;
 }
