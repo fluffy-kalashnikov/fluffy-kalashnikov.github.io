@@ -105,20 +105,24 @@ img {
 
 .project-summary-list {
   display: grid;
-  gap: var(--padd1);
+  gap: var(--padd2);
 }
 
 .project-summary {
-  column-gap: var(--padd1);
   display: grid;
   grid-template-columns: 512px 512px;
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   grid-template-areas: 
-    "header header"
-    "description screenshot";
+  "header tags"
+  "description screenshot";
+  justify-content: space-between;
 }
+
 .project-summary h2 {
   grid-area: header;
+}
+.project-summary section {
+  grid-area: tags;
 }
 .project-summary p {
   grid-area: description;
@@ -132,8 +136,9 @@ img {
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
-    "header"
-    "description"
-    "screenshot";
+      "header"
+      "tags"
+      "description"
+      "screenshot";
   }
 }

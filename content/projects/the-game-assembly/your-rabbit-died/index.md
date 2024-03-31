@@ -1,5 +1,6 @@
 +++
 title = 'Your Rabbit Died'
+tags = ['C#', 'Unity']
 date = 2024-01-07T18:57:27+01:00
 draft = false
 screenshot = '/projects/the-game-assembly/your-rabbit-died/overworld.webp'

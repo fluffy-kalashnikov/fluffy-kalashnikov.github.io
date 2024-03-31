@@ -1,5 +1,6 @@
 +++
 title = 'When You See Me Cry'
+tags = ['C++', 'The Game Engine']
 date = 2024-01-07T18:57:32+01:00
 draft = false
 screenshot = '/projects/the-game-assembly/when-you-see-me-cry/puzzle1.webp'

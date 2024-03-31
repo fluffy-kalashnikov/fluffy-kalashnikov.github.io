@@ -5,5 +5,6 @@ draft = false
 +++
 The Game Assembly Malmö is where my education as 
 a game programmer stems from. Apart from the
-individual courses and individual specialization we 
-finished 8 game projects in groups of 12-18 people.
+individual courses and the individual specialization
+project we finished 8 game projects in groups of 
+12-18 people.

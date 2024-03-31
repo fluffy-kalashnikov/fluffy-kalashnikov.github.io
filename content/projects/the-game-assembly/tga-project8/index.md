@@ -1,5 +1,6 @@
 +++
 title = 'TGA Project 8'
+tags = ['C++', 'Clockwork Engine', 'Direct3D 11']
 date = 2024-01-07T18:57:47+01:00
 draft = false
 screenshot = '/projects/the-game-assembly/tga-project8/placeholder.webp'

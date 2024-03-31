@@ -1,5 +1,10 @@
 <article class="project-summary">
     <h2><a class="header1" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    <section>
+        {{ range .GetTerms "tags" }}
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{ end }}
+    </section>
     <p>{{ .Summary }}</p>
-    <img src="{{ path.Join .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy"/>  
+    <img src="{{ .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy"/>  
 </article>

@@ -1,9 +1,9 @@
 {{ define "main" }}
   <section>
-    <h2><a class="header1" href="{{ .Site.Home.Permalink }}">{{ .Title }}</a></h2>
+    <h2><a class="header1" href="{{ .Parent.RelPermalink }}">{{ .Title }}</a></h2>
     {{ .Content }}  
   </section>
-  <section>
+  <section class="project-summary-list">
     {{ range .Pages }}
       {{ partial "project-summary.html" . }}
     {{ end }}
