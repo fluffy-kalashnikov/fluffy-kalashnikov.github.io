@@ -9,7 +9,7 @@ we parsed in The Game Engine.
 tags = ['C++', 'The Game Engine', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:30+01:00
 draft = false
-screenshot = '/projects/the-game-assembly/wolls/forest.webp'
+screenshot = '/projects/wolls/forest.webp'
 credits = [
     'Elvira Aldén',
     'Fredrik Christensen',

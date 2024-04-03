@@ -45,7 +45,7 @@ TODO
   --color-fg: #ebdbb2;
 
   --border-radius: 10px;
-  --padd1: 1.2rem;
+  --padd1: 1.5rem;
   --padd2: calc(var(--padd1) * 2);
 }
 
@@ -97,7 +97,7 @@ img {
 
 .header1 {
   color: var(--color-yellow-light);
-  /* text-decoration: none; */
+  text-decoration: none;
 }
 .header2 {
   color: var(--color-yellow);

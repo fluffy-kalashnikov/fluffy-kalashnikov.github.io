@@ -7,7 +7,7 @@ at [The Game Assembly](https://thegameassembly.com) and was made in Unity as wel
 tags = ['C-sharp', 'Unity', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:27+01:00
 draft = false
-screenshot = '/projects/the-game-assembly/your-rabbit-died/overworld.webp'
+screenshot = '/projects/your-rabbit-died/overworld.webp'
 credits = [
     'Alfred Nilsson',
     'Anton Johansson',

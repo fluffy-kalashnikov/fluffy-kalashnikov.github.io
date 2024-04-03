@@ -1,9 +1,9 @@
 +++
-title = 'Mochi - The Longest Tuesday'
+title = 'TGA Project 8'
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
-date = 2024-01-07T18:57:43+01:00
+date = 2024-01-07T18:57:47+01:00
 draft = true
-screenshot = '/projects/the-game-assembly/mochi-the-longest-tuesday/placeholder.webp'
+screenshot = '/projects/tga-project8/placeholder.webp'
 credits = [
     'Ameer Khalid',
     'Cecilia Ålander',
@@ -26,6 +26,4 @@ credits = [
 ]
 +++
 
-
-Mochi - The Longest Tuesday is my seventh game project at [The Game Assembly](https://thegameassembly.com) and is 
-heavily inspired by [Jak & Daxter](https://en.wikipedia.org/wiki/Jak_and_Daxter).
+Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit.

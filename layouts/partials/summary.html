@@ -2,5 +2,7 @@
     <h2><a class="header1" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     {{ partial "tags.html" . }}
     <p>{{ .Summary }}</p>
-    <img src="{{ .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy"/>  
+    <a href="{{ .RelPermalink }}">
+        <img src="{{ .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy"/>
+    </a>
 </article>
