@@ -3,7 +3,7 @@
       <h1><a class="header1" href="{{ .Parent.RelPermalink }}">{{ .Title }}</a></h1>
       {{ partial "tags.html" . }}  
     </section>
-    <article>
+    <article class="project-single">
       {{ .Content }}
     </article>
 {{ end }}

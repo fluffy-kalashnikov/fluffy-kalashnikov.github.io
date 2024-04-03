@@ -1,5 +1,11 @@
 +++
 title = 'Wolls'
+summary = '''
+_Wolls_ is a 2D platformer. It was our third game project and the first one made in 
+The Game Engine, the internal game engine provided by [The Game Assembly](https://thegameassembly.com).
+We used Unity as a level editor for our level designers and exported JSON-files which
+we parsed in The Game Engine.
+'''
 tags = ['C++', 'The Game Engine', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:30+01:00
 draft = false
@@ -19,7 +25,9 @@ credits = [
     'Youcef Lounes',
 ]
 +++
+
 {{<youtube id="DhZeJ8avWAQ" title="Wolls trailer.">}}
+
 _Wolls_ is a 2D platformer. It was our third game project and the first one made in 
 The Game Engine, the internal game engine provided by [The Game Assembly](https://thegameassembly.com).
 We used Unity as a level editor for our level designers and exported JSON-files which

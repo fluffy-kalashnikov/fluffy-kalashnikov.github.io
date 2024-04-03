@@ -45,8 +45,8 @@ TODO
   --color-fg: #ebdbb2;
 
   --border-radius: 10px;
-  --padd1: 1.5rem;
-  --padd2: 3rem;
+  --padd1: 1.2rem;
+  --padd2: calc(var(--padd1) * 2);
 }
 
 @font-face {
@@ -85,6 +85,10 @@ a {
   color: var(--color-yellow);
 }
 
+ul {
+  margin-left: calc(var(--padd1) * 2.5);
+}
+
 img {
   object-fit: scale-down;
   border-radius: var(--border-radius);
@@ -93,12 +97,11 @@ img {
 
 .header1 {
   color: var(--color-yellow-light);
-  text-decoration: none;
-
+  /* text-decoration: none; */
 }
 .header2 {
   color: var(--color-yellow);
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 .project-summary-list {
@@ -139,6 +142,12 @@ img {
       "screenshot";
   }
 }
+
+.project-single  {
+  display: grid;
+  gap: var(--padd1);
+}
+
 
 footer {
   display: grid;

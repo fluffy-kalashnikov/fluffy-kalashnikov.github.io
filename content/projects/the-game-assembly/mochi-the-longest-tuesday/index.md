@@ -2,7 +2,7 @@
 title = 'Mochi - The Longest Tuesday'
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:43+01:00
-draft = false
+draft = true
 screenshot = '/projects/the-game-assembly/mochi-the-longest-tuesday/placeholder.webp'
 credits = [
     'Ameer Khalid',

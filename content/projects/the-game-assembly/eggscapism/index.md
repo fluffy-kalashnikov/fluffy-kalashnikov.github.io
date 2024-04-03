@@ -1,5 +1,10 @@
 +++
 title = 'Eggscapism'
+summary = '''
+_Eggscapism_ is a narrative puzzler roughly 2 minutes in length. It was the fifth project
+at [The Game Assembly](https://thegameassembly.com) and it was the first project where
+we used our own game engine made from scratch.
+'''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:34+01:00
 draft = false
@@ -30,8 +35,7 @@ Eggscapism is a narrative puzzler roughly 2 minutes in length. It was the fifth 
 at [The Game Assembly](https://thegameassembly.com) and it was the first project where 
 we used our own game engine made from scratch. Given that I was the only programmer 
 in my group willing to do graphics programming and that my graphics engine was the most 
-complete at the time, we decided to use my engine as the foundation for our custom game 
-engine.
+complete at the time, we decided to use my graphics engine as the foundation.
 
 I was responsible for
 * Graphics programming

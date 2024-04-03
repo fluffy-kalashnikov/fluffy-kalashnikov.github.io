@@ -1,5 +1,9 @@
 +++
 title = 'Your Rabbit Died'
+summary = '''
+_Your Rabbit Died_ is a puzzle game built for mobile. It was the second game project 
+at [The Game Assembly](https://thegameassembly.com) and was made in Unity as well.
+'''
 tags = ['C#', 'Unity', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:27+01:00
 draft = false
@@ -20,7 +24,9 @@ credits = [
     'Sofie Axelsson',
 ]
 +++
+
 {{<youtube id="AMju0Vkug08" title="Your Rabbit Died trailer.">}}
+
 _Your Rabbit Died_ is a puzzle game built for mobile. It was the second game project 
 at [The Game Assembly](https://thegameassembly.com) and was made in Unity as well.
 
