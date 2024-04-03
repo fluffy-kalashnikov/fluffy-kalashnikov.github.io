@@ -6,7 +6,7 @@ at [The Game Assembly](https://thegameassembly.com) and was made in Unity.
 I was one of the few in my group with prior experience of Unity, so I assisted
 my other programmers as much as I could.
 '''
-tags = ['C#', 'Unity', 'Perforce', 'Taiga']
+tags = ['C-sharp', 'Unity', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:04+01:00
 draft = false
 screenshot = '/projects/the-game-assembly/sootling-saga/cave.webp'
@@ -27,8 +27,6 @@ credits = [
     'Nanna Lundin',
 ]
 +++
-
-{{<youtube id="whfLbvExxHE" title="Sootling Saga trailer.">}}
 
 _Sootling Saga_ is a sidescrolling platformer. It was the first game project
 at [The Game Assembly](https://thegameassembly.com) and was made in Unity.
@@ -57,6 +55,4 @@ I also learned how to add custom editor commands to the editor context menu. I m
 to add a button to start playtesting from the location of any Transform-component inside
 the game. Achieving something like this is something I have wanted for a long time in Unity.
 
-![Desert biome in Sootling Saga.](desert.webp)
-![Jungle biome in Sootling Saga.](jungle.webp)
-![Cave biome in Sootling Saga.](cave.webp)
+{{<youtube id="whfLbvExxHE" title="Sootling Saga trailer.">}}

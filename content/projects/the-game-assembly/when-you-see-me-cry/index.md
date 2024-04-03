@@ -29,8 +29,6 @@ credits = [
 ]
 +++
 
-{{<youtube id="RTEkSJmcURg" title="When You See Me Cry trailer.">}}
-
 _When You See Me Cry_ is a 3D adventure game heavily inspired by 
 [The Legend of Zelda: A Link to the Past](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past). 
 It was my forth game project at [The Game Assembly](https://thegameassembly.com)
@@ -60,10 +58,4 @@ that it wasn't a problem that had to be solved. It was a case of premature optim
 that I regret and I think a simpler solution would be to have a list of game objects per
 room volume instead.
 
-![Screenshot outside a temple.](outside.webp)
-
-![Screenshot of a puzzle in a temple.](puzzle1.webp)
-
-![Screenshot of another puzzle in a temple.](puzzle2.webp)
-
-![Screenshot of a tablet granting the player powers.](tablet.webp)
+{{<youtube id="RTEkSJmcURg" title="When You See Me Cry trailer.">}}

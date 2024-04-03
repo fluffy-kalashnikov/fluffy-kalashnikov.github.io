@@ -26,8 +26,6 @@ credits = [
 ]
 +++
 
-{{<youtube id="DhZeJ8avWAQ" title="Wolls trailer.">}}
-
 _Wolls_ is a 2D platformer. It was our third game project and the first one made in 
 The Game Engine, the internal game engine provided by [The Game Assembly](https://thegameassembly.com).
 We used Unity as a level editor for our level designers and exported JSON-files which
@@ -79,7 +77,4 @@ them to playtest the game without worrying about becoming out of date with the l
 and simplified the sprite pipeline substantially as graphical artists only had to update
 sprites inside of Unity.
 
-![Screenshot of forest level in Wolls.](forest.webp)
-![Screenshot of mire level in Wolls.](mire.webp)
-![Screenshot of thunder section in Wolls.](thunder.webp)
-![Screenshot of village section in Wolls.](village.webp)
+{{<youtube id="DhZeJ8avWAQ" title="Wolls trailer.">}}

@@ -3,9 +3,9 @@
     <h1><a class="header1" href="{{ .Parent.RelPermalink }}">{{ .Title }}</a></h1>
     {{ .Content }}  
   </section>
-  <section class="project-summary-list">
+  <section class="summary-list">
     {{ range .Pages }}
-      {{ partial "project-summary.html" . }}
+      {{ partial "summary.html" . }}
     {{ end }}
   </section>
 {{ end }}

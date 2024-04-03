@@ -1,9 +1,9 @@
 {{ define "main" }}
-    <section>
-      <h1><a class="header1" href="{{ .Parent.RelPermalink }}">{{ .Title }}</a></h1>
-      {{ partial "tags.html" . }}  
-    </section>
-    <article class="project-single">
-      {{ .Content }}
-    </article>
+  <section>
+    <h1><a class="header1" href="{{ .Parent.RelPermalink }}">{{ .Title }}</a></h1>
+    {{ partial "tags.html" . }}  
+  </section>
+  <article class="article">
+    {{ .Content }}
+  </article>
 {{ end }}
