@@ -8,7 +8,7 @@ we used our own game engine made from scratch.
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:34+01:00
 draft = false
-screenshot = '/projects/eggscapism/egg.webp'
+screenshot = '/projects/eggscapism/eggscapism-icon.webp'
 credits = [
     'Ameer Khalid',
     'Cecilia Ålander',
