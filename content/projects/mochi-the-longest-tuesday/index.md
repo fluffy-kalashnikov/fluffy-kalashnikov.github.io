@@ -1,9 +1,15 @@
 +++
 title = 'Mochi - The Longest Tuesday'
+summary = '''
+_Mochi - The Longest Tuesday_ is my seventh game project at [The Game Assembly](https://thegameassembly.com) and is 
+heavily inspired by [Jak & Daxter](https://en.wikipedia.org/wiki/Jak_and_Daxter). As [_Spite - Plague Purge_](../spite-plague-purge/)
+missed the deadline and some rendering features like post processing was necessary for both projects, there was a fair
+bit of overlap between the projects in terms of the graphics engine. The project is not finished yet.
+'''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:43+01:00
 draft = false
-screenshot = '/projects/mochi-the-longest-tuesday/main-menu.webp'
+screenshot = '/projects/mochi-the-longest-tuesday/mochi-the-longest-tuesday-icon.webp'
 credits = [
     'Ameer Khalid',
     'Cecilia Ålander',
@@ -28,7 +34,7 @@ credits = [
 
 _Mochi - The Longest Tuesday_ is my seventh game project at [The Game Assembly](https://thegameassembly.com) and is 
 heavily inspired by [Jak & Daxter](https://en.wikipedia.org/wiki/Jak_and_Daxter). As [_Spite - Plague Purge_](../spite-plague-purge/)
-missed the deadline and some rendering features like post processing was needed for both projects, there was a fair
+missed the deadline and some rendering features like post processing was necessary for both projects, there was a fair
 bit of overlap between the projects in terms of the graphics engine.
 
 I was responsible for

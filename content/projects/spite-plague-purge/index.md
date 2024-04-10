@@ -1,9 +1,14 @@
 +++
 title = 'Spite - Plague Purge'
+summary = '''
+_Spite - Plague Purge_ was my sixth game project at [The Game Assembly](https://thegameassembly.com) and heavily inspired by Diablo III. 
+It was made in our custom game engine Clockwork. We basically scrapped the game engine from [Eggscapism](../eggscapism/) apart from
+the graphics engine and merged it with another engine. The project is not finished yet.
+'''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:41+01:00
 draft = false
-screenshot = '/projects/spite-plague-purge/placeholder.webp'
+screenshot = '/projects/spite-plague-purge/spite-plague-purge-icon.webp'
 credits = [
     'Ameer Khalid',
     'Cecilia Ålander',
@@ -33,7 +38,7 @@ It was made in our custom game engine Clockwork. We basically scrapped the game 
 the graphics engine and merged it with another engine. It was a decision made without any formal agreement between us programmers,
 and I had no insight into this decision as I was busy finishing [Eggscapism](../eggscapism/). However, we recovered fairly fast and 
 have since improved our cooperation a lot. I am grateful that we hit this low point as early into the project as we did, and I have 
-learnt a lot from it.
+learnt a lot from it. 
 
 During the project my role as the primary graphics programmer was reinforced, and I was responsible for
 * Premake5 integration
