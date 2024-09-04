@@ -1,8 +1,8 @@
 +++
 title = 'Mochi - The Longest Tuesday'
 summary = '''
-_Mochi - The Longest Tuesday_ is my seventh game project at [The Game Assembly](https://thegameassembly.com) and is 
-heavily inspired by [Jak & Daxter](https://en.wikipedia.org/wiki/Jak_and_Daxter). As [_Spite - Plague Purge_](../spite-plague-purge/)
+Mochi - The Longest Tuesday is my seventh game project at [The Game Assembly](https://thegameassembly.com) and is 
+heavily inspired by [Jak & Daxter](https://en.wikipedia.org/wiki/Jak_and_Daxter). As [Spite - Plague Purge](../spite-plague-purge/)
 missed the deadline and some rendering features like post processing was necessary for both projects, there was a fair
 bit of overlap between the projects in terms of the graphics engine. The project is not finished yet.
 '''
@@ -32,8 +32,8 @@ credits = [
 ]
 +++
 
-_Mochi - The Longest Tuesday_ is my seventh game project at [The Game Assembly](https://thegameassembly.com) and is 
-heavily inspired by [Jak & Daxter](https://en.wikipedia.org/wiki/Jak_and_Daxter). As [_Spite - Plague Purge_](../spite-plague-purge/)
+Mochi - The Longest Tuesday is my seventh game project at [The Game Assembly](https://thegameassembly.com) and is 
+heavily inspired by [Jak & Daxter](https://en.wikipedia.org/wiki/Jak_and_Daxter). As [Spite - Plague Purge](../spite-plague-purge/)
 missed the deadline and some rendering features like post processing was necessary for both projects, there was a fair
 bit of overlap between the projects in terms of the graphics engine.
 

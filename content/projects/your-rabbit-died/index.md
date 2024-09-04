@@ -1,8 +1,15 @@
 +++
 title = 'Your Rabbit Died'
 summary = '''
-_Your Rabbit Died_ is a puzzle game built for mobile. It was the second game project 
+Your Rabbit Died is a puzzle game built for mobile. It was the second game project 
 at [The Game Assembly](https://thegameassembly.com) and was made in Unity as well.
+
+Game Programmer Responsibilities
+  *  Building/shipping
+  *  Dialogue
+  *  Grid system/tooling
+  *  Sound system/playback
+  *  Mobile support
 '''
 tags = ['C-sharp', 'Unity', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:27+01:00
@@ -25,7 +32,7 @@ credits = [
 ]
 +++
 
-_Your Rabbit Died_ is a puzzle game built for mobile. It was the second game project 
+Your Rabbit Died is a puzzle game built for mobile. It was the second game project 
 at [The Game Assembly](https://thegameassembly.com) and was made in Unity as well.
 
 I was responsible for

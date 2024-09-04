@@ -1,7 +1,7 @@
 +++
 title = 'Spite - Plague Purge'
 summary = '''
-_Spite - Plague Purge_ was my sixth game project at [The Game Assembly](https://thegameassembly.com) and heavily inspired by Diablo III. 
+Spite - Plague Purge was my sixth game project at [The Game Assembly](https://thegameassembly.com) and heavily inspired by Diablo III. 
 It was made in our custom game engine Clockwork. We basically scrapped the game engine from [Eggscapism](../eggscapism/) apart from
 the graphics engine and merged it with another engine. The project is not finished yet.
 '''
@@ -33,7 +33,7 @@ credits = [
 ]
 +++
 
-_Spite - Plague Purge_ was my sixth game project at [The Game Assembly](https://thegameassembly.com) and heavily inspired by Diablo III. 
+Spite - Plague Purge was my sixth game project at [The Game Assembly](https://thegameassembly.com) and heavily inspired by Diablo III. 
 It was made in our custom game engine Clockwork. We basically scrapped the game engine from [Eggscapism](../eggscapism/) apart from
 the graphics engine and merged it with another engine. It was a decision made without any formal agreement between us programmers,
 and I had no insight into this decision as I was busy finishing [Eggscapism](../eggscapism/). However, we recovered fairly fast and 

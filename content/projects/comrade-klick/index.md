@@ -1,7 +1,7 @@
 +++
 title = 'comrade-klick'
 summary = '''
-[_comrade-klick_](https://github.com/fluffy-kalashnikov/comrade-klick) was my specialization 
+[comrade-klick](https://github.com/fluffy-kalashnikov/comrade-klick) was my specialization 
 project at [The Game Assembly](https://thegameassembly.com). I attempted to create a basic 
 implementation of asynchronous reprojection in Direct3D 12 but did not finish in time.
 '''
@@ -14,7 +14,7 @@ credits = [
 ]
 +++
 
-[_comrade-klick_](https://github.com/fluffy-kalashnikov/comrade-klick) was my specialization 
+[comrade-klick](https://github.com/fluffy-kalashnikov/comrade-klick) was my specialization 
 project at [The Game Assembly](https://thegameassembly.com). I attempted to create a basic 
 implementation of asynchronous reprojection in Direct3D 12 but did not finish in time.
 
@@ -22,10 +22,10 @@ implementation of asynchronous reprojection in Direct3D 12 but did not finish in
 
 ## Introduction
 I've been an avid subscriber of [3kliksphilip](https://www.youtube.com/@3kliksphilip)/[2kliksphilip](https://www.youtube.com/@2kliksphilip)/[kliksphilip](https://www.youtube.com/@kliksphilip) for a long time. During my first term at The Game Assembly 
-he released [_DLSS 3 - What I think of it_](https://www.youtube.com/watch?v=OjPEdtd1g6I&t=539s). 
-Shortly after he released [_The future of upscaling?_](https://youtu.be/f8piCZz0p-Y?si=iPn88J_FmiLd_DZK)
+he released [DLSS 3 - What I think of it](https://www.youtube.com/watch?v=OjPEdtd1g6I&t=539s). 
+Shortly after he released [The future of upscaling?](https://youtu.be/f8piCZz0p-Y?si=iPn88J_FmiLd_DZK)
 showcasing a demo made by [Comrade Stinger](https://www.youtube.com/@comradestinger) and a 
-video titled [_Async Reprojection outside of VR_](https://www.youtube.com/watch?v=VvFyOFacljg).
+video titled [Async Reprojection outside of VR](https://www.youtube.com/watch?v=VvFyOFacljg).
 I took very great interest in the video and it has since stuck in my mind. It is a very
 mind-bending technique as there appears to be 2 separate layers of rendering happening 
 concurrently, and when I were to choose a specialization project it felt like a good

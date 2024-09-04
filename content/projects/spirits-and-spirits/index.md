@@ -1,5 +1,8 @@
 +++
-title = 'TGA Project 8'
+title = 'Spirits & Spirits'
+summary = '''
+Spirits & Spirits is a cooperative liqour mixing game heavily inspired by Overcooked 2.
+'''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:47+01:00
 draft = true
@@ -26,4 +29,6 @@ credits = [
 ]
 +++
 
-Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis. Proident fugiat labore eu laboris officia Lorem enim. Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit.
+Occaecat aliqua consequat laborum ut ex aute aliqua culpa quis irure esse magna dolore quis.
+Proident fugiat labore eu laboris officia Lorem enim.
+Ipsum occaecat cillum ut tempor id sint aliqua incididunt nisi incididunt reprehenderit.

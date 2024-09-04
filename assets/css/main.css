@@ -3,173 +3,128 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 * {
-  margin: 0;
-  padding: 0;
-  overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
 }
 img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 input, button, textarea, select {
-  font: inherit;
+    font: inherit;
 }
 
 
-
-/*
-TODO
-  - [x] formalize padding
-  - [x] color links
-  - [ ] add tag support
-*/
 
 
 :root {
-  --color-red: #cc241d;
-  --color-red-light: #fb4934;
-  --color-green: #98971a;
-  --color-green-light: #b8bb26;
-  --color-yellow: #d89921;
-  --color-yellow-light: #fabd2f;
-  --color-blue: #458588;
-  --color-blue-light: #83a598;
-  --color-purple: #b16286;
-  --color-purple-light: #d3869b;
-  --color-aqua: #689d6a;
-  --color-aqua-light: #8ec07c;
-  --color-bg: #282828;
-  --color-fg: #ebdbb2;
-
-  --border-radius: 10px;
-  --padd1: 1.5rem;
-  --padd2: calc(var(--padd1) * 2);
+    --color-bg: #fafafa;
+    --color-fg: #242424;
+    --border-radius: 10px;
+    --padd1: 1.5rem;
+    --padd2: calc(var(--padd1) * 2);
 }
-
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 html {
-  background-color: var(--color-bg);
-  box-sizing: border-box;
-  color: var(--color-fg);
-  font-family: 'JetBrains Mono', 'monospace';
-  line-height: 1.9;
-  min-height: 100vh;
-  overflow: scroll;
+    background-color: var(--color-bg);
+    box-sizing: border-box;
+    color: var(--color-fg);
+    font-family: Verdana;
+    line-height: 1.9;
+    min-height: 100vh;
+    overflow: scroll;
 }
 
 body {
-  display: grid;
-  gap: var(--padd2);
-  margin: var(--padd2) auto;
-  max-width: 1044px;
-  width: calc(100% - var(--padd2));
-  --webkit-font-smoothing: antialiased;
+    display: grid;
+    gap: var(--padd2);
+    margin: var(--padd2) auto;
+    max-width: 1044px;
+    width: calc(100% - var(--padd2));
+    --webkit-font-smoothing: antialiased;
+}
+
+header {
+    align-items: baseline;
+    display: grid;
+    gap: 15px 15px;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+nav {
+    align-items: baseline;
+    display: grid;
+    column-gap: 20px;
+    grid-auto-flow: column;
 }
 
 main {
-  display: grid;
-  gap: var(--padd2);
+    display: grid;
+    gap: var(--padd2);
 }
 
 a {
-  color: var(--color-yellow);
+    color: var(--color-yellow);
 }
 
 ul {
-  margin-left: calc(var(--padd1) * 2.5);
+    margin-left: calc(var(--padd1) * 2.5);
 }
 
 h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 1.875rem;
-}
-
-h3 {
-  font-size: 1.5rem;
+    font-size: 1.875rem;
 }
 
 img {
-  object-fit: scale-down;
-  border-radius: var(--border-radius);
-  box-shadow: 2px 2px 5px #000000;
+    object-fit: scale-down;
+    border-radius: var(--border-radius);
+    box-shadow: 2px 2px 5px #000000;
 }
 
-#title {
-  display: grid;
-  justify-content: center;
-}
-#title h1 {
-  text-align: center;
+.link-hidden {
+    text-decoration: none;
 }
 
-.header1 {
-  color: var(--color-yellow-light);
-  text-decoration: none;
-}
-.header2 {
-  color: var(--color-yellow);
-  /* text-decoration: none; */
+.pageline {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--color-fg);
 }
 
-.article  {
-  display: grid;
-  gap: var(--padd1);
+.article {
+    display: grid;
+    gap: var(--padd1);
 }
 
-.summary-list {
-  display: grid;
-  gap: var(--padd2);
-}
-.summary {
-  display: grid;
-  grid-template-columns: 512px 512px;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "header tags"
-    "description screenshot";
-  justify-content: space-between;
-}
-.summary h2 {
-  grid-area: header;
-}
-.summary section {
-  align-self: end;
-  grid-area: tags;
-}
-.summary p {
-  grid-area: description;
-}
-.summary img {
-  grid-area: screenshot;
+.card-list {
+    display: grid;
+    gap: var(--padd2);
 }
 
-@media screen and (max-width: 1044px) {
-  .summary {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "header"
-      "tags"
-      "description"
-      "screenshot";
-  }
+.card-project {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.card-project section {
+    display: grid;
+    column-gap: 20px;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    justify-content: space-between;    
 }
 
 footer {
-  display: grid;
-  gap: var(--padd1);
-  text-align: center;
+    display: grid;
+    gap: var(--padd1);
+    text-align: center;
 }

@@ -1,7 +1,7 @@
 +++
 title = 'Eggscapism'
 summary = '''
-_Eggscapism_ is a narrative puzzler roughly 2 minutes in length. It was the fifth project
+Eggscapism is a narrative puzzler roughly 2 minutes in length. It was the fifth project
 at [The Game Assembly](https://thegameassembly.com) and it was the first project where
 we used our own game engine made from scratch.
 '''

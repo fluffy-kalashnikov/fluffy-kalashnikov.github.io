@@ -1,2 +1,8 @@
-<header>
+<header class="pageline">
+    <h1>Ivar Sidorsson</h1>
+    <nav>
+        {{ range .Site.Menus.main }}
+            <h3><a class="link-hidden" href="{{ .URL }}">{{ .Name }}</a></h3>
+        {{ end }}
+    </nav>
 </header>

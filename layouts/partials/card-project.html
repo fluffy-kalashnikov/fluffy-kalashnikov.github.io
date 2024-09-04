@@ -1,0 +1,11 @@
+<article class="card card-project">
+    <h2><a class="link-hidden" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+    <section>
+        <div>
+            {{ .Summary }}
+        </div>
+        <a href="{{ .RelPermalink }}">
+            <img src="{{ .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy" />
+        </a>
+    </section>
+</article>

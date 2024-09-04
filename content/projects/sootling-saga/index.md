@@ -1,10 +1,19 @@
 +++
 title = 'Sootling Saga'
 summary = '''
-_Sootling Saga_ is a sidescrolling platformer. It was the first game project
+Sootling Saga is a sidescrolling platformer. It was the first game project
 at [The Game Assembly](https://thegameassembly.com) and was made in Unity.
 I was one of the few in my group with prior experience of Unity, so I assisted
 my other programmers as much as I could.
+
+Game Programmer Responsibilities
+  *  Building/shipping
+  *  Checkpoints
+  *  Editor playtest tooling
+  *  UI
+  *  Scene transitions
+  *  Score/pickups
+  *  Cutscene playback
 '''
 tags = ['C-sharp', 'Unity', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:04+01:00
@@ -28,7 +37,7 @@ credits = [
 ]
 +++
 
-_Sootling Saga_ is a sidescrolling platformer. It was the first game project
+Sootling Saga is a sidescrolling platformer. It was the first game project
 at [The Game Assembly](https://thegameassembly.com) and was made in Unity.
 I was one of the few in my group with prior experience of Unity, so I assisted
 my other programmers as much as I could.
