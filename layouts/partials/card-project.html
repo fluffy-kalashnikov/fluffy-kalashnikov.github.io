@@ -1,9 +1,9 @@
-<article class="card card-project">
-    <h2><a class="link-hidden" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+<article class="card card-project pageline">
     <section>
-        <div>
-            {{ .Summary }}
-        </div>
+        <h2><a class="link-hidden" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ .Summary }}
+    </section>
+    <section>
         <a href="{{ .RelPermalink }}">
             <img src="{{ .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy" />
         </a>

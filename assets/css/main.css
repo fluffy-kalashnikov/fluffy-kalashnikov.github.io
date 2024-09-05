@@ -112,18 +112,14 @@ img {
 
 .card-project {
     display: grid;
-    grid-auto-flow: row;
-}
-
-.card-project section {
-    display: grid;
     column-gap: 20px;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
-    justify-content: space-between;    
+    justify-content: space-between;
+    padding-bottom: 30px;
 }
 
-.card-project:nth-child(odd) section a {
+.card-project:nth-child(odd) section:last-child {
     order: -1;
 }
 
