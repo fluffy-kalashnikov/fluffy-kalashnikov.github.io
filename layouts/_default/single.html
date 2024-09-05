@@ -1,8 +1,6 @@
 {{ define "main" }}
-  <section id="title">
-    <h1>{{ .Title }}</h1>
-  </section>
-  <article class="article">
+<h1><a class="link-hidden" href="{{ .Parent.RelPermalink }}">{{ .Title }}</a></h1>
+<article class="article">
     {{ .Content }}
-  </article>
+</article>
 {{ end }}

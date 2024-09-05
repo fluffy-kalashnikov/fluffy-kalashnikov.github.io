@@ -123,6 +123,11 @@ img {
     justify-content: space-between;    
 }
 
+.card-project:nth-child(odd) section a {
+    order: -1;
+}
+
+
 footer {
     display: grid;
     gap: var(--padd1);
