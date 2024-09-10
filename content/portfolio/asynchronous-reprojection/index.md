@@ -1,14 +1,14 @@
 +++
-title = 'comrade-klick'
+title = 'Asynchronous Reprojection Specialization'
 summary = '''
-[comrade-klick](https://github.com/fluffy-kalashnikov/comrade-klick) was my specialization 
-project at [The Game Assembly](https://thegameassembly.com). I attempted to create a basic 
-implementation of asynchronous reprojection in Direct3D 12 but did not finish in time.
+This project was my specialization at [The Game Assembly](https://thegameassembly.com).
+I attempted to create a basic implementation of asynchronous reprojection in Direct3D 12 
+but did not finish in time.
 '''
 tags = ['C++', 'Direct3D 12', 'Git', 'RenderDoc', 'PIX']
 date = 2024-01-07T18:58:06+01:00
 draft = false
-screenshot = '/projects/comrade-klick/thank-you-pix.webp'
+screenshot = '/portfolio/asynchronous-reprojection/thank-you-pix.webp'
 credits = [
     'Ivar Sidorsson'
 ]

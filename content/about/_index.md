@@ -4,8 +4,8 @@ date = 2024-01-14T11:40:24+01:00
 draft = false
 +++
 
-Hi! I'm Ivar Sidorsson. I'm a game developer from southern Tjörn, 
-a centerpiece in the Swedish Bohuslän archipelago!
+Hi! I'm Ivar Sidorsson. I'm a game developer from southern Tjï¿½rn, 
+a centerpiece in the Swedish Bohuslï¿½n archipelago!
 
 I was introduced to the gaming landscape through New Super Mario Bros 
 and Minecraft on a laptop that barely ran at 24 FPS, and since then I 
@@ -44,3 +44,6 @@ I am now truly a multiclasser!
 
 # Contacting Me
 My preferred method of communication is by email. However, do not be afraid of calling me if it's urgent!
+
+[Download Resume](/Ivar%20Sidorsson%20Resume.pdf)
+![Ivar Sidorsson's fancy resume.](/Ivar%20Sidorsson%20Resume.webp)

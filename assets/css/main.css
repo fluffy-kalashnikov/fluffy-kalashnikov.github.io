@@ -22,17 +22,18 @@ input, button, textarea, select {
 
 
 :root {
-    --color-bg: #fafafa;
-    --color-fg: #242424;
+    --color-white-80: #fafafa;
+    --color-white-20: #242424;
+    --color-white-40: #474747;
     --border-radius: 10px;
     --padd1: 1.5rem;
     --padd2: calc(var(--padd1) * 2);
 }
 
 html {
-    background-color: var(--color-bg);
+    background-color: var(--color-white-80);
     box-sizing: border-box;
-    color: var(--color-fg);
+    color: var(--color-white-40);
     font-family: Verdana;
     line-height: 1.9;
     min-height: 100vh;
@@ -76,6 +77,10 @@ ul {
     margin-left: calc(var(--padd1) * 2.5);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-white-20)
+}
+
 h1 {
     font-size: 2.5rem;
 }
@@ -86,8 +91,6 @@ h2 {
 
 img {
     object-fit: scale-down;
-    border-radius: var(--border-radius);
-    box-shadow: 2px 2px 5px #000000;
 }
 
 .link-hidden {
@@ -97,7 +100,7 @@ img {
 .pageline {
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: var(--color-fg);
+    border-bottom-color: var(--color-white-40);
 }
 
 .article {
@@ -121,11 +124,4 @@ img {
 
 .card-project:nth-child(odd) section:last-child {
     order: -1;
-}
-
-
-footer {
-    display: grid;
-    gap: var(--padd1);
-    text-align: center;
 }
