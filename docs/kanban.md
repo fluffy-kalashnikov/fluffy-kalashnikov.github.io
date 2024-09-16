@@ -12,13 +12,11 @@ kanban-plugin: board
 - [ ] I can click a button to only see programmer/technical artist projects/portfolio
 - [ ] Every project card has at least 2 screenshots at a consistent size
 - [ ] Text in home.html, list.html, single.html has consistent spacing and padding
-- [ ] Adjust page width to be more comfortable for reading
 
 
 ## In Progress
 
-- [ ] I can see an embedded resume PDF within 1 button click
-- [ ] I can download the embedded resume PDF within 2 button clicks
+- [ ] Adjust page width to be more comfortable for reading
 
 
 ## Verify
@@ -27,6 +25,8 @@ kanban-plugin: board
 
 ## Done
 
+- [ ] I can see an embedded resume PDF within 1 button click
+- [ ] I can download the embedded resume PDF within 2 button clicks
 
 
 

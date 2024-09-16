@@ -45,5 +45,4 @@ I am now truly a multiclasser!
 # Contacting Me
 My preferred method of communication is by email. However, do not be afraid of calling me if it's urgent!
 
-[Download Resume](/Ivar%20Sidorsson%20Resume.pdf)
-![Ivar Sidorsson's fancy resume.](/Ivar%20Sidorsson%20Resume.webp)
+{{< resume >}}

@@ -26,8 +26,8 @@ input, button, textarea, select {
     --color-white-20: #242424;
     --color-white-40: #474747;
     --border-radius: 10px;
-    --padd1: 1.5rem;
-    --padd2: calc(var(--padd1) * 2);
+    --padding1: 1.5rem;
+    --padding2: calc(var(--padding1) * 2);
 }
 
 html {
@@ -42,17 +42,16 @@ html {
 
 body {
     display: grid;
-    gap: var(--padd2);
-    margin: var(--padd2) auto;
-    max-width: 1044px;
-    width: calc(100% - var(--padd2));
+    gap: var(--padding2);
+    margin: var(--padding2) auto;
+    max-width: 1200px;
+    width: calc(100% - var(--padding2));
     --webkit-font-smoothing: antialiased;
 }
 
-header {
+header section {
     align-items: baseline;
     display: grid;
-    gap: 15px 15px;
     grid-template-columns: auto auto;
     justify-content: space-between;
 }
@@ -60,24 +59,21 @@ header {
 nav {
     align-items: baseline;
     display: grid;
-    column-gap: 20px;
+    column-gap: var(--padding1);
     grid-auto-flow: column;
 }
 
 main {
     display: grid;
-    gap: var(--padd2);
-}
-
-a {
-    color: var(--color-yellow);
+    gap: var(--padding2);
+    padding: 0 var(--padding2);
 }
 
 ul {
-    margin-left: calc(var(--padd1) * 2.5);
+    margin-left: calc(var(--padding1) * 2.5);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, a {
     color: var(--color-white-20)
 }
 
@@ -97,29 +93,26 @@ img {
     text-decoration: none;
 }
 
-.pageline {
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: var(--color-white-40);
+hr {
+    color: var(--color-white-40);
 }
 
 .article {
     display: grid;
-    gap: var(--padd1);
+    gap: var(--padding1);
 }
 
 .card-list {
     display: grid;
-    gap: var(--padd2);
+    gap: var(--padding2);
 }
 
 .card-project {
     display: grid;
-    column-gap: 20px;
+    column-gap: var(--padding1);
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
     justify-content: space-between;
-    padding-bottom: 30px;
 }
 
 .card-project:nth-child(odd) section:last-child {

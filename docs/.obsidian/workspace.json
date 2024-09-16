@@ -11,11 +11,18 @@
             "id": "577bbc6b58978518",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "style-guidelines.md",
-                "mode": "source",
-                "source": false
+                "file": "kanban.md",
+                "kanbanViewState": {
+                  "kanban-plugin": "board",
+                  "list-collapse": [
+                    false,
+                    false,
+                    false,
+                    false
+                  ]
+                }
               }
             }
           }
@@ -85,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "style-guidelines.md",
+                "file": "kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +109,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "style-guidelines.md",
+                "file": "kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +132,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "style-guidelines.md"
+                "file": "kanban.md"
               }
             }
           }
@@ -149,8 +156,8 @@
   },
   "active": "577bbc6b58978518",
   "lastOpenFiles": [
-    "style-references.md",
     "style-guidelines.md",
-    "kanban.md"
+    "kanban.md",
+    "style-references.md"
   ]
 }
