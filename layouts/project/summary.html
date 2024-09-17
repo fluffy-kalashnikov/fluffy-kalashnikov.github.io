@@ -1,0 +1,11 @@
+<article class="summary-project">
+    <section>
+        <h2><a class="link-hidden" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        {{ .Summary }}
+    </section>
+    <section>
+        <a href="{{ .RelPermalink }}">
+            <img src="{{ .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy" />
+        </a>
+    </section>
+</article>

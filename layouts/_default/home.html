@@ -2,9 +2,9 @@
   <section>
     {{ .Content }}
   </section>
-  <section class="card-list">
+  <section class="summary-list">
     {{ range .Site.RegularPages }}
-        {{ partial "card-project.html" . }}
+      {{ .Render "summary" }}
     {{ end }}
   </section>
 {{ end }}

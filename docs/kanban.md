@@ -12,6 +12,7 @@ kanban-plugin: board
 - [ ] I can click a button to only see programmer/technical artist projects/portfolio
 - [ ] Every project card has at least 2 screenshots at a consistent size
 - [ ] Text in home.html, list.html, single.html has consistent spacing and padding
+- [ ] Use layout/content-type/summary.html for rendering project/portfolio summaries
 
 
 ## In Progress

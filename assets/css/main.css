@@ -17,36 +17,45 @@ img, picture, video, canvas, svg {
 input, button, textarea, select {
     font: inherit;
 }
+img {
+    object-fit: scale-down;
+}
+
+
 
 
 
 
 :root {
     --color-white-80: #fafafa;
-    --color-white-20: #242424;
     --color-white-40: #474747;
-    --border-radius: 10px;
+    --color-white-20: #242424;
     --padding1: 1.5rem;
     --padding2: calc(var(--padding1) * 2);
-}
-
-html {
-    background-color: var(--color-white-80);
-    box-sizing: border-box;
     color: var(--color-white-40);
     font-family: Verdana;
-    line-height: 1.9;
-    min-height: 100vh;
-    overflow: scroll;
+    line-height: 1.75;
 }
 
 body {
-    display: grid;
-    gap: var(--padding2);
-    margin: var(--padding2) auto;
-    max-width: 1200px;
+    background-color: var(--color-white-80);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: calc(70ch + var(--padding2) * 2);
+    min-height: 100vh;
+    overflow: scroll;
+    padding: var(--padding2) 0;
     width: calc(100% - var(--padding2));
     --webkit-font-smoothing: antialiased;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--padding2);
+    padding: 0 var(--padding2);
 }
 
 header section {
@@ -63,15 +72,18 @@ nav {
     grid-auto-flow: column;
 }
 
-main {
-    display: grid;
-    gap: var(--padding2);
-    padding: 0 var(--padding2);
+hr {
+    color: var(--color-white-40);
 }
 
 ul {
     margin-left: calc(var(--padding1) * 2.5);
 }
+
+
+
+
+/* text */
 
 h1, h2, h3, h4, h5, h6, a {
     color: var(--color-white-20)
@@ -85,16 +97,13 @@ h2 {
     font-size: 1.875rem;
 }
 
-img {
-    object-fit: scale-down;
-}
+
+
+
+/* custom classes */
 
 .link-hidden {
     text-decoration: none;
-}
-
-hr {
-    color: var(--color-white-40);
 }
 
 .article {
@@ -102,12 +111,12 @@ hr {
     gap: var(--padding1);
 }
 
-.card-list {
+.summary-list {
     display: grid;
     gap: var(--padding2);
 }
 
-.card-project {
+.summary-project {
     display: grid;
     column-gap: var(--padding1);
     grid-auto-flow: column;
@@ -115,6 +124,6 @@ hr {
     justify-content: space-between;
 }
 
-.card-project:nth-child(odd) section:last-child {
+.summary-project:nth-child(odd) section:last-child {
     order: -1;
 }
