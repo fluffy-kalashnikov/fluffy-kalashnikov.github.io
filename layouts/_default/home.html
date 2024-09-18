@@ -1,10 +1,19 @@
 {{ define "main" }}
-  <section>
     {{ .Content }}
-  </section>
-  <section class="summary-list">
-    {{ range .Site.RegularPages }}
-      {{ .Render "summary" }}
+
+    {{ with .Site.GetPage "/portfolio" }}
+        <section class="summary-list">
+            {{ range .Pages }}
+                {{ .Render "summary" }}
+            {{ end }}
+        </section>
     {{ end }}
-  </section>
+
+    {{ with .Site.GetPage "/projects" }}
+        <section class="summary-list">
+            {{ range .Pages }}
+                {{ .Render "summary" }}
+            {{ end }}
+        </section>
+    {{ end }}
 {{ end }}

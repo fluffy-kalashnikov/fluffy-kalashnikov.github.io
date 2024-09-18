@@ -54,8 +54,7 @@ main {
     display: flex;
     flex: 1;
     flex-direction: column;
-    gap: var(--padding2);
-    padding: 0 var(--padding2);
+    padding: var(--padding1) var(--padding2);
 }
 
 header section {
@@ -89,6 +88,10 @@ h1, h2, h3, h4, h5, h6, a {
     color: var(--color-white-20)
 }
 
+p {
+    margin: 20px 0
+}
+
 h1 {
     font-size: 2.5rem;
 }
@@ -106,14 +109,10 @@ h2 {
     text-decoration: none;
 }
 
-.article {
-    display: grid;
-    gap: var(--padding1);
-}
-
 .summary-list {
     display: grid;
     gap: var(--padding2);
+    margin: var(--padding1) 0;
 }
 
 .summary-project {
