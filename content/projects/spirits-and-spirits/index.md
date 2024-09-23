@@ -6,7 +6,6 @@ Spirits & Spirits is a cooperative liqour mixing game heavily inspired by Overco
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:47+01:00
 draft = true
-screenshot = '/projects/tga-project8/placeholder.webp'
 credits = [
     'Ameer Khalid',
     'Cecilia Ålander',

@@ -5,7 +5,9 @@
     </section>
     <section>
         <a href="{{ .RelPermalink }}">
-            <img src="{{ .Params.screenshot }}" alt="{{ .Params.screenshot }}" loading="lazy" />
+            {{ range .Resources.Match "*screenshot*.webp" }}
+                <img src="{{ .RelPermalink }}" alt="Screenshot from {{ .Title }}" loading="lazy" />
+            {{ end }}
         </a>
     </section>
 </article>

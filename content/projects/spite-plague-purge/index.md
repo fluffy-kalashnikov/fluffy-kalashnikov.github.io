@@ -8,7 +8,6 @@ the graphics engine and merged it with another engine. The project is not finish
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:41+01:00
 draft = false
-screenshot = '/projects/spite-plague-purge/spite-plague-purge-icon.webp'
 credits = [
     'Ameer Khalid',
     'Cecilia Ålander',

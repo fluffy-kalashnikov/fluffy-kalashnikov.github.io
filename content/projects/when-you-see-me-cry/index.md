@@ -18,7 +18,6 @@ Game Programmer Responsibilities
 tags = ['C++', 'The Game Engine', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:32+01:00
 draft = false
-screenshot = '/projects/when-you-see-me-cry/when-you-see-me-cry-icon.webp'
 credits = [
     'Alexander Ekengren',
     'Clara-Cecilia Ingner',

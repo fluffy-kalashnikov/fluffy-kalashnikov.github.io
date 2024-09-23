@@ -18,7 +18,6 @@ Game Programmer Responsibilities
 tags = ['C-sharp', 'Unity', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:04+01:00
 draft = false
-screenshot = '/projects/sootling-saga/cave.webp'
 credits = [
     'Elden Bähni',
     'Elisabet Sarsenov',
