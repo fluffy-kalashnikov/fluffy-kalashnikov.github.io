@@ -45,7 +45,7 @@ body {
     max-width: calc(70ch + var(--padding2) * 2);
     min-height: 100vh;
     overflow: scroll;
-    padding: var(--padding2) 0;
+    padding: 0;
     width: calc(100% - var(--padding2));
     --webkit-font-smoothing: antialiased;
 }

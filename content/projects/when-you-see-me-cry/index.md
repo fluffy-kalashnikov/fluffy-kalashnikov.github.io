@@ -1,10 +1,7 @@
 +++
 title = 'When You See Me Cry'
 summary = '''
-When You See Me Cry is a 3D adventure game heavily inspired by 
-[The Legend of Zelda: A Link to the Past](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past). 
-It was my forth game project at [The Game Assembly](https://thegameassembly.com)
-and was the last project made using The Game Engine.
+When You See Me Cry is a 3D adventure game where you combat silly archaeologists that stole artifacts and thus ruined the balance of the climate. Inspired by The Legend of Zelda: A Link to the Past. Made in The Game Engine.
 
 Game Programmer Responsibilities
   *  Tile system

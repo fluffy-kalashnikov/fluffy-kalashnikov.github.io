@@ -1,9 +1,7 @@
 +++
-title = 'Spite - Plague Purge'
+title = 'Spite Plague Purge'
 summary = '''
-Spite - Plague Purge was my sixth game project at [The Game Assembly](https://thegameassembly.com) and heavily inspired by Diablo III. 
-It was made in our custom game engine Clockwork. We basically scrapped the game engine from [Eggscapism](../eggscapism/) apart from
-the graphics engine and merged it with another engine. The project is not finished yet.
+Spite Plague Purge is an ARPG where you fight the infected with your crossbow and crow companion through gothic-themed levels. Inspired by Diablo 3. Made in Clockwork Engine.
 '''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:41+01:00

@@ -11,19 +11,14 @@
             "id": "577bbc6b58978518",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "kanban.md",
-                "kanbanViewState": {
-                  "kanban-plugin": "board",
-                  "list-collapse": [
-                    false,
-                    false,
-                    false,
-                    false
-                  ]
-                }
-              }
+                "file": "style-references.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "style-references"
             }
           }
         ]
@@ -46,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -61,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -69,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -92,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "kanban.md",
+                "file": "style-references.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +101,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for style-references"
             }
           },
           {
@@ -109,10 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "kanban.md",
+                "file": "style-references.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from style-references"
             }
           },
           {
@@ -123,7 +128,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -132,8 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "kanban.md"
-              }
+                "file": "style-references.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of style-references"
             }
           }
         ]
@@ -157,7 +166,7 @@
   "active": "577bbc6b58978518",
   "lastOpenFiles": [
     "style-guidelines.md",
-    "style-references.md",
-    "kanban.md"
+    "kanban.md",
+    "style-references.md"
   ]
 }

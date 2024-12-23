@@ -1,9 +1,7 @@
 +++
 title = 'Eggscapism'
 summary = '''
-Eggscapism is a narrative puzzler roughly 2 minutes in length. It was the fifth project
-at [The Game Assembly](https://thegameassembly.com) and it was the first project where
-we used our own game engine made from scratch.
+Eggscapism is a narrative puzzler where you need restore the power and call for help to escape an arctic laboratory from an ominous presence. Inspired by Legend of Grimrock 2. Made in Clockwork Engine.
 '''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:34+01:00

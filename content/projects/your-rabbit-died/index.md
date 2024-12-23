@@ -1,8 +1,7 @@
 +++
 title = 'Your Rabbit Died'
 summary = '''
-Your Rabbit Died is a puzzle game built for mobile. It was the second game project 
-at [The Game Assembly](https://thegameassembly.com) and was made in Unity as well.
+Your Rabbit Died is a game where you need warp between diemensions to outsmart your enemies and solve puzzles. Inspired by Lara Croft Go. Made in Unity for mobile devices.
 
 Game Programmer Responsibilities
   *  Building/shipping

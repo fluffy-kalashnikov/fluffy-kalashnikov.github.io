@@ -1,7 +1,7 @@
 +++
 title = 'Spirits & Spirits'
 summary = '''
-Spirits & Spirits is a cooperative liqour mixing game heavily inspired by Overcooked 2.
+Spirits & Spirits is a cooperative liqour mixing game where you serve rowdy spirits that can't party enough. Inspired by Overcooked 2. Made in Clockwork Engine.
 '''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:47+01:00
