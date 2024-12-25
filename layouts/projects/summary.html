@@ -1,13 +1,23 @@
 <article class="summary-project">
+    <a class="link-hidden" href="{{ .RelPermalink }}">
+        {{ range .Resources.Match "*thumbnail*" }}
+            <img src="{{ .RelPermalink }}" alt="Thumbnail" loading="lazy" />
+        {{ end }}
+    </a>
+</article>
+
+
+
+{{/*  <article class="summary-project">
     <section>
         <h2><a class="link-hidden" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
         {{ .Summary }}
     </section>
     <section>
         <a href="{{ .RelPermalink }}">
-            {{ range .Resources.Match "*screenshot*.webp" }}
+            {{ range .Resources.Match "*screenshot*" }}
                 <img src="{{ .RelPermalink }}" alt="Screenshot from {{ .Title }}" loading="lazy" />
             {{ end }}
         </a>
     </section>
-</article>
+</article>  */}}

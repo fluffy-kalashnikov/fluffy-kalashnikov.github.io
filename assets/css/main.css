@@ -37,12 +37,16 @@ img {
     line-height: 1.75;
 }
 
+html {
+    scrollbar-gutter: stable;
+}
+
 body {
     background-color: var(--color-white-80);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: calc(70ch + var(--padding2) * 2);
+    max-width: calc(90ch + var(--padding2) * 2);
     min-height: 100vh;
     overflow: scroll;
     padding: 0;
@@ -54,13 +58,16 @@ main {
     display: flex;
     flex: 1;
     flex-direction: column;
-    padding: var(--padding1) var(--padding2);
 }
 
-header section {
-    align-items: baseline;
+header {
+    align-items: end;
     display: grid;
     grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "title hamburger"
+    "nav nav";
     justify-content: space-between;
 }
 
@@ -80,7 +87,58 @@ ul {
 }
 
 
+/** hamburger menu **/
+#title {
+    z-index: 20;
+}
 
+#menu-nav {
+    display: none;
+    z-index: 10;
+}
+
+#menu-hamburger {
+    position: relative;
+    z-index: 20;
+}
+
+#menu-hamburger span {
+    background-color: var(--color-white-20);
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    /* border-radius: 3px; */
+}
+
+#menu-hamburger input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    user-select: none;
+    opacity: 0.01;
+    z-index: 30;
+}
+
+body:has(#menu-checkbox:checked) {
+    overflow: hidden;
+}
+
+header:has(#menu-checkbox:checked) #menu-nav {
+    display: block;
+}
+
+header:has(#menu-checkbox:checked) #menu-bg {
+    background-color: var(--color-white-80);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
 
 /* text */
 
