@@ -1,10 +1,11 @@
 +++
 title = 'Your Rabbit Died'
 summary = '''
+**20XX-XX-XX to 20XX-XX-XX**
+
 Your Rabbit Died is a game where you need warp between diemensions to outsmart your enemies and solve puzzles. Inspired by Lara Croft Go. Made in Unity for mobile devices.
 
-Game Programmer Responsibilities
-  *  Building/shipping
+**Game Programmer Responsibilities**
   *  Dialogue
   *  Grid system/tooling
   *  Sound system/playback

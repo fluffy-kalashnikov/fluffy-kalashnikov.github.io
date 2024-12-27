@@ -1,7 +1,15 @@
 +++
 title = 'Eggscapism'
 summary = '''
+**20XX-XX-XX to 20XX-XX-XX**
+
 Eggscapism is a narrative puzzler where you need restore the power and call for help to escape an arctic laboratory from an ominous presence. Inspired by Legend of Grimrock 2. Made in Clockwork Engine.
+
+**Game Programmer Responsibilities**
+  *  aaaaaaaaaaaaaaaaaaaaaaa
+  *  bbbbbbbbbbbbbbbbbbbbbbb
+  *  ccccccccccccccccccccccc
+  *  ddddddddddddddddddddddd
 '''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:34+01:00

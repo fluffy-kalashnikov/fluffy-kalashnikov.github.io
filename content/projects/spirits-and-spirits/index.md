@@ -1,7 +1,15 @@
 +++
 title = 'Spirits & Spirits'
 summary = '''
+**20XX-XX-XX to 20XX-XX-XX**
+
 Spirits & Spirits is a cooperative liqour mixing game where you serve rowdy spirits that can't party enough. Inspired by Overcooked 2. Made in Clockwork Engine.
+
+**Game Programmer Responsibilities**
+  *  aaaaaaaaaaaaaaaaaaaaaaa
+  *  bbbbbbbbbbbbbbbbbbbbbbb
+  *  ccccccccccccccccccccccc
+  *  ddddddddddddddddddddddd
 '''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:47+01:00

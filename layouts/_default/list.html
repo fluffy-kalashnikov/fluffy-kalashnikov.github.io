@@ -1,9 +1,5 @@
 {{ define "main" }}
     {{ .Content }}  
     
-    <section class="summary-list">
-        {{ range .Pages }}
-            {{ .Render "summary" }}
-        {{ end }}
-    </section>
+    {{ partial "display-double.html" .Pages }}
 {{ end }}

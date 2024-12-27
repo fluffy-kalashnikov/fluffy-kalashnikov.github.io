@@ -1,16 +1,15 @@
 +++
 title = 'When You See Me Cry'
 summary = '''
+**20XX-XX-XX to 20XX-XX-XX**
+
 When You See Me Cry is a 3D adventure game where you combat silly archaeologists that stole artifacts and thus ruined the balance of the climate. Inspired by The Legend of Zelda: A Link to the Past. Made in The Game Engine.
 
-Game Programmer Responsibilities
+**Game Programmer Responsibilities**
   *  Tile system
-  *  Tile gameplay utilities
-  *  Debug drawing
   *  Collisions/intersections
   *  Entity movement respecting boundaries
-  *  Rooms
-  *  Doors
+  *  Rooms & doors
 '''
 tags = ['C++', 'The Game Engine', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:32+01:00

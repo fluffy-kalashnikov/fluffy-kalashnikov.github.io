@@ -1,7 +1,15 @@
 +++
 title = 'Mochi The Longest Tuesday'
 summary = '''
+**20XX-XX-XX to 20XX-XX-XX**
+
 Mochi The Longest Tuesday is a third person platformer where you as Mochi, a cat with a mech, has to search an alien planet for you beloved cardboard-box and deal with the slimy inhabitants. Inspired by Jak & Daxter. Made in Clockwork Engine.
+
+**Game Programmer Responsibilities**
+  *  aaaaaaaaaaaaaaaaaaaaaaa
+  *  bbbbbbbbbbbbbbbbbbbbbbb
+  *  ccccccccccccccccccccccc
+  *  ddddddddddddddddddddddd
 '''
 tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
 date = 2024-01-07T18:57:43+01:00

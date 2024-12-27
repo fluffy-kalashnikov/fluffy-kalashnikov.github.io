@@ -1,6 +1,6 @@
 <article>
     <a class="link-hidden" href="{{ .RelPermalink }}">
-        {{ range .Resources.Match "*thumbnail*" }}
+        {{ with .Resources.GetMatch "*thumbnail*" }}
             <img src="{{ .RelPermalink }}" alt="Thumbnail" loading="lazy" />
         {{ end }}
     </a>

@@ -2,18 +2,10 @@
     {{ .Content }}
 
     {{ with .Site.GetPage "/portfolio" }}
-        <section class="summary-list">
-            {{ range .Pages }}
-                {{ .Render "summary" }}
-            {{ end }}
-        </section>
+        {{ partial "display-double.html" .Pages }}
     {{ end }}
 
     {{ with .Site.GetPage "/projects" }}
-        <section class="summary-list">
-            {{ range .Pages }}
-                {{ .Render "summary" }}
-            {{ end }}
-        </section>
+        {{ partial "display-single.html" (first 3 .Pages) }}
     {{ end }}
 {{ end }}
