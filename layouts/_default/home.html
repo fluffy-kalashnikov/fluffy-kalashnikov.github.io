@@ -1,10 +1,10 @@
 {{ define "main" }}
-    {{ .Content }}
+    {{ partial "content.html" . }}
 
     {{ with .Site.GetPage "/portfolio" }}
         {{ partial "display-double.html" .Pages }}
     {{ end }}
-
+    <h2 id="home-project-title">Project highlights</h2>
     {{ with .Site.GetPage "/projects" }}
         {{ partial "display-single.html" (first 3 .Pages) }}
     {{ end }}

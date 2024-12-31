@@ -1,0 +1,8 @@
+{{ define "main" }}
+    <div id="about">
+        {{ partial "content.html" . }}
+        {{ with .Resources.Get "me-but-cool.webp" }}
+            <img src="{{ .RelPermalink }}">
+        {{ end }}
+    </div>
+{{ end }}

@@ -1,18 +1,21 @@
 <header>
-    <h2 id="title"><a class="link-hidden" href="{{ .Site.Home.RelPermalink }}">Ivar Sidorsson</a></h2>
-    <div id="menu-hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-        <input type="checkbox" id="menu-checkbox" name="menu-checkbox">
-    </div>
-    <nav id="menu-nav">
+    <a class="link-hidden" href="{{ .Site.Home.RelPermalink }}">
+        <img src="/fluffy-kalashnikov.png" width=48px height=48px>
+    </a>
+    <a class="link-hidden" href="{{ .Site.Home.RelPermalink }}">
+        <h2>Ivar Sidorsson</h2>
+    </a>
+    <nav>
         {{ range .Site.Menus.main.ByWeight }}
             {{ if ne .KeyName "Home"}}
-                <h3><a class="link-hidden" href="{{ .URL }}">{{ .KeyName }}</a></h3>
+            <h3><a class="link-hidden" href="{{ .URL }}">{{ .KeyName }}</a></h3>
             {{ end }}
         {{ end }}
     </nav>
-    <!-- invisible mobile navbar -->
-    <div id="menu-bg"></div>
+    <div id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+        <input type="checkbox">
+    </div>
 </header>
