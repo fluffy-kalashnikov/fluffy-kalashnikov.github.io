@@ -30,6 +30,7 @@ img {
     --neutral-100: #fafafa;
     --neutral-200: #cacaca;
     --neutral-400: #ccc;
+    --neutral-600: #707070;
     --neutral-800: #171717;
     --neutral-900: #101010;
 
@@ -217,6 +218,7 @@ footer {
     grid-area: footer;
 }
 footer section p {
+    color: var(--neutral-600);
     font-size: 0.7rem;
 }
 
