@@ -1,11 +1,5 @@
 {{ define "main" }}
-  <section>
-    <h1><a class="header1">{{ .Title }}</a></h1>
-    {{ .Content }}  
-  </section>
-  <section class="summary-list">
-    {{ range .Pages }}
-      {{ partial "summary.html" . }}
-    {{ end }}
-  </section>
+    {{ partial "content.html" . }}  
+    
+    {{ partial "display-double.html" .Pages }}
 {{ end }}

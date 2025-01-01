@@ -1,13 +1,19 @@
 +++
 title = 'Your Rabbit Died'
 summary = '''
-_Your Rabbit Died_ is a puzzle game built for mobile. It was the second game project 
-at [The Game Assembly](https://thegameassembly.com) and was made in Unity as well.
+**20XX-XX-XX to 20XX-XX-XX**
+
+Your Rabbit Died is a game where you need warp between dimensions to outsmart your enemies and solve puzzles. Inspired by Lara Croft Go. Made in Unity for mobile devices.
+
+**Game Programmer Responsibilities**
+  *  Dialogue
+  *  Grid system/tooling
+  *  Sound system/playback
+  *  Mobile support
 '''
 tags = ['C-sharp', 'Unity', 'Perforce', 'Taiga']
 date = 2024-01-07T18:57:27+01:00
 draft = false
-screenshot = '/projects/your-rabbit-died/overworld.webp'
 credits = [
     'Alfred Nilsson',
     'Anton Johansson',
@@ -25,7 +31,7 @@ credits = [
 ]
 +++
 
-_Your Rabbit Died_ is a puzzle game built for mobile. It was the second game project 
+Your Rabbit Died is a puzzle game built for mobile. It was the second game project 
 at [The Game Assembly](https://thegameassembly.com) and was made in Unity as well.
 
 I was responsible for

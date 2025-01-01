@@ -1,0 +1,8 @@
+{{ define "main" }}
+    <div id="about">
+        {{ partial "content.html" . }}
+        {{ with .Resources.Get "ivar-sidorsson.webp" }}
+            <img src="{{ .RelPermalink }}">
+        {{ end }}
+    </div>
+{{ end }}

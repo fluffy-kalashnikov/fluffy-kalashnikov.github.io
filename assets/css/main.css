@@ -3,173 +3,364 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 * {
-  margin: 0;
-  padding: 0;
-  overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
 }
 img, picture, video, canvas, svg {
-  display: block;
-  max-width: 100%;
+    display: block;
+    max-width: 100%;
 }
 input, button, textarea, select {
-  font: inherit;
+    font: inherit;
+}
+img {
+    object-fit: scale-down;
 }
 
 
 
-/*
-TODO
-  - [x] formalize padding
-  - [x] color links
-  - [ ] add tag support
-*/
 
 
-:root {
-  --color-red: #cc241d;
-  --color-red-light: #fb4934;
-  --color-green: #98971a;
-  --color-green-light: #b8bb26;
-  --color-yellow: #d89921;
-  --color-yellow-light: #fabd2f;
-  --color-blue: #458588;
-  --color-blue-light: #83a598;
-  --color-purple: #b16286;
-  --color-purple-light: #d3869b;
-  --color-aqua: #689d6a;
-  --color-aqua-light: #8ec07c;
-  --color-bg: #282828;
-  --color-fg: #ebdbb2;
 
-  --border-radius: 10px;
-  --padd1: 1.5rem;
-  --padd2: calc(var(--padd1) * 2);
+:root {    
+    --neutral-100: #fafafa;
+    --neutral-200: #cacaca;
+    --neutral-400: #ccc;
+    --neutral-600: #707070;
+    --neutral-800: #171717;
+    --neutral-900: #101010;
+
+    --pad1: 0.75rem;
+    --pad2: 1.5rem;
+    --pad3: 3rem;
+    color: var(--neutral-400);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.75;
 }
 
-@font-face {
-  font-family: 'JetBrains Mono';
-  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
+
+
 
 
 html {
-  background-color: var(--color-bg);
-  box-sizing: border-box;
-  color: var(--color-fg);
-  font-family: 'JetBrains Mono', 'monospace';
-  line-height: 1.9;
-  min-height: 100vh;
-  overflow: scroll;
+    scrollbar-gutter: stable;
 }
 
 body {
-  display: grid;
-  gap: var(--padd2);
-  margin: var(--padd2) auto;
-  max-width: 1044px;
-  width: calc(100% - var(--padd2));
-  --webkit-font-smoothing: antialiased;
+    max-width: 1250px;
+    min-height: 100vh;
+    background-color: var(--neutral-900);
+    display: grid;
+    gap: var(--pad1);
+    grid-template-columns: var(--pad2) 1fr var(--pad2);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header header"
+        ". main ."
+        "footer footer footer";
+    padding: var(--pad1);
+    margin: auto auto;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        grid-template-areas: 
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
 }
 
 main {
-  display: grid;
-  gap: var(--padd2);
+    grid-area: main;
+    display: flex;
+    flex: 1; /* todo: figure out of needed on other elements as well */
+    flex-direction: column;
 }
 
-a {
-  color: var(--color-yellow);
+hr {
+    color: var(--neutral-400);
 }
 
-ul {
-  margin-left: calc(var(--padd1) * 2.5);
+
+
+/** basic formatting **/
+h1, h2, h3, h4, h5, h6, a {
+    color: var(--neutral-100)
 }
 
 h1 {
-  font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 1.875rem;
+    font-size: 1.875rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+    font-size: 1.35rem;
+}
+
+ul {
+    margin-left: calc(var(--pad2) * 2.5);
 }
 
 img {
-  object-fit: scale-down;
-  border-radius: var(--border-radius);
-  box-shadow: 2px 2px 5px #000000;
+    border-radius: var(--pad1);
 }
 
-#title {
-  display: grid;
-  justify-content: center;
-}
-#title h1 {
-  text-align: center;
+
+
+
+
+/** header **/
+header {
+    display: grid;
+    grid-area: header;
+    grid-template-columns: auto auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "img title nav"
+    ". . .";
+    justify-content: start;
+    align-items: baseline;
 }
 
-.header1 {
-  color: var(--color-yellow-light);
-  text-decoration: none;
-}
-.header2 {
-  color: var(--color-yellow);
-  /* text-decoration: none; */
+header a:has(img) {
+    align-self: center;
+    grid-area: img;
 }
 
-.article  {
-  display: grid;
-  gap: var(--padd1);
+header a:has(h2) {
+    grid-area: title;
 }
 
-.summary-list {
-  display: grid;
-  gap: var(--padd2);
-}
-.summary {
-  display: grid;
-  grid-template-columns: 512px 512px;
-  grid-template-rows: auto;
-  grid-template-areas: 
-    "header tags"
-    "description screenshot";
-  justify-content: space-between;
-}
-.summary h2 {
-  grid-area: header;
-}
-.summary section {
-  align-self: end;
-  grid-area: tags;
-}
-.summary p {
-  grid-area: description;
-}
-.summary img {
-  grid-area: screenshot;
+header nav {
+    display: flex;
+    column-gap: var(--pad1);
+    grid-area: nav;
 }
 
-@media screen and (max-width: 1044px) {
-  .summary {
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: 
-      "header"
-      "tags"
-      "description"
-      "screenshot";
-  }
+#menu-btn {
+    grid-area: btn;
+    justify-self: end;
+    position: relative;
 }
 
+#menu-btn input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    user-select: none;
+    opacity: 0.01;
+    z-index: 30;
+}
+
+
+#menu-btn span { /* hamburger styling */
+    background-color: var(--neutral-100);
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+}
+
+/** desktop **/
+@media screen and (min-width: 700px) {
+    header {
+        grid-template-areas: "img title nav"; 
+    }
+    header nav {
+        justify-self: end;
+    }
+    header #menu-btn {
+        display: none;
+    }
+}
+/** mobile **/
+@media screen and (max-width: 700px) {
+    header {
+        grid-template-areas: 
+            "img title btn"
+            "nav nav nav"; 
+    }
+    header nav {
+        display: none;
+    }
+    header:has(input:checked) nav {
+        display: flex;
+        flex-direction: column;
+    }
+    header #menu-btn {
+        display: block;
+    }
+    body:has(header input:checked) main {
+        display: none;
+    }
+}
+
+
+
+
+
+/** footer **/
 footer {
-  display: grid;
-  gap: var(--padd1);
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--pad1);
+    grid-area: footer;
+}
+footer section p {
+    color: var(--neutral-600);
+    font-size: 0.7rem;
+}
+
+
+
+
+
+/** components **/
+.link-hidden {
+    text-decoration: none;
+}
+
+.display-single {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pad3);
+}
+@media screen and (max-width: 700px) {
+    .display-single {
+        gap: var(--pad1);
+    }
+}
+
+.display-double {
+    display: grid;
+    gap: var(--pad1);
+    grid-template-columns: auto auto;
+    grid-auto-columns: auto auto;
+    grid-auto-flow: row;
+}
+@media screen and (max-width: 700px) {
+    .display-double {
+        grid-template-columns: auto;
+        grid-auto-columns: auto;
+        grid-auto-flow: row;
+    }
+}
+
+.content {
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
+.content > p {
+    margin: 20px 0;
+}
+
+.content > p:first-child {
+    margin-top: 0;
+}
+
+.content > p:last-child {
+    margin-bottom: 0;
+}
+
+
+
+
+/** about **/
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: var(--pad1);
+}
+@media screen and (max-width: 700px) {
+    #about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/** home **/
+#home-project-title {
+    margin: var(--pad3) auto var(--pad2) auto;
+    color: var(--neutral-400);
+    font-weight: 300;
+}
+
+
+/** summary **/
+.project-summary {
+    display: grid;
+    column-gap: var(--pad2);
+    grid-template-columns: 1fr 1fr;
+    gap: var(--pad1);
+    justify-content: space-between;
+}
+
+.project-summary section {
+    background-color: var(--neutral-800);
+    border-radius: var(--pad1);
+    grid-area: content;
+    padding: var(--pad1);
+}
+
+.project-summary a:nth-of-type(1) {
+    grid-area: thumbnail;
+}
+
+.project-summary a:nth-of-type(2) {
+    grid-area: screenshot1;
+}
+
+.project-summary a:nth-of-type(3) {
+    grid-area: screenshot2;
+}
+
+
+/*** TODO: hardcode override padding of double-sided view when single-sided */
+
+
+
+/* desktop */
+@media screen and (min-width: 700px) {
+    .project-summary {
+        grid-template-areas: 
+            "content screenshot1"
+            "content screenshot2";
+    }
+    .project-summary:nth-child(odd) {
+        grid-template-areas: 
+            "screenshot1 content"
+            "screenshot2 content";
+    }
+
+    .project-summary > a:first-of-type {
+        display: none;
+    }
+}
+/* mobile */
+@media screen and (max-width: 700px) {
+    .project-summary {
+        grid-template-areas: 
+            "thumbnail thumbnail"
+            "thumbnail thumbnail";
+    }
+
+    .project-summary > *:first-child {
+        display: block;
+    }
+    .project-summary > *:not(:first-child) {
+        display: none;
+    }
 }

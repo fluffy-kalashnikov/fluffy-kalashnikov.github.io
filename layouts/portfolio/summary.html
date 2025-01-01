@@ -1,0 +1,7 @@
+<article>
+    <a class="link-hidden" href="{{ .RelPermalink }}">
+        {{ with .Resources.GetMatch "*thumbnail*" }}
+            <img src="{{ .RelPermalink }}" alt="Thumbnail" loading="lazy" />
+        {{ end }}
+    </a>
+</article>

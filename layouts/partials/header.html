@@ -1,2 +1,21 @@
 <header>
+    <a class="link-hidden" href="{{ .Site.Home.RelPermalink }}">
+        <img src="/fluffy-kalashnikov.png" width=48px height=48px>
+    </a>
+    <a class="link-hidden" href="{{ .Site.Home.RelPermalink }}">
+        <h2>Ivar Sidorsson</h2>
+    </a>
+    <nav>
+        {{ range .Site.Menus.main.ByWeight }}
+            {{ if ne .KeyName "Home"}}
+            <h3><a class="link-hidden" href="{{ .URL }}">{{ .KeyName }}</a></h3>
+            {{ end }}
+        {{ end }}
+    </nav>
+    <div id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+        <input type="checkbox">
+    </div>
 </header>
