@@ -66,10 +66,19 @@ body {
     margin: auto auto;
 }
 
+@media screen and (max-width: 700px) {
+    body {
+        grid-template-areas: 
+            "header header header"
+            "main main main"
+            "footer footer footer";
+    }
+}
+
 main {
     grid-area: main;
     display: flex;
-    flex: 1;
+    flex: 1; /* todo: figure out of needed on other elements as well */
     flex-direction: column;
 }
 
@@ -221,7 +230,8 @@ footer section p {
 }
 
 .display-single {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--pad3);
 }
 
@@ -231,6 +241,13 @@ footer section p {
     grid-template-columns: auto auto;
     grid-auto-columns: auto auto;
     grid-auto-flow: row;
+}
+@media screen and (max-width: 700px) {
+    .display-double {
+        grid-template-columns: auto;
+        grid-auto-columns: auto;
+        grid-auto-flow: row;
+    }
 }
 
 .content {
@@ -249,12 +266,16 @@ footer section p {
 /** about **/
 #about {
     display: grid;
-    grid-auto-columns: 1fr;
-    grid-auto-flow: column;
-    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     gap: var(--pad1);
 }
-
+@media screen and (max-width: 700px) {
+    #about {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
 
 /** home **/
 #home-project-title {
@@ -268,9 +289,6 @@ footer section p {
 .project-summary {
     display: grid;
     column-gap: var(--pad2);
-    grid-template-areas: 
-        "content screenshot1"
-        "content screenshot2";
     grid-template-columns: 1fr 1fr;
     gap: var(--pad1);
     justify-content: space-between;
@@ -279,20 +297,56 @@ footer section p {
 .project-summary section {
     background-color: var(--neutral-800);
     border-radius: var(--pad1);
-    padding: var(--pad1);
     grid-area: content;
+    padding: var(--pad1);
 }
 
 .project-summary a:nth-of-type(1) {
-    grid-area: screenshot1;
+    grid-area: thumbnail;
 }
 
 .project-summary a:nth-of-type(2) {
+    grid-area: screenshot1;
+}
+
+.project-summary a:nth-of-type(3) {
     grid-area: screenshot2;
 }
 
-.project-summary:nth-child(odd) {
-    grid-template-areas: 
-        "screenshot1 content"
-        "screenshot2 content";
+
+/*** TODO: hardcode override padding of double-sided view when single-sided */
+
+
+
+/* desktop */
+@media screen and (min-width: 700px) {
+    .project-summary {
+        grid-template-areas: 
+            "content screenshot1"
+            "content screenshot2";
+    }
+    .project-summary:nth-child(odd) {
+        grid-template-areas: 
+            "screenshot1 content"
+            "screenshot2 content";
+    }
+
+    .project-summary > a:first-of-type {
+        display: none;
+    }
+}
+/* mobile */
+@media screen and (max-width: 700px) {
+    .project-summary {
+        grid-template-areas: 
+            "thumbnail thumbnail"
+            "thumbnail thumbnail";
+    }
+
+    .project-summary > *:first-child {
+        display: block;
+    }
+    .project-summary > *:not(:first-child) {
+        display: none;
+    }
 }

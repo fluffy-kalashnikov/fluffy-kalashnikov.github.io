@@ -1,7 +1,7 @@
 {{ define "main" }}
     <div id="about">
         {{ partial "content.html" . }}
-        {{ with .Resources.Get "me-but-cool.webp" }}
+        {{ with .Resources.Get "ivar-sidorsson.webp" }}
             <img src="{{ .RelPermalink }}">
         {{ end }}
     </div>
