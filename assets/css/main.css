@@ -30,7 +30,7 @@ img {
     --neutral-100: #fafafa;
     --neutral-200: #cacaca;
     --neutral-400: #ccc;
-    --neutral-600: #707070;
+    --neutral-600: #b3b3b3;
     --neutral-800: #171717;
     --neutral-900: #101010;
 
@@ -120,6 +120,8 @@ img {
 
 /** header **/
 header {
+    container-type: inline-size;
+    container-name: header;
     display: grid;
     grid-area: header;
     grid-template-columns: auto auto 1fr;
@@ -128,17 +130,50 @@ header {
     "img title nav"
     ". . .";
     justify-content: start;
-    align-items: baseline;
+    align-items: center;
 }
 
-header a:has(img) {
-    align-self: center;
-    grid-area: img;
-}
-
-header a:has(h2) {
+header a {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "icon name-surname"
+    "icon position";
     grid-area: title;
 }
+
+header a img {
+    align-self: center;
+    grid-area: icon;
+}
+
+header a h2 {
+    font-size: 1.875rem;
+    grid-area: name-surname;
+    line-height: 1.8rem;
+    white-space: nowrap;
+}
+
+header a p {
+    color: var(--neutral-600);
+    font-size: 0.75rem;
+    grid-area: position;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 800px) {
+    header a h2 {
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+    header a p {
+        font-size: 0.6rem;
+    }
+}
+
+
+
 
 header nav {
     display: flex;
