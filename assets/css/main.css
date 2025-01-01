@@ -236,6 +236,11 @@ footer section p {
     flex-direction: column;
     gap: var(--pad3);
 }
+@media screen and (max-width: 700px) {
+    .display-single {
+        gap: var(--pad1);
+    }
+}
 
 .display-double {
     display: grid;
@@ -257,10 +262,17 @@ footer section p {
     margin: 0 auto;
 }
 
-.content > p:not(:first-child):not(:last-child) {
+.content > p {
     margin: 20px 0;
 }
 
+.content > p:first-child {
+    margin-top: 0;
+}
+
+.content > p:last-child {
+    margin-bottom: 0;
+}
 
 
 
