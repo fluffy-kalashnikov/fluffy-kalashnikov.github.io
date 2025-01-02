@@ -1,5 +1,7 @@
 {{ define "main" }}
-    {{ partial "content.html" . }}
+    <section class="content">
+        {{ .Content }}
+    </section>
 
     {{ with .Site.GetPage "/portfolio" }}
         {{ partial "display-double.html" .Pages }}

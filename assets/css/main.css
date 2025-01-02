@@ -30,7 +30,7 @@ img {
     --neutral-100: #fafafa;
     --neutral-200: #cacaca;
     --neutral-400: #ccc;
-    --neutral-600: #b3b3b3;
+    --neutral-600: #777;
     --neutral-800: #171717;
     --neutral-900: #101010;
 
@@ -94,6 +94,10 @@ h1, h2, h3, h4, h5, h6, a {
     color: var(--neutral-100)
 }
 
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1;
+}
+
 h1 {
     font-size: 2.5rem;
 }
@@ -106,9 +110,6 @@ h3 {
     font-size: 1.35rem;
 }
 
-ul {
-    margin-left: calc(var(--pad2) * 2.5);
-}
 
 img {
     border-radius: var(--pad1);
@@ -156,7 +157,7 @@ header a h2 {
 }
 
 header a p {
-    color: var(--neutral-600);
+    color: var(--neutral-400);
     font-size: 0.75rem;
     grid-area: position;
     white-space: nowrap;
@@ -292,6 +293,9 @@ footer section p {
     }
 }
 
+
+
+/** content **/
 .content {
     max-width: 80ch;
     margin: 0 auto;
@@ -300,8 +304,26 @@ footer section p {
 .content > p {
     margin: 20px 0;
 }
+.content > ul {
+    margin: 20px 0 20px var(--pad2);
+}
 
-.content > p:first-child {
+.content > h1,
+.content > h2,
+.content > h3 {
+    margin: 10px 0;
+}
+
+ul {
+    margin-left: var(--pad2);
+}
+.content > p:first-child,
+.content > h1 + p,
+.content > h2 + p,
+.content > h3 + p,
+.content > h1 + ul,
+.content > h2 + ul,
+.content > h3 + ul {
     margin-top: 0;
 }
 
@@ -316,15 +338,50 @@ footer section p {
 #about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "content portrait"
+        "legal legal";
     gap: var(--pad1);
 }
+
+#about img {
+    grid-area: portrait;
+}
+
+#about section {
+    grid-area: content;
+}
+
+#about > p {
+    color: var(--neutral-600);
+    grid-area: legal;
+}
+
+#about section h2:last-of-type {
+    line-height: 1;
+}
+
+#about section ul {
+    list-style: none;
+}
+
 @media screen and (max-width: 700px) {
     #about {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "portrait portrait"
+            "content content"
+            "legal legal";
     }
 }
+
+
+
+
+
+
+
+
 
 /** home **/
 #home-project-title {
