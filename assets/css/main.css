@@ -24,15 +24,18 @@ img {
 
 
 
-
-
 :root {    
     --neutral-100: #fafafa;
     --neutral-200: #cacaca;
     --neutral-400: #ccc;
+    --neutral-500: #b3b3b3;
     --neutral-600: #777;
     --neutral-800: #171717;
     --neutral-900: #101010;
+
+    --primary-200: #fe9b77;
+    --primary-400: #ff6c36;
+
 
     --pad1: 0.75rem;
     --pad2: 1.5rem;
@@ -87,14 +90,52 @@ hr {
     color: var(--neutral-400);
 }
 
+pre:has(code) {
+    padding: var(--pad1);
+    border-radius: var(--pad1);
+}
+
 
 
 /** basic formatting **/
-h1, h2, h3, h4, h5, h6, a {
-    color: var(--neutral-100)
+a {
+    color: var(--neutral-100);
+    text-decoration: none;
 }
 
+a:not(header > a):hover {
+    text-decoration: underline;
+}
+
+/* 
+HOVER UNDERLINE EXPERIMENT
+
+a::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    border-radius: 1px;
+    background-color: currentColor;
+    transition: width 0.2s;
+}
+
+a:hover:after {
+    width: 100%;
+    left: 0;
+} */
+
+
+
+/* 
+a:hover {
+    text-decoration: underline;
+} */
+
 h1, h2, h3, h4, h5, h6 {
+    color: var(--neutral-100);
     line-height: 1;
 }
 
@@ -110,11 +151,9 @@ h3 {
     font-size: 1.35rem;
 }
 
-
 img {
     border-radius: var(--pad1);
 }
-
 
 
 
@@ -141,7 +180,6 @@ header a {
     grid-template-areas: 
     "icon name-surname"
     "icon position";
-    grid-area: title;
 }
 
 header a img {
@@ -180,6 +218,18 @@ header nav {
     display: flex;
     column-gap: var(--pad1);
     grid-area: nav;
+}
+
+.active {
+    text-decoration: underline;
+    text-decoration-color: var(--primary-400);
+}
+.active:hover {
+    text-decoration-color: var(--primary-400);
+}
+
+header nav h3 a:not(.active) {
+    color: var(--neutral-500);
 }
 
 #menu-btn {
@@ -263,10 +313,6 @@ footer section p {
 
 
 /** components **/
-.link-hidden {
-    text-decoration: none;
-}
-
 .display-single {
     display: flex;
     flex-direction: column;
@@ -331,6 +377,13 @@ ul {
     margin-bottom: 0;
 }
 
+.content p > a,
+.content li > a {
+    color: #178a9c;
+    font-weight: 600;
+}
+
+
 
 
 
@@ -386,8 +439,7 @@ ul {
 /** home **/
 #home-project-title {
     margin: var(--pad3) auto var(--pad2) auto;
-    color: var(--neutral-400);
-    font-weight: 300;
+    color: var(--neutral-500);
 }
 
 

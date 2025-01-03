@@ -5,9 +5,14 @@
         <p>Technical Artist + Game Programmer</p>
     </a>
     <nav>
+        {{ $currentPage := . }}
         {{ range .Site.Menus.main.ByWeight }}
-            {{ if ne .KeyName "Home"}}
-            <h3><a class="link-hidden" href="{{ .URL }}">{{ .KeyName }}</a></h3>
+            {{ if ne .URL "/" }}
+                {{ if $currentPage.IsMenuCurrent .Menu . }}
+                    <h3><a class="active" aria-current="page" href="{{ .URL }}">{{ .KeyName }}</a></h3>
+                {{ else }}
+                    <h3><a href="{{ .URL }}">{{ .KeyName }}</a></h3>
+                {{ end }}
             {{ end }}
         {{ end }}
     </nav>

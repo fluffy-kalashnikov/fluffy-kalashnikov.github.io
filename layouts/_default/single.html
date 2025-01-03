@@ -1,4 +1,10 @@
 {{ define "main" }}
+    {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}">Prev</a>
+    {{ end }}
+    {{ with .NextInSection }}
+        <a href="{{ .RelPermalink }}">Next</a>
+    {{ end }}
     <section class="content">
         {{ .Content }}
     </section>
