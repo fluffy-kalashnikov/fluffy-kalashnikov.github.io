@@ -66,7 +66,7 @@ body {
     margin: auto auto;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
     body {
         grid-template-areas: 
             "header header header"
@@ -103,32 +103,9 @@ a:not(header > a):hover {
     text-decoration: underline;
 }
 
-/* 
-HOVER UNDERLINE EXPERIMENT
-
-a::after {
-    content: '';
-    position: absolute;
-    height: 2px;
-    right: 0;
-    bottom: -3px;
-    width: 0;
-    border-radius: 1px;
-    background-color: currentColor;
-    transition: width 0.2s;
-}
-
-a:hover:after {
-    width: 100%;
-    left: 0;
-} */
 
 
 
-/* 
-a:hover {
-    text-decoration: underline;
-} */
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--neutral-100);
@@ -156,21 +133,17 @@ img {
 
 /** header **/
 header {
-    container-type: inline-size;
-    container-name: header;
-    display: grid;
-    grid-area: header;
-    grid-template-columns: auto auto 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-    "img title nav"
-    ". . .";
-    justify-content: start;
     align-items: center;
+    container-name: header;
+    container-type: inline-size;
+    display: flex;
+    grid-area: header;
+    justify-content: space-between;
 }
 
-header a {
+header > a {
     display: grid;
+    grid-area: title;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto auto;
     grid-template-areas: 
@@ -178,21 +151,21 @@ header a {
     "icon position";
 }
 
-header a img {
+header > a > img {
     align-self: center;
     width: 3.2rem;
     height: 3.2rem;
     grid-area: icon;
 }
 
-header a h2 {
+header > a > h2 {
     font-size: 1.875rem;
     grid-area: name-surname;
     line-height: 1.8rem;
     white-space: nowrap;
 }
 
-header a p {
+header > a > p {
     color: var(--neutral-400);
     font-size: 0.75rem;
     grid-area: position;
@@ -203,77 +176,96 @@ header a p {
 
 
 
-header nav {
+header > nav {
     display: flex;
     column-gap: var(--pad1);
     grid-area: nav;
 }
 
-.active {
+.nav-active {
     text-decoration: underline;
 }
 
-
-header nav h3 a:not(.active) {
+.nav-inactive {
     color: var(--neutral-500);
 }
 
-#menu-btn {
+
+
+
+
+
+#popover-nav {
+    align-items: center;
+    background: none;
+    border: none;
+    justify-content: center;
+    overflow: hidden;
+    margin: 8rem auto auto auto;
+}
+
+#popover-nav:popover-open {
+    display: grid;
+}
+
+#popover-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--pad1);
+    grid-area: nav;
+    width: fit-content;
+    height: fit-content;
+    list-style: none;
+}
+
+body:has(#popover-nav:popover-open) main,
+body:has(#popover-nav:popover-open) footer {
+    display: none
+}
+
+
+
+#hamburger-btn {
+    aspect-ratio: 1.5;
+    display: grid;
+    gap: 0.3rem;
     grid-area: btn;
-    justify-self: end;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     position: relative;
+    width: 2rem;
+    z-index: 1;
 }
 
-#menu-btn input {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    user-select: none;
-    opacity: 0.01;
-    z-index: 30;
-}
-
-
-#menu-btn span { /* hamburger styling */
+#hamburger-btn > span {
     background-color: var(--neutral-100);
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
+    position: relative;
+    z-index: 2;
+}
+
+#popover-btn {
+    border: 0;
+    opacity: 0;
+    inset: 0;
+    position: absolute;
+    z-index: 3;
 }
 
 /** desktop **/
-@media screen and (min-width: 700px) {
-    header {
-        grid-template-areas: "img title nav"; 
+@media screen and (min-width: 500px) {
+    #hamburger-btn {
+        display: none;
     }
     header nav {
-        justify-self: end;
-    }
-    header #menu-btn {
-        display: none;
+        display: flex;
     }
 }
 /** mobile **/
-@media screen and (max-width: 700px) {
-    header {
-        grid-template-areas: 
-            "img title btn"
-            "nav nav nav"; 
+@media screen and (max-width: 500px) {
+    #hamburger-btn {
+        display: grid;
     }
     header nav {
-        display: none;
-    }
-    header:has(input:checked) nav {
-        display: flex;
-        flex-direction: column;
-    }
-    header #menu-btn {
-        display: block;
-    }
-    body:has(header input:checked) main {
         display: none;
     }
 }
@@ -314,7 +306,7 @@ footer #footer-next-btn {
     flex-direction: column;
     gap: var(--pad3);
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
     .display-single {
         gap: var(--pad1);
     }
@@ -327,7 +319,7 @@ footer #footer-next-btn {
     grid-auto-columns: auto auto;
     grid-auto-flow: row;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
     .display-double {
         grid-template-columns: auto;
         grid-auto-columns: auto;
@@ -351,9 +343,6 @@ footer #footer-next-btn {
     margin: 10px 0;
 }
 
-ul {
-    margin-left: var(--pad2);
-}
 .content > p:first-child,
 .content > h1 + p,
 .content > h2 + p,
@@ -427,7 +416,7 @@ ul {
     list-style: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
     #about {
         grid-template-areas:
             "portrait portrait"
@@ -485,7 +474,7 @@ ul {
 
 
 /* desktop */
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 500px) {
     .project-summary {
         grid-template-areas: 
             "content screenshot1"
@@ -502,7 +491,7 @@ ul {
     }
 }
 /* mobile */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
     .project-summary {
         grid-template-areas: 
             "thumbnail thumbnail"

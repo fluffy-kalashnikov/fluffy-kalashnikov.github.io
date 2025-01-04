@@ -9,17 +9,29 @@
         {{ range .Site.Menus.main.ByWeight }}
             {{ if ne .URL "/" }}
                 {{ if $currentPage.IsMenuCurrent .Menu . }}
-                    <h3><a class="active" aria-current="page" href="{{ .URL }}">{{ .KeyName }}</a></h3>
+                    <h3><a class="nav-active" aria-current="page" href="{{ .URL }}">{{ .KeyName }}</a></h3>
                 {{ else }}
-                    <h3><a href="{{ .URL }}">{{ .KeyName }}</a></h3>
+                    <h3><a class="nav-inactive" href="{{ .URL }}">{{ .KeyName }}</a></h3>
                 {{ end }}
             {{ end }}
         {{ end }}
     </nav>
-    <div id="menu-btn">
+
+    <div id="hamburger-btn">
         <span></span>
         <span></span>
         <span></span>
-        <input type="checkbox">
+        <button popovertarget="popover-nav" id="popover-btn"></button>
+    </div>
+    <div popover="manual" id="popover-nav">
+        <ul>
+            {{ range .Site.Menus.main.ByWeight }}
+                {{ if $currentPage.IsMenuCurrent .Menu . }}
+                    <li><h2><a class="nav-active" aria-current="page" href="{{ .URL }}">{{ .KeyName }}</a></h2></li>
+                {{ else }}
+                    <li><h2><a class="nav-inactive" href="{{ .URL }}">{{ .KeyName }}</a></h2></li>
+                {{ end }}
+            {{ end }}
+        </ul>
     </div>
 </header>
