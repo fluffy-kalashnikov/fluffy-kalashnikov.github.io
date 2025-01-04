@@ -1,5 +1,7 @@
 +++
 title = 'Eggscapism'
+date = 2024-01-07T18:57:34+01:00
+draft = false
 summary = '''
 **20XX-XX-XX to 20XX-XX-XX**
 
@@ -11,29 +13,6 @@ Eggscapism is a narrative puzzler where you need restore the power and call for 
   *  ccccccccccccccccccccccc
   *  ddddddddddddddddddddddd
 '''
-tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
-date = 2024-01-07T18:57:34+01:00
-draft = false
-credits = [
-    'Ameer Khalid',
-    'Cecilia Ålander',
-    'David Lindberg',
-    'Ethan Uong',
-    'Hedvig Kronnäs',
-    'Ivar Sidorsson',
-    'Jakob Pihl',
-    'Jenny Hellström',
-    'Jonathan Disenfeldt',
-    'Linnéa Sjöstrand',
-    'Luna Barane',
-    'Olaus Klaveness',
-    'Sofie Axelsson',
-    'Siri Forsell',
-    'Urban Gustavsson',
-    'Viktor Pennonen',
-    'Vincen Nguyen',
-    'Youcef Lounes',
-]
 +++
 
 Eggscapism is a narrative puzzler roughly 2 minutes in length. It was the fifth project 

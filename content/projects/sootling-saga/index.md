@@ -1,5 +1,7 @@
 +++
 title = 'Sootling Saga'
+date = 2024-01-07T18:57:04+01:00
+draft = false
 summary = '''
 **20XX-XX-XX to 20XX-XX-XX**
 
@@ -11,25 +13,6 @@ Sootling Saga is a sidescrolling platformer where you need to run, jump and dash
   *  UI
   *  Score/pickups
 '''
-tags = ['C-sharp', 'Unity', 'Perforce', 'Taiga']
-date = 2024-01-07T18:57:04+01:00
-draft = false
-credits = [
-    'Elden Bähni',
-    'Elisabet Sarsenov',
-    'Elvira Aldén',
-    'Hedvig Kronnäs',
-    'Ivar Sidorsson',
-    'Jakob Persson',
-    'Jeff Persson',
-    'Jesse Emmoth',
-    'Joakim Nilsen',
-    'Johan Melkersson',
-    'Johan Rubertsson',
-    'Jonas Gustafsson',
-    'Lovisa Wirtén',
-    'Nanna Lundin',
-]
 +++
 
 Sootling Saga is a sidescrolling platformer. It was the first game project

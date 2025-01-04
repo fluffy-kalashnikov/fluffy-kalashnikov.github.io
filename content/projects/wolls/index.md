@@ -1,5 +1,7 @@
 +++
 title = 'Wolls'
+date = 2024-01-07T18:57:30+01:00
+draft = false
 summary = '''
 **20XX-XX-XX to 20XX-XX-XX**
 
@@ -11,23 +13,6 @@ Wolls is a 2D platformer where you as a Huldra fight and bounce on trolls, fairi
   *  Physics
   *  UI
 '''
-tags = ['C++', 'The Game Engine', 'Perforce', 'Taiga']
-date = 2024-01-07T18:57:30+01:00
-draft = false
-credits = [
-    'Elvira Aldén',
-    'Fredrik Christensen',
-    'Hanna Hinderson',
-    'Ivar Sidorsson',
-    'Jakob Persson',
-    'Jesse Emmoth',
-    'Luna Barane',
-    'Måns Hedlund',
-    'Nanna Lundin',
-    'Philip Wolff',
-    'Sandra Sandal',
-    'Youcef Lounes',
-]
 +++
 
 Wolls is a 2D platformer. It was our third game project and the first one made in 

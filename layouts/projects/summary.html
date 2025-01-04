@@ -1,15 +1,18 @@
 <article class="project-summary">
-    <a href="{{ .RelPermalink }}">
+    {{ $permalink := .RelPermalink }}
+
+    <a href="{{ $permalink }}">
         {{ with .Resources.GetMatch "*thumbnail*" }}
             <img src="{{ .RelPermalink }}" alt="Thumbnail" loading="lazy" />
         {{ end }}
     </a>
     <section class="content">
-        <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+        <h2><a href="{{ $permalink }}">{{ .LinkTitle }}</a></h2>
         {{ .Summary }}
     </section>
     {{ range first 2 (.Resources.Match "*screenshot*") }}
-    <a href="{{ .RelPermalink }}">
+
+    <a href="{{ $permalink }}">
         <img src="{{ .RelPermalink }}" alt="Screenshot from {{ .Title }}" loading="lazy" />
     </a>
     {{ end }}

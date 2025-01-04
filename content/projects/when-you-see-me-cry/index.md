@@ -1,5 +1,7 @@
 +++
 title = 'When You See Me Cry'
+date = 2024-01-07T18:57:32+01:00
+draft = false
 summary = '''
 **20XX-XX-XX to 20XX-XX-XX**
 
@@ -11,29 +13,9 @@ When You See Me Cry is a 3D adventure game where you combat silly archaeologists
   *  Entity movement respecting boundaries
   *  Rooms & doors
 '''
-tags = ['C++', 'The Game Engine', 'Perforce', 'Taiga']
-date = 2024-01-07T18:57:32+01:00
-draft = false
-credits = [
-    'Alexander Ekengren',
-    'Clara-Cecilia Ingner',
-    'David Scholander',
-    'Emil André',
-    'Fredrik Christensen',
-    'Ivar Sidorsson',
-    'Joar Andersén',
-    'Lukas Frej',
-    'Måns Hedlund',
-    'Omar Abdallah',
-    'Ossian Sarén Gran',
-    'Oliver Mathrani',
-    'Thomas Holtz',
-    'Viktor Pennonen',
-    'Ylva Oknelid',
-]
 +++
 
-_When You See Me Cry_ is a 3D adventure game heavily inspired by 
+When You See Me Cry is a 3D adventure game heavily inspired by 
 [The Legend of Zelda: A Link to the Past](https://en.wikipedia.org/wiki/The_Legend_of_Zelda:_A_Link_to_the_Past). 
 It was my forth game project at [The Game Assembly](https://thegameassembly.com)
 and was the last project made using The Game Engine.

@@ -1,5 +1,7 @@
 +++
 title = 'Your Rabbit Died'
+date = 2024-01-07T18:57:27+01:00
+draft = false
 summary = '''
 **20XX-XX-XX to 20XX-XX-XX**
 
@@ -11,24 +13,6 @@ Your Rabbit Died is a game where you need warp between dimensions to outsmart yo
   *  Sound system/playback
   *  Mobile support
 '''
-tags = ['C-sharp', 'Unity', 'Perforce', 'Taiga']
-date = 2024-01-07T18:57:27+01:00
-draft = false
-credits = [
-    'Alfred Nilsson',
-    'Anton Johansson',
-    'Cecilia Ålander',
-    'David Hamark',
-    'Elden Bähni',
-    'Elias Böök',
-    'Gustaf Löfkvist Andersson',
-    'Ivar Sidorsson',
-    'Jeff Persson',
-    'Johan Fryklander',
-    'Linus Svensson',
-    'Olaus Klaveness',
-    'Sofie Axelsson',
-]
 +++
 
 Your Rabbit Died is a puzzle game built for mobile. It was the second game project 

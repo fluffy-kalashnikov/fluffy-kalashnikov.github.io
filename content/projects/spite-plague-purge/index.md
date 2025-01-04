@@ -1,5 +1,7 @@
 +++
 title = 'Spite Plague Purge'
+date = 2024-01-07T18:57:41+01:00
+draft = false
 summary = '''
 **20XX-XX-XX to 20XX-XX-XX**
 
@@ -11,31 +13,6 @@ Spite Plague Purge is an ARPG where you fight the infected with your crossbow an
   *  ccccccccccccccccccccccc
   *  ddddddddddddddddddddddd
 '''
-tags = ['C++', 'Clockwork Engine', 'Direct3D 11', 'Perforce', 'YouTrack']
-date = 2024-01-07T18:57:41+01:00
-draft = false
-credits = [
-    'Ameer Khalid',
-    'Cecilia Ålander',
-    'David Lindberg',
-    'Ethan Uong',
-    'Hedvig Kronnäs',
-    'Ivar Sidorsson',
-    'Jakob Pihl',
-    'Jenny Hellström',
-    'Joar Andersén',
-    'Jonathan Disenfeldt',
-    'Linnéa Sjöstrand',
-    'Luna Barane',
-    'Olaus Klaveness',
-    'Sofie Axelsson',
-    'Siri Forsell',
-    'Urban Gustavsson',
-    'Viktor Pennonen',
-    'Vincen Nguyen',
-    'Wasin Laokhot',
-    'Youcef Lounes',
-]
 +++
 
 Spite - Plague Purge was my sixth game project at [The Game Assembly](https://thegameassembly.com) and heavily inspired by Diablo III. 
