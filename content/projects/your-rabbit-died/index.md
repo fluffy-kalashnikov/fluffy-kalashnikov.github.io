@@ -1,9 +1,9 @@
 +++
 title = 'Your Rabbit Died'
-date = 2024-01-07T18:57:27+01:00
+date = 2022-10-07
 draft = false
 summary = '''
-**20XX-XX-XX to 20XX-XX-XX**
+**2022-10-07 to 2022-12-16**
 
 Your Rabbit Died is a game where you need warp between dimensions to outsmart your enemies and solve puzzles. Inspired by Lara Croft Go. Made in Unity for mobile devices.
 

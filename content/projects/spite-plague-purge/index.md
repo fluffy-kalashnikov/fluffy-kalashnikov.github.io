@@ -1,17 +1,17 @@
 +++
 title = 'Spite Plague Purge'
-date = 2024-01-07T18:57:41+01:00
+date = 2023-10-02
 draft = false
 summary = '''
-**20XX-XX-XX to 20XX-XX-XX**
+**2023-10-02 to 2023-12-08**
 
 Spite Plague Purge is an ARPG where you fight the infected with your crossbow and crow companion through gothic-themed levels. Inspired by Diablo 3. Made in Clockwork Engine.
 
 **Game Programmer Responsibilities**
-  *  aaaaaaaaaaaaaaaaaaaaaaa
-  *  bbbbbbbbbbbbbbbbbbbbbbb
-  *  ccccccccccccccccccccccc
-  *  ddddddddddddddddddddddd
+  *  Deferred rendering pointlight/spotlights
+  *  Custom shader pipeline
+  *  Live shader preview
+  *  Shadow mapping
 '''
 +++
 
@@ -23,18 +23,17 @@ have since improved our cooperation a lot. I am grateful that we hit this low po
 learnt a lot from it. 
 
 During the project my role as the primary graphics programmer was reinforced, and I was responsible for
-* Premake5 integration
-* Shadow mapping
-* Shader preview tool with autoreload
-* Serializible shader pipeline
+* Custom shader pipeline
+* Debug rendering
+* Deferred rendering spotlight/pointlight support
+* Live shader preview
 * Translucent/opaque material support
 * Splitting Editor/Game
 * Playtesting
 * Rendering optimizations
-* Deferred rendering spotlight/pointlight support
-* Debug rendering
+* Shadow mapping
 
-My proudest achievement was finishing the serializible shader pipeline. It allowed our technical artists to create materials with
+My proudest achievement was finishing the plain-text shader pipeline. It allowed our technical artists to create materials with
 pipeline state objects loaded from JSON containing bindings for custom shaders, textures, samplers, depth stencils and other 
 necessary Direct3D 11 resources. Combined with the shader preview it allowed them to iterate visual effects very quickly, and
 altough I wouldn't call the solution elegant as of now, it certainly felt so back then.

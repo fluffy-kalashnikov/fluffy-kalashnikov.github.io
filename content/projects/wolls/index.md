@@ -1,9 +1,9 @@
 +++
 title = 'Wolls'
-date = 2024-01-07T18:57:30+01:00
+date = 2023-01-16
 draft = false
 summary = '''
-**20XX-XX-XX to 20XX-XX-XX**
+**2023-01-16 to 2023-04-07**
 
 Wolls is a 2D platformer where you as a Huldra fight and bounce on trolls, fairies and goblins through viking-themed levels. Inspired by Shovel Knight. Made in The Game Engine.
 

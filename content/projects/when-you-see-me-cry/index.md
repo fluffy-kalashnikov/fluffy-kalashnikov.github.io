@@ -1,9 +1,9 @@
 +++
 title = 'When You See Me Cry'
-date = 2024-01-07T18:57:32+01:00
+date = 2023-04-17
 draft = false
 summary = '''
-**20XX-XX-XX to 20XX-XX-XX**
+**2023-04-17 to 2023-06-09**
 
 When You See Me Cry is a 3D adventure game where you combat silly archaeologists that stole artifacts and thus ruined the balance of the climate. Inspired by The Legend of Zelda: A Link to the Past. Made in The Game Engine.
 

@@ -1,9 +1,9 @@
 +++
 title = 'Sootling Saga'
-date = 2024-01-07T18:57:04+01:00
+date = 2022-09-19
 draft = false
 summary = '''
-**20XX-XX-XX to 20XX-XX-XX**
+**2022-09-19 to 2022-10-28**
 
 Sootling Saga is a sidescrolling platformer where you need to run, jump and dash your way through obstacles to lit the bonfire at the top of the mountain. Inspired by Canabalt. Made in Unity.
 
@@ -21,16 +21,12 @@ I was one of the few in my group with prior experience of Unity, so I assisted
 my other programmers as much as I could.
 
 I was responsible for
-* Building/shipping
 * Checkpoints
+* Cutscene playback
 * Editor playtest tooling
-* HUD
-* Main menu
-* Pause menu
-* Settings menu
 * Scene transitions
 * Scores/pickups
-* Cutscene playback
+* UI
 
 I am particularly fond of the editor playtest tooling as I struggled to find a way
 to create temporary checkpoints that does not get saved in the scene yet still

@@ -1,17 +1,17 @@
 +++
 title = 'Eggscapism'
-date = 2024-01-07T18:57:34+01:00
+date = 2023-09-04
 draft = false
 summary = '''
-**20XX-XX-XX to 20XX-XX-XX**
+**2023-09-04 to 2023-09-29**
 
 Eggscapism is a narrative puzzler where you need restore the power and call for help to escape an arctic laboratory from an ominous presence. Inspired by Legend of Grimrock 2. Made in Clockwork Engine.
 
 **Game Programmer Responsibilities**
-  *  aaaaaaaaaaaaaaaaaaaaaaa
-  *  bbbbbbbbbbbbbbbbbbbbbbb
-  *  ccccccccccccccccccccccc
-  *  ddddddddddddddddddddddd
+  *  Engine restructuring
+  *  Graphics engine debugging
+  *  FMOD setup
+  *  UI
 '''
 +++
 
@@ -22,12 +22,12 @@ in my group willing to do graphics programming and that my graphics engine was t
 complete at the time, we decided to use my graphics engine as the foundation.
 
 I was responsible for
-* Graphics programming
-* Splash screens
-* Main menu
-* Pause menu
-* Win menu
-* HUD
+  * Engine restructuring
+  * FMOD setup
+  * Graphics engine debugging
+  * Pixel picking
+  * Splash screens
+  * UI
 
 Overall this project felt very chaotic. We had very many issues regarding our pipeline to iron out.
 We never managed to find a correct way to convert a quaternion from Unreal Engine to 
