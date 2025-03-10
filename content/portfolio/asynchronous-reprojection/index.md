@@ -7,8 +7,8 @@ but did not finish in time.
 '''
 tags = ['C++', 'Direct3D 12', 'Git', 'RenderDoc', 'PIX']
 date = 2024-01-07T18:58:06+01:00
+expiryDate = 2025-03-04
 draft = false
-screenshot = '/portfolio/asynchronous-reprojection/thank-you-pix.webp'
 credits = [
     'Ivar Sidorsson'
 ]
