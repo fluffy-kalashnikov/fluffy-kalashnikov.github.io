@@ -6,7 +6,6 @@ tags = []
 date = 2025-01-03
 draft = false
 +++
-
 I created the thruster model, Maya plugin and modified the asset manager in our custom engine to implement the tool for this demo. I'm very grateful to [Alvin Andersson Eriksson](https://www.linkedin.com/in/alvin-andersson-eriksson-799b72279/) for letting me modify the asset manager to fit my peculiar needs!
 
 {{< fakegif "live-maya-exporter.webm" >}}
