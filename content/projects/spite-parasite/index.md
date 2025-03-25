@@ -7,7 +7,7 @@ summary = '''
 
 Spite Parasite. Inspired by Diablo 3. Made in Tre Rader Kod.
 
-**Technical Artist Responsibilities**
+**Technical Art Responsibilities**
   *  Unreal Engine asset exporter
   *  Enemy/boss highlight shader
   *  Vertex paint shader/material

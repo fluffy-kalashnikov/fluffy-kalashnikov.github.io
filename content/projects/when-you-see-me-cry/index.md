@@ -7,7 +7,7 @@ summary = '''
 
 When You See Me Cry is a 3D adventure game where you combat silly archaeologists that stole artifacts and thus ruined the balance of the climate. Inspired by The Legend of Zelda: A Link to the Past. Made in The Game Engine.
 
-**Game Programmer Responsibilities**
+**Game Programming Responsibilities**
   *  Tile system
   *  Collisions/intersections
   *  Entity movement respecting boundaries

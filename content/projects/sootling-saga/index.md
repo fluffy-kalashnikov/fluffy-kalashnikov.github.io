@@ -7,7 +7,7 @@ summary = '''
 
 Sootling Saga is a sidescrolling platformer where you need to run, jump and dash your way through obstacles to lit the bonfire at the top of the mountain. Inspired by Canabalt. Made in Unity.
 
-**Game Programmer Responsibilities**
+**Game Programming Responsibilities**
   *  Checkpoints
   *  Editor playtest tooling
   *  UI

@@ -21,7 +21,10 @@ img {
     object-fit: scale-down;
 }
 
-
+@font-face {
+    font-family: 'JetBrainsMono Regular';
+    src: url(/JetBrainsMono-Regular.woff2);
+  }
 
 
 :root {    
@@ -87,10 +90,14 @@ hr {
 }
 
 pre:has(code) {
+    font-size: 13px;
     padding: var(--pad1);
-    border-radius: var(--pad1);
+    overflow-x: scroll;
 }
 
+code {
+    font-family: 'JetBrainsMono Regular', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 
 /** basic formatting **/

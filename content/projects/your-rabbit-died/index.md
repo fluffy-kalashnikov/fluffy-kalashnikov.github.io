@@ -7,7 +7,7 @@ summary = '''
 
 Your Rabbit Died is a game where you need warp between dimensions to outsmart your enemies and solve puzzles. Inspired by Lara Croft Go. Made in Unity for mobile devices.
 
-**Game Programmer Responsibilities**
+**Game Programming Responsibilities**
   *  Dialogue
   *  Grid system/tooling
   *  Sound system/playback

@@ -3,38 +3,43 @@ languageCode = 'en-us'
 title = 'Ivar Sidorsson'
 
 
-[[menus.main]]
-name = 'Home'
-pageRef = '/'
-weight = 10
+[markup]
+    [markup.highlight]
+    style = 'gruvbox'
+
 
 [[menus.main]]
-name = 'Portfolio'
-pageRef = '/portfolio'
-weight = 20
+    name = 'Home'
+    pageRef = '/'
+    weight = 10
 
 [[menus.main]]
-name = 'Projects'
-pageRef = '/projects'
-weight = 30
+    name = 'Portfolio'
+    pageRef = '/portfolio'
+    weight = 20
 
 [[menus.main]]
-name = 'About'
-pageRef = '/about'
-weight = 40
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 30
+
+[[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 40
 
 
 [[params.social]]
-name = "Mail"
-icon = "mail"
-url = "mailto:ivar.sidorsson@pm.me"
+    name = "Mail"
+    icon = "mail"
+    url = "mailto:ivar@sidorsson.com"
 
 [[params.social]]
-name = "LinkedIn"
-icon = "linkedin"
-url = "https://www.linkedin.com/in/ivar-sidorsson/"
+    name = "LinkedIn"
+    icon = "linkedin"
+    url = "https://www.linkedin.com/in/ivar-sidorsson/"
 
 [[params.social]]
-name = "GitHub"
-icon = "github"
-url = "https://github.com/fluffy-kalashnikov"
+    name = "GitHub"
+    icon = "github"
+    url = "https://github.com/fluffy-kalashnikov"

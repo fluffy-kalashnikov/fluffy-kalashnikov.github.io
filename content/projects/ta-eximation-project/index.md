@@ -7,7 +7,7 @@ summary = '''
 
 Inspired by XXXXXX. Made in Tre Rader Kod.
 
-**Technical Artist Responsibilities**
+**Technical Art Responsibilities**
   *  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
   *  BBBBBBBBBBBBBBBBBBBBBBBBBBBBBB
   *  CCCCCCCCCCCCCCCCCCCCCCCCCCCCCC

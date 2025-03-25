@@ -7,7 +7,7 @@ summary = '''
 
 Spite Plague Purge is an ARPG where you fight the infected with your crossbow and crow companion through gothic-themed levels. Inspired by Diablo 3. Made in Clockwork Engine.
 
-**Game Programmer Responsibilities**
+**Game Programming Responsibilities**
   *  Deferred rendering pointlight/spotlights
   *  Custom shader pipeline
   *  Live shader preview

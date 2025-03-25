@@ -7,7 +7,7 @@ summary = '''
 
 Spite Parasite preproduction. Inspired by Diablo 3. Made in Tre Rader Kod.
 
-**Technical Artist Responsibilities**
+**Technical Art Responsibilities**
   *  Perforce support
   *  Unreal Engine project setup
   *  Maya python extention setup
