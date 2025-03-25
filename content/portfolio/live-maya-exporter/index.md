@@ -6,9 +6,20 @@ tags = []
 date = 2025-01-03
 draft = false
 +++
-I created the thruster model, Maya plugin and modified the asset manager in our custom engine to implement the tool for this demo. I'm very grateful to [Alvin Andersson Eriksson](https://www.linkedin.com/in/alvin-andersson-eriksson-799b72279/) for letting me modify the asset manager to fit my peculiar needs!
+TODO: I created a Maya plugin for updating models live ingame with one click.
 
-{{< fakegif "live-maya-exporter.webm" >}}
+
+
+1. Vad har jag gjort
+2. Hur fungerar det övergripligt
+3. Teknisk breakdown/problem
+4. Om jag hade mer tid eller börjat om idag
+
+I created the Maya plugin and modified the asset manager in our custom engine to implement the tool for this demo. I'm very grateful to [Alvin Andersson Eriksson](https://www.linkedin.com/in/alvin-andersson-eriksson-799b72279/) for letting me modify the game engines asset manager to fit my peculiar needs!
+
+{{< fakegif "live-maya-exporter-showcase.webm" >}}
+
+TODO: ändra
 
 Have you ever been frustrated about exporting a model from Maya or Blender just to find out that it looks different ingame? Wouldn't it be terribly convenient if you could just see the model update directly ingame without fuss?
 
