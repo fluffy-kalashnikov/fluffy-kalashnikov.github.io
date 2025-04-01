@@ -15,7 +15,10 @@ TODO: I created a Maya plugin for updating models live ingame with one click.
 3. Teknisk breakdown/problem
 4. Om jag hade mer tid eller börjat om idag
 
-I created the Maya plugin and modified the asset manager in our custom engine to implement the tool for this demo. I'm very grateful to [Alvin Andersson Eriksson](https://www.linkedin.com/in/alvin-andersson-eriksson-799b72279/) for letting me modify the game engines asset manager to fit my peculiar needs!
+//realtime, bridge, seamless  
+I created a Maya plugin that lets the user seamlessly update models while the game is running.
+
+ and modified the asset manager in our custom engine to implement the tool for this demo. I'm very grateful to [Alvin Andersson Eriksson](www.alvineriksson.com) for letting me modify the game engines asset manager to fit my peculiar needs!
 
 {{< fakegif "live-maya-exporter-showcase.webm" >}}
 
