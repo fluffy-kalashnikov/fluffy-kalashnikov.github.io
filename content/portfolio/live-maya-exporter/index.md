@@ -6,19 +6,7 @@ tags = []
 date = 2025-01-03
 draft = false
 +++
-TODO: I created a Maya plugin for updating models live ingame with one click.
-
-
-
-1. Vad har jag gjort
-2. Hur fungerar det övergripligt
-3. Teknisk breakdown/problem
-4. Om jag hade mer tid eller börjat om idag
-
-//realtime, bridge, seamless  
-I created a Maya plugin that lets the user seamlessly update models while the game is running.
-
- and modified the asset manager in our custom engine to implement the tool for this demo. I'm very grateful to [Alvin Andersson Eriksson](www.alvineriksson.com) for letting me modify the game engines asset manager to fit my peculiar needs!
+I created a Maya plugin that lets the user seamlessly update models while the game is running simultaneuosly. I'm very grateful to [Alvin Andersson Eriksson](www.alvineriksson.com) for letting me modify the game engines asset manager to fit my peculiar needs!
 
 {{< fakegif "live-maya-exporter-showcase.webm" >}}
 
