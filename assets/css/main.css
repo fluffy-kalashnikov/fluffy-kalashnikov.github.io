@@ -347,7 +347,11 @@ footer #footer-next-btn {
 .content > h1,
 .content > h2,
 .content > h3 {
-    margin: 60px 0 10px 0;
+    margin: 124px 0 10px 0;
+}
+
+.content > h2 + h3 {
+    margin-top: 64px;
 }
 
 .content > p:first-child,
@@ -381,6 +385,18 @@ footer #footer-next-btn {
 
 #TableOfContents ul {
     list-style: none;
+}
+
+#TableOfContents li ul {
+    margin-left: 16px;
+}
+
+#TableOfContents ul li a {
+    font-weight: 700;
+}
+
+#TableOfContents ul li ul li a {
+    font-weight: 500;
 }
 
 #TableOfContents ul li a {
