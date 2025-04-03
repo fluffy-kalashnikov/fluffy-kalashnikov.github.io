@@ -6,12 +6,11 @@ tags = []
 date = 2025-02-10
 draft = false
 +++
-I created the interior mapping shader and interior cubemaps used for this demo. Big thanks to [Agnes Hallin](https://agneshallin.artstation.com/projects) for letting me use her modular building kit and the environment used in the background!
+I implemented an interior mapping material that can be used to render interiors inside of larger buildings without requiring any extra geometry inside of the building. Big thanks to [Agnes Hallin](https://agneshallin.artstation.com/projects) for letting me use her modular building kit and the environment used in the background! I also refitted textures from [wParallax](https://wparallax.com/) to cubemaps for use with the material.
 
-{{< fakegif "interior-mapping-demo.webm" >}}
+{{< fakegif "interior_mapping_demo.webm" >}}
 
-
-I have a big fascination for parallax effects in games and wanted get a better understanding of how these techniques work. I found the [Interior Mapping paper by Joost van Dongen (2008)](https://www.proun-game.com/Oogst3D/CODING/InteriorMapping/InteriorMapping.pdf) during my research and wanted to give an attempt at implementing this myself. 
+I have a big fascination for parallax effects in games and wanted get a better understanding of how these techniques work. I found the [Interior Mapping paper by Joost van Dongen (2008)](https://www.proun-game.com/Oogst3D/CODING/InteriorMapping/InteriorMapping.pdf) during my research and wanted to give an attempt at implementing it myself. 
 
 The technique uses raycasting to determine where in the cubemap to sample from. By raycasting against a corresponding plane for X, Y, Z and selecting the closest point of intersection, we can sample the cubemap in such a way to give the illusion of volume inside a flat plane!
 

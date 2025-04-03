@@ -6,13 +6,14 @@ tags = []
 date = 2025-03-10
 draft = true
 +++
-I've created a spline-driven fence generator in Houdini with tweakable parameters, interchangable models and used content from [Quixel Megascans](https://www.fab.com/sellers/Quixel) to spice up this demo!
+I've created a spline-driven fence generator in Houdini with tweakable parameters that let other disciplines create fences from already existing models! All the models used below are from [Quixel Megascans](https://www.fab.com/sellers/Quixel).
 
-{{< fakegif "procedural-fence-demo.webm" >}}
+{{< fakegif "procedural_fence_generator_01_showcase.webm" >}}
 
-I've wanted to dive deeper into Houdini Digital Assets for quite some time because as a programmer I've seen people make numerous tools for placing models according to specific rules or inputs. Often I've found these tools error prone, inflexible and tedious to expand upon, and optimizing them adds another level of complexity.
+For a long time I was intimidated about learning Houdini for game development, but I was very inspired by a lecture from David Lindberg to start small in Houdini and develop increasingly sophisticated things over time. During [P7]() I decided to integrate Houdini into our custom engines pipeline, and with all the accumulated experience from producing smaller Houdini Digital Assets during development I have become a lot more confident in Houdini!
 
-Houdini Digital Assets on the other hand provides both lower and higher levels of control, where each piece can be controlled individually but also the system as a whole. I wanted to learn Houdini as the non-destructive node workflow makes it far easier to iterate and experiment, but Houdini also makes it easier to expose more parameters in an artist-friendly manner. Developing a fence generator has definetly improved how I expose parameters to the end user!
+With this fence generator I wanted to dive deeper into producing Houdini Digital Assets natively for Unreal Engine and also create a more generic Houdini Digital Asset with many parameters that other disciplines can bend to their will. During testing I discovered many happy mistakes that I polished into features in the end!
+
 
 ## How it works
 {{< fakegif "procedural-fence-generator-usage.webm" >}}
