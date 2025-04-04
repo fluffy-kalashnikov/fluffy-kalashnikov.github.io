@@ -15,9 +15,8 @@ I have a big fascination for parallax effects in games and wanted get a better u
 The technique uses raycasting to determine where in the cubemap to sample from. By raycasting against a corresponding plane for X, Y, Z and selecting the closest point of intersection, we can sample the cubemap in such a way to give the illusion of volume inside a flat plane!
 
 
-{{< tableofcontents >}}
 
-## How object-space interior mapping works
+## Breakdown of the algorithm
 ### Understanding intersections between rays and planes
 ```hlsl
 float PlaneRayIntersection(float3 RayPoint, float3 RayDirection, float3 PlaneNormal, float PlaneDistance)
@@ -27,7 +26,7 @@ float PlaneRayIntersection(float3 RayPoint, float3 RayDirection, float3 PlaneNor
     return T;
 }
 ```
-I use this code snippet to calculate intersections between rays and planes. To use it properly it's important to understand what rays and planes from a purely mathematical standpoint. I wholeheartedly recommend [gamemath.com](https://gamemath.com/book/geomtests.html#intersection_ray_plane) for a proper explanation, but here is at least a freshly baked visualization!
+I use this code snippet to calculate intersections between rays and planes. To use it properly it's important to understand what rays and planes are from a purely mathematical standpoint. I wholeheartedly recommend [gamemath.com](https://gamemath.com/book/geomtests.html#intersection_ray_plane) for a proper explanation, but here is at least a freshly baked visualization!
 {{< fakegif "01_ray_plane_intersection.webm" >}}
 In my opinion, the key takeaways are that rays are parametrically defined by a point and a direction and planes are implicitly defined by a normal and a distance from the origin. Unlike 3D geometry, rays and planes in mathematics are infinite. Unless the ray is perfectly perpendicular to a plane, it will always intersect in either the positive or negative direction.
 
@@ -92,6 +91,6 @@ If I had more time I would definetly be interested in adding furniture inside of
 
 {{< fakegif "matrix_awakens.webm" >}}
 
-I wanted to figure out how it works, but the material graph doesn't even fit on the screen entirely. As of now assembling spaghetti at this scale is absolutely beyond me but maybe there is a method to this madness. If you know, I'd very much like to hear from you :-)
+I wanted to figure out how it works, but the material graph doesn't even fit on the screen entirely. As of now assembling spaghetti at this scale is absolutely beyond me but maybe there is a method to this madness. If you know, I'd very much like to hear out from you :-)
 
 ![Window material from Matrix Awakens.](matrix_awakens_window_material.webp)
