@@ -7,44 +7,43 @@ date = 2024-10-01
 draft = false
 +++
 
-```md
-Under spelprojekt 7 märkte jag av problem med pipeline
-
-Vad var problemet
-* Exportera levlar enklare
-* Speltestning för icke-tekniska
-* DDS-exportering 
 
 
-Vad fanns från början? 
 
-Vilka features har jag lagt till?
 
-TODO: Loopande korta videor för textur-export, speltest och perforce integration
-```
-During the game projects as a Technical Artist I've primarily been responsible for standardizing and improving the pipeline for our artists and level designers. As the programmers began development of Tre Rader Kod, our custom game engine, we were handed an Unreal Engine plugin by the educators to export level data we could feed into Tre Rader Kod. It was cumbersome to use at the start, but over all iterations I've made since then I'm happy I've found numerous ways to improve it!
 
-### Playtesting
-To playtest a level in development, we were required to
-* Click the export button
+Note: Videos have been sped up and cut to reduce length.
+
+{{< fakegif "unreal_engine_exporter_showcase.webm" >}}
+
+During the game projects with Vrak Studios I've had the primary responsibility to standardize and streamline the pipeline for our artists and level designers. 
+The pipeline during [Spite Parasite](/projects/spite-parasite) was initially very manual, but with all iterations made since then I'm happy over the numerous ways I've found to improve it!
+
+### Playtesting the game
+To playtest a level in development, we were initially required to
+* Click the export level button
 * Choose an export directory through a file picker dialogue
-* Click OK in an annoying success prompt
-* Export all missing models
+* Click OK in a blocking success prompt
 * Locate the game from File Explorer
 * Launch the game
 * Open the level from a debug level selection menu
 
-To alleviate this, I created a button to launch the game from within Unreal Engine. I also got rid of the file picker and turned the success prompt into a notification instead. A lot of people forgot to export levels before launching the game, so to make sure the level data always is up to date I made sure the play button always exports the level before launching the game. I also made sure the play button sends which level to load directly to the game by providing command line arguments containing the newly exported level path.
+{{< fakegif "unreal_engine_exporter_playfromstart.webm" >}}
 
-At this point you can playtest a level open in Unreal Engine seamlessly with the press of a button, but later during development I also added a button to play directly from where the viewport camera is located in Unreal Engine. I also added a button to launch RenderDoc with the same information, so you launch anywhere in a level ready to take captures.
+To alleviate this, I created a launch button inside of Unreal Engine. The current level is automatically exported and loaded at startup, and error notifications was turned into non-blocking success/failure toasts.
 
-### Exporting Models
-While we originally used FBX files directly, our programmers decided to convert them into a binary format to improve load speeds. This proved problematic because everyone had to export themselves as the binary files wasn't synced with version control, so missing models was more of a norm than a deviation. TODO: continue
+{{< fakegif "unreal_engine_exporter_renderdoc.webm" >}}
 
-### Exporting Textures
-Tre Rader Kod uses Direct3D 11 and doesn't use any external libaries to load textures, thus we are required to convert all textures into the native DirectDraw Surface format. Our initial approach to this was manual, but our graphical artists found it cumbersome to export each time they wanted to see how a texture looks ingame. It was very error-prone as they had to choose the correct compression format and wether the texture should be converted to sRGB or not.
+This already improved the situation a lot, but playtesting longer levels is cumbersome if you always need to play through the entire level to reach a specific spot. I collaborated with [Truls](https://trulsrockstrom.com/) and [Alvin](https://www.alvineriksson.com/) to implement a separate "play from here" button and also integrated RenderDoc with similar logic.
 
-To address this I initially wrote a batch script to convert textures in bulk using the DirectXTex conversion application. I rewrote it in Python to add additional layers of validation, but to streamline it further I began integrating it in C++ with the Unreal Engine level exporter directly. Hooking into Unreal Engine directly ment that I could provide a unified interface for exporting assets, validating assets, playtesting levels, and errors could be communicated directly with the end user through notifications. Relying on file naming conventions alone to determine if an Unreal Engine asset was a texture or not proved problematic as artists frequently forgot about prefixes/suffixes, so querying Unreal Engine's asset manager directly proved much more reliable.
 
-### Perforce Integration
-TODO: write
+### Exporting assets
+The custom engine requires meshes to be in a custom binary format and textures to be converted into DirectDraw Surface. Early during [Spite Parasite](/projects/spite-parasite) these game-ready assets weren't synced with version control, and it was very common for the game to crash because of outdated assets. 
+
+Meshes were converted into binary format when the game launched, significantly impacting startup time for playtesting. Textures were exported from a script that converted based on file naming standards, but issues arising from incorrect spelling was common. Exports could have incorrect color space, incorrect compression type or simply not happen at all.
+
+{{< fakegif "unreal_engine_exporter_exportchangelist.webm" >}}
+
+To improve, all tools were integrated into Unreal Engine and the pipeline was reorganized around a separate content folder exclusively for game-ready assets synced with version control. The texture and mesh converters now exports directly into the game-ready content folder, and Perforce has been integrated to give the option of only exporting assets that could have changed. Output files are automatically checked out or marked for add, and this means artists literally only have to drag an asset into the content browser, press export changelist and submit.
+
+Integrating into Unreal Engine allowed direct access to the asset manager and asset properties, and has allowed for far greater depths of validation.

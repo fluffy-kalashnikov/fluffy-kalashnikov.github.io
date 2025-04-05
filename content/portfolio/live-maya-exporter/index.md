@@ -20,7 +20,7 @@ The networking parts of the tool is implemented as a static library that is used
 
 {{< fakegif "live-maya-exporter-playtest.webm" >}}
 
-The networking itself is very simplified. Both the server and the clients keeps track of their own individual list of connections. If the clients doesn't have any connections, it sends a connection request to localhost:27015. If a server is running it responds with an acknowledgement and keeps track of the newly added connection. The connection list is then used by the server to broadcast messages to all connected clients.
+The networking itself is very simplified as it is assumed to be local. Both the server and the clients keeps track of their own individual list of connections. If the clients doesn't have any connections, it sends a connection request to localhost:27015. If a server is running it responds with an acknowledgement and keeps track of the newly added connection. The connection list is then used by the server to broadcast messages to all connected clients.
 
 {{< fakegif "live-maya-exporter-reconnecting.webm" >}}
 
@@ -29,4 +29,4 @@ It regularly happens though that the server and the clients disconnect themselve
 ## If I had more time
 If I had more time the first thing I would like to add is a Python backend so that it could be implemented in Blender, Substance Designer, Unreal Engine or almost any application really with a modern Python interpreter and plugin architecture. I also think it would be interesting to implement actions sent from the game back to Maya. Things like clicking a model in the level and opening the corresponding source file inside of Maya could be very useful!
 
-Something that would be really elegant is the creation of a standalone server application that lets both games and different editors connect simultaneuosly, acting as a bridge for the entire content pipeline. One could create a unified source file viewer with Houdini, Maya, Blender, ZBrush, Photoshop, Substance, Unreal Engine all integrated into something similar as the Steam overlay. I presume it won't work as well as it sounds in practice but it makes me drool :3
+Something that would be really elegant is the creation of a standalone server application that lets both games and different editors connect simultaneuosly, acting as a bridge for the entire content pipeline. One could create a unified source file viewer with Houdini, Maya, Blender, ZBrush, Photoshop, Substance, Unreal Engine all integrated into something similar as the Steam overlay. I presume it won't work as well as it sounds in practice but it makes me drool.

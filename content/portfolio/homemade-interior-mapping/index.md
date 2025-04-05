@@ -26,11 +26,11 @@ float PlaneRayIntersection(float3 RayPoint, float3 RayDirection, float3 PlaneNor
     return T;
 }
 ```
-I use this code snippet to calculate intersections between rays and planes. To use it properly it's important to understand what rays and planes are from a purely mathematical standpoint. I wholeheartedly recommend [gamemath.com](https://gamemath.com/book/geomtests.html#intersection_ray_plane) for a proper explanation, but here is at least a freshly baked visualization!
+I use this code snippet to calculate intersections between rays and planes. To use it properly it's important to understand what rays and planes are from a purely mathematical standpoint. I wholeheartedly recommend [gamemath.com](https://gamemath.com/book/geomtests.html#intersection_ray_plane) for a proper explanation, but here is at least an explanatory visualization!
 {{< fakegif "01_ray_plane_intersection.webm" >}}
 In my opinion, the key takeaways are that rays are parametrically defined by a point and a direction and planes are implicitly defined by a normal and a distance from the origin. Unlike 3D geometry, rays and planes in mathematics are infinite. Unless the ray is perfectly perpendicular to a plane, it will always intersect in either the positive or negative direction.
 
-### Calculating the planes to intersect against
+### Calculating the planes to raycast against
 {{< fakegif "02_calc_closest_plane.webm" >}}
 
 We begin by calculating the planes to raycast against. For this we need to calculate each planes normal and distance to the origin. The distance can be calculated by rounding the local vertex position to the size of the room, but depending on the direction we also need to take into consideration which side of the room the plane exists and wether the distance needs to be negated if the plane is facing the origin.
@@ -89,8 +89,6 @@ As a result we should now have interior mapping that tiles infinitely with an ad
 ## If I had more time
 If I had more time I would definetly be interested in adding furniture inside of the rooms as well. My main inspiration for this project was the [Matrix Awakens](https://www.unrealengine.com/en-US/blog/introducing-the-matrix-awakens-an-unreal-engine-5-experience) demo for Unreal Engine 5 and I think it uses dual-depth relief mapping to create furniture. It has uncannily convincing volume most of the time!
 
-{{< fakegif "matrix_awakens.webm" >}}
-
-I wanted to figure out how it works, but the material graph doesn't even fit on the screen entirely. As of now assembling spaghetti at this scale is absolutely beyond me but maybe there is a method to this madness. If you know, I'd very much like to hear out from you :-)
-
 ![Window material from Matrix Awakens.](matrix_awakens_window_material.webp)
+
+I wanted to figure out how it works, but the material graph doesn't even fit on the screen. As of now assembling spaghetti at this scale is absolutely beyond me but maybe there is a method to this madness. If you happen to know, I'd very much like to hear from you!
