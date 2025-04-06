@@ -10,7 +10,7 @@ draft = false
 # Homemade Interior Mapping
 I implemented an interior mapping material that can be used to render interiors inside of larger buildings without requiring any extra geometry inside of the building. Big thanks to [Agnes Hallin](https://agneshallin.artstation.com/projects) for letting me use her modular building kit and the environment used in the background! I also refitted textures from [wParallax](https://wparallax.com/) to cubemaps for use with the material.
 
-{{< fakegif "interior_mapping_demo.webm" >}}
+{{< fakegif "homemade_interior_mapping_showcase.webm" >}}
 
 I have a big fascination for parallax effects in games and wanted get a better understanding of how these techniques work. I found the [Interior Mapping paper by Joost van Dongen (2008)](https://www.proun-game.com/Oogst3D/CODING/InteriorMapping/InteriorMapping.pdf) during my research and wanted to give an attempt at implementing it myself. 
 

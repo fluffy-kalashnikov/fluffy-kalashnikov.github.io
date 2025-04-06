@@ -10,7 +10,7 @@ draft = false
 # Live Maya Exporter
 I created a Maya plugin that lets the user seamlessly update models while the game is running simultaneuosly. I'm very grateful to [Alvin Andersson Eriksson](www.alvineriksson.com) for letting me modify the game engines asset manager to fit my needs!
 
-{{< fakegif "live-maya-exporter-showcase.webm" >}}
+{{< fakegif "live_maya_exporter_showcase.webm" >}}
 
 Since I studied game programming extensively before I dove into technical art I've been very interested in finding unique ways to apply my previous experience for pipeline development. Inspired by the networking course at The Game Assembly, I wanted to create a tool that communicates between processes!
 
