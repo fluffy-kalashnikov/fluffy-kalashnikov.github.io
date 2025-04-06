@@ -20,7 +20,7 @@ To playtest a level in development, we were initially required to
 * Click the export level button
 * Choose an export directory through a file picker dialogue
 * Click OK in a blocking success prompt
-* Locate the game from File Explorer
+* Locate the game in File Explorer
 * Launch the game
 * Open the level from a debug level selection menu
 
@@ -36,10 +36,10 @@ This already improved the situation a lot, but playtesting longer levels is cumb
 ### Exporting assets
 The custom engine requires meshes to be in a custom binary format and textures to be converted into DirectDraw Surface. Early during [Spite Parasite](/projects/spite-parasite) these game-ready assets weren't synced with version control, and it was very common for the game to crash because of outdated assets. 
 
-Meshes were converted into binary format when the game launched, significantly impacting startup time for playtesting. Textures were exported from a script that converted based on file naming standards, but issues arising from incorrect spelling was common. Exports could have incorrect color space, incorrect compression type or simply not happen at all.
+Meshes were converted into binary format when the game launched, significantly impacting startup time for playtesting. Textures were exported from a script that converted based on file naming standards, but issues arising from incorrect spelling was common. Exports could have incorrect color space, compression type or simply not happen at all.
 
 {{< fakegif "unreal_engine_exporter_exportchangelist.webm" >}}
 
 To improve, all tools were integrated into Unreal Engine and the pipeline was reorganized around a separate content folder exclusively for game-ready assets synced with version control. The texture and mesh converters now exports directly into the game-ready content folder, and Perforce has been integrated to give the option of only exporting assets that could have changed. Output files are automatically checked out or marked for add, and this means artists literally only have to drag an asset into the content browser, press export changelist and submit.
 
-Integrating into Unreal Engine allowed direct access to the asset manager and asset properties, and has allowed for far greater depths of validation.
+Integrating into Unreal Engine also allowed direct access to the asset manager and asset properties, which has allowed for far greater depths of validation.
