@@ -331,7 +331,7 @@ footer #footer-next-btn {
 
 .display-double {
     display: grid;
-    gap: var(--pad1);
+    gap: var(--pad2);
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr 1fr;
     grid-auto-flow: row;
@@ -372,7 +372,9 @@ footer #footer-next-btn {
 .gap {
     gap: var(--pad1);
 }
-
+.gap2 {
+    gap: var(--pad2);
+}
 
 
 
