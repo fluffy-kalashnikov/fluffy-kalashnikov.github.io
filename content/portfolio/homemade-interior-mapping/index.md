@@ -88,6 +88,112 @@ As a result we should now have interior mapping that tiles infinitely with an ad
 {{< fakegif "04_sample_cubemap_tiling.webm" >}}
 
 
+### The final custom node snippet
+Here's the final code for calculating the sampling direction. It requires float3 inputs for CameraPosition, ObjectPosition, RoomSize, ObjectHash and float1 output for RoomHash. It returns a direction vector for cubemap texture sampling. It is definitely not as optimized as the built-in interior mapping node, but it could be a fun exercise to simplify the algorithm further!
+```hlsl
+struct Functions
+{
+	/** [Intersection of a Ray and Plane](https://gamemath.com/book/geomtests.html#intersection_ray_plane)*/
+	float PlaneRayIntersection(float3 RayPoint, float3 RayDirection, float3 PlaneNormal, float PlaneDistance)
+	{
+		float T = PlaneDistance - dot(RayPoint, PlaneNormal);
+		T /= dot(RayDirection, PlaneNormal);
+		return T;
+	}
+
+	/** [Hash Functions for GPU Rendering](https://jcgt.org/published/0009/03/02/)*/
+	uint3 pcg3d(uint3 v)
+	{
+		v = v * 1664525u + 1013904223u;
+		v.x += v.y*v.z; v.y += v.z*v.x; v.z += v.x*v.y;
+		v ^= v >> 16u;
+		v.x += v.y*v.z; v.y += v.z*v.x; v.z += v.x*v.y;
+		return v;
+	}
+};
+Functions Fn;
+
+
+
+
+
+const float3 CameraDirection = normalize(ObjectPosition - CameraPosition);
+
+float3 PlaneNormals = -CameraDirection;
+PlaneNormals.x = sign(PlaneNormals.x);
+PlaneNormals.y = sign(PlaneNormals.y);
+PlaneNormals.z = sign(PlaneNormals.z);
+
+
+float3 PlaneDistances;
+[flatten]
+if (PlaneNormals.x < 0)
+{
+	PlaneDistances.x = ceil(ObjectPosition.x / RoomSize.x) * -RoomSize.x;
+}
+else
+{
+	PlaneDistances.x = (ceil(ObjectPosition.x / RoomSize.x) - 1) * RoomSize.x;
+}
+
+[flatten]
+if (PlaneNormals.y < 0)
+{
+	PlaneDistances.y = ceil(ObjectPosition.y / RoomSize.y) * -RoomSize.y;
+}
+else
+{
+	PlaneDistances.y = (ceil(ObjectPosition.y / RoomSize.y) - 1) * RoomSize.y;
+}
+
+[flatten]
+if (PlaneNormals.z < 0)
+{
+	PlaneDistances.z = ceil(ObjectPosition.z / RoomSize.z) * -RoomSize.z;
+}
+else
+{
+	PlaneDistances.z = (ceil(ObjectPosition.z / RoomSize.z) -1) * RoomSize.z;
+}
+
+
+
+float T, ClosestT = 100000;
+T = Fn.PlaneRayIntersection(ObjectPosition, CameraDirection, float3(PlaneNormals.x, 0, 0), PlaneDistances.x);
+if (T > 0 && T < ClosestT)
+{
+	ClosestT = T;
+}
+T = Fn.PlaneRayIntersection(ObjectPosition, CameraDirection, float3(0, PlaneNormals.y, 0), PlaneDistances.y);
+if (T > 0 && T < ClosestT)
+{
+	ClosestT = T;
+}
+T = Fn.PlaneRayIntersection(ObjectPosition, CameraDirection, float3(0, 0, PlaneNormals.z), PlaneDistances.z);
+if (T > 0 && T < ClosestT)
+{
+	ClosestT = T;
+}
+
+
+
+
+float3 Intersection = ObjectPosition + CameraDirection * ClosestT;
+float3 RoomCenter = (ceil(ObjectPosition / RoomSize) - 0.5f) * RoomSize;
+float3 Direction = normalize(Intersection - RoomCenter);
+
+
+uint3 RoomHash3 = Fn.pcg3d((uint3)ceil(ObjectPosition / RoomSize) * ObjectPosition);
+RoomHash3 += Fn.pcg3d((uint3)ceil(ObjectHash));
+RoomHash = asfloat(Fn.pcg3d(RoomHash3).x);
+
+return Direction;
+```
+![](homemade_interior_mapping_customnode.webp)
+
+
+
+
 ## If I had more time
 If I had more time I would definetly be interested in adding furniture inside of the rooms as well. My main inspiration for this project was the [Matrix Awakens](https://www.unrealengine.com/en-US/blog/introducing-the-matrix-awakens-an-unreal-engine-5-experience) demo for Unreal Engine 5 and I think it uses dual-depth relief mapping to create furniture. It has uncannily convincing volume most of the time!
 
