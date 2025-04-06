@@ -13,7 +13,7 @@ I created a Maya plugin that lets the user seamlessly update models while the ga
 
 Since I studied game programming extensively before I dove into technical art I've been very interested in finding unique ways to apply my previous experience for pipeline development. Inspired by the networking course at The Game Assembly, I wanted to create a tool that communicates between processes!
 
-The exporter roughly works by letting an instance of Maya act as a server and the game instances as clients. When the user presses a keybind, Maya exports the current scene to a temporary directory and notifies all connected game instances that a particular model needs to be reloaded. The game clients subsequently searches for the most suitable model to update and imports the file Maya requested. Voilà!
+The exporter works by letting an instance of Maya act as a server and the game instances as clients. When the user presses a keybind, Maya exports the current scene to a temporary directory and notifies all connected game instances that a particular model needs to be reloaded. The game clients subsequently searches for the most suitable model to update and imports the file Maya requested. Voilà!
 
 
 ## Implementation
@@ -30,4 +30,4 @@ It regularly happens though that the server and the clients disconnect themselve
 ## If I had more time
 If I had more time the first thing I would like to add is a Python backend so that it could be implemented in Blender, Substance Designer, Unreal Engine or almost any application really with a modern Python interpreter and plugin architecture. I also think it would be interesting to implement actions sent from the game back to Maya. Things like clicking a model in the level and opening the corresponding source file inside of Maya could be very useful!
 
-Something that would be really elegant is the creation of a standalone server application that lets both games and different editors connect simultaneuosly, acting as a bridge for the entire content pipeline. One could create a unified source file viewer with Houdini, Maya, Blender, ZBrush, Photoshop, Substance, Unreal Engine all integrated into something similar as the Steam overlay. I presume it won't work as well as it sounds in practice but it makes me drool.
+Something that would be really elegant is the creation of a standalone server application that lets both games and different editors connect simultaneuosly, acting as a bridge for the entire content pipeline. One could create a unified source file viewer with Houdini, Maya, Blender, ZBrush, Photoshop, Substance, Unreal Engine all integrated into something similar as the Steam overlay.
