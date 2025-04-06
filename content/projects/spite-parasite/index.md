@@ -1,6 +1,6 @@
 +++
 title = 'Spite Parasite'
-date = 2024-09-30
+date = 2024-09-02
 draft = false
 summary = '''
 **2024-09-30 to 2024-12-06**
@@ -19,6 +19,7 @@ I was responsible for
  * Asset validation scripts
  * Maya tool requests
  * Testing custom material pipeline
+   Unreal Engine Perforce setup
  * Unreal Engine playtest buttons
  * Unreal Engine asset exporter
  * Vertex paint shader/material
