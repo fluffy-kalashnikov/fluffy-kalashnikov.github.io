@@ -1,7 +1,11 @@
 <article>
-    <a href="{{ .RelPermalink }}">
+    <a href="{{ .RelPermalink }}" class="flex-column gap">
+        <h2>{{ .Title }}</h2>
         {{ with .Resources.GetMatch "*thumbnail*" }}
-            <img src="{{ .RelPermalink }}" alt="Thumbnail" loading="lazy" />
+            <video autoplay muted loop poster>
+                <source src="{{ .RelPermalink }}" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
         {{ end }}
     </a>
 </article>
