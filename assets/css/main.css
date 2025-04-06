@@ -40,6 +40,9 @@ img {
     --pad1: 0.75rem;
     --pad2: 1.5rem;
     --pad3: 3rem;
+    --pad4: 6rem;
+    --pad5: 12rem;
+    --pad6: 24rem;
     color: var(--neutral-400);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: calc(0.7em + 0.6vw); /* 1.3em; */
@@ -340,7 +343,6 @@ footer #footer-next-btn {
     .display-double {
         grid-template-columns: 1fr;
         grid-auto-columns: 1fr;
-        grid-auto-flow: row;
     }
 }
 
@@ -369,13 +371,28 @@ footer #footer-next-btn {
     padding: var(--pad1);
 }
 
-.gap {
+
+.gap0 {
+    gap: var(--pad0);
+}
+.gap1, .gap {
     gap: var(--pad1);
 }
 .gap2 {
     gap: var(--pad2);
 }
-
+.gap3 {
+    gap: var(--pad3);
+}
+.gap4 {
+    gap: var(--pad4);
+}
+.gap5{
+    gap: var(--pad5);
+}
+.gap6{
+    gap: var(--pad6);
+}
 
 
 /** content **/

@@ -1,13 +1,18 @@
 {{ define "main" }}
-    <section class="content">
-        {{ .Content }}
-    </section>
+<section class="content">
+    {{ .Content }}
+</section>
 
-    {{ with .Site.GetPage "/portfolio" }}
-        {{ partial "display-double.html" .Pages }}
-    {{ end }}
-    <h2 id="home-project-title">Project highlights</h2>
-    {{ with .Site.GetPage "/projects" }}
-        {{ partial "display-single.html" (first 3 .Pages) }}
-    {{ end }}
+<div class="flex-column gap5">
+    <div>
+        {{ with .Site.GetPage "/portfolio" }}
+            {{ partial "display-double.html" .Pages }}
+        {{ end }}
+    </div>
+    <div>
+        {{ with .Site.GetPage "/projects" }}
+            {{ partial "display-single.html" (first 3 .Pages) }}
+        {{ end }}
+    </div>
+</div>
 {{ end }}
