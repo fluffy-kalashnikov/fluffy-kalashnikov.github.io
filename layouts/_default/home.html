@@ -6,7 +6,7 @@
 <div class="flex-column gap5">
     <div>
         {{ with .Site.GetPage "/portfolio" }}
-            {{ partial "display-double.html" .Pages }}
+            {{ partial "display-double.html" .Pages.ByWeight }}
         {{ end }}
     </div>
     <div>
