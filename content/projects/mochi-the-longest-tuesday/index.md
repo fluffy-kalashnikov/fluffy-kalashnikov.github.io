@@ -5,7 +5,7 @@ draft = false
 summary = '''
 **2024-01-01 to 2024-04-12**
 
-Mochi The Longest Tuesday is a third person platformer where you as Mochi, a cat with a mech, has to search an alien planet for you beloved cardboard-box and deal with the slimy inhabitants. Inspired by Jak & Daxter. Made in Clockwork Engine.
+Mochi The Longest Tuesday is a third person platformer where you as Mochi, a cat with a mech, has to search an alien planet for your beloved cardboard-box. Inspired by Jak & Daxter. Made in Clockwork Engine.
 
 **Game Programming Responsibilities**
   *  Level of Detail
@@ -14,7 +14,7 @@ Mochi The Longest Tuesday is a third person platformer where you as Mochi, a cat
   *  Simplifying custom shader pipeline
 '''
 +++
-
+# Mochi The Longest Tuesday
 Mochi - The Longest Tuesday is my seventh game project at [The Game Assembly](https://thegameassembly.com) and is 
 heavily inspired by [Jak & Daxter](https://en.wikipedia.org/wiki/Jak_and_Daxter). As [Spite - Plague Purge](../spite-plague-purge/)
 missed the deadline and some rendering features like post processing was necessary for both projects, there was a fair

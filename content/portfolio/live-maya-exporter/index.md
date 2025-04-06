@@ -6,6 +6,7 @@ tags = []
 date = 2025-01-03
 draft = false
 +++
+# Live Maya Exporter
 I created a Maya plugin that lets the user seamlessly update models while the game is running simultaneuosly. I'm very grateful to [Alvin Andersson Eriksson](www.alvineriksson.com) for letting me modify the game engines asset manager to fit my peculiar needs!
 
 {{< fakegif "live-maya-exporter-showcase.webm" >}}

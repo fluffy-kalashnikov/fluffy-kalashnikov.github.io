@@ -1,19 +1,22 @@
 <article class="project-summary">
     {{ $permalink := .RelPermalink }}
 
-    <a href="{{ $permalink }}">
+    {{/*  <a href="{{ $permalink }}">
         {{ with .Resources.GetMatch "*thumbnail*" }}
             <img src="{{ .RelPermalink }}" alt="Thumbnail" loading="lazy" />
         {{ end }}
-    </a>
-    <section class="content">
-        <h2><a href="{{ $permalink }}">{{ .LinkTitle }}</a></h2>
-        {{ .Summary }}
-    </section>
-    {{ range first 2 (.Resources.Match "*screenshot*") }}
-
-    <a href="{{ $permalink }}">
-        <img src="{{ .RelPermalink }}" alt="Screenshot from {{ .Title }}" loading="lazy" />
-    </a>
-    {{ end }}
+    </a>  */}}
+    <div class="grid-row gap">
+        <section class="content card">
+            <h2><a href="{{ $permalink }}">{{ .LinkTitle }}</a></h2>
+            {{ .Summary }}
+        </section>
+        <section class="flex-column gap hide-on-mobile">
+            {{ range first 2 (.Resources.Match "*screenshot*") }}
+                <a href="{{ $permalink }}">
+                    <img src="{{ .RelPermalink }}" alt="Screenshot from {{ .Title }}" loading="lazy" />
+                </a>
+            {{ end }}
+        </section>
+    </div>
 </article>

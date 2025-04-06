@@ -15,6 +15,7 @@ Wolls is a 2D platformer where you as a Huldra fight and bounce on trolls, fairi
 '''
 +++
 
+# Wolls
 Wolls is a 2D platformer. It was our third game project and the first one made in 
 The Game Engine, the internal game engine provided by [The Game Assembly](https://thegameassembly.com).
 We used Unity as a level editor for our level designers and exported JSON-files which

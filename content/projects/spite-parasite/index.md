@@ -14,7 +14,7 @@ Spite Parasite. Inspired by Diablo 3. Made in Tre Rader Kod.
   *  Maya tool requests
 '''
 +++
-
+# Spite Parasite
 I was responsible for
  * Asset validation scripts
  * Maya tool requests

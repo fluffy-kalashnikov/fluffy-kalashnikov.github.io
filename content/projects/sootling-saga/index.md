@@ -5,7 +5,7 @@ draft = false
 summary = '''
 **2022-09-19 to 2022-10-28**
 
-Sootling Saga is a sidescrolling platformer where you need to run, jump and dash your way through obstacles to lit the bonfire at the top of the mountain. Inspired by Canabalt. Made in Unity.
+Sootling Saga is a sidescrolling platformer where you need to run, jump and dash your way through obstacles to lit a bonfire at the top of the mountain. Inspired by Canabalt. Made in Unity.
 
 **Game Programming Responsibilities**
   *  Checkpoints
@@ -14,7 +14,7 @@ Sootling Saga is a sidescrolling platformer where you need to run, jump and dash
   *  Score/pickups
 '''
 +++
-
+# Sootling Saga
 Sootling Saga is a sidescrolling platformer. It was the first game project
 at [The Game Assembly](https://thegameassembly.com) and was made in Unity.
 I was one of the few in my group with prior experience of Unity, so I assisted

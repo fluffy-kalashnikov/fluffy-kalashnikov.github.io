@@ -15,6 +15,7 @@ Your Rabbit Died is a game where you need warp between dimensions to outsmart yo
 '''
 +++
 
+# Your Rabbit Died
 Your Rabbit Died is a puzzle game built for mobile. It was the second game project 
 at [The Game Assembly](https://thegameassembly.com) and was made in Unity as well.
 

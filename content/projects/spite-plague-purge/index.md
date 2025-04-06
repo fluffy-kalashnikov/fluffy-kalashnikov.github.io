@@ -14,7 +14,7 @@ Spite Plague Purge is an ARPG where you fight the infected with your crossbow an
   *  Shadow mapping
 '''
 +++
-
+# Spite Plague Purge
 Spite - Plague Purge was my sixth game project at [The Game Assembly](https://thegameassembly.com) and heavily inspired by Diablo III. 
 It was made in our custom game engine Clockwork. We basically scrapped the game engine from [Eggscapism](../eggscapism/) apart from
 the graphics engine and merged it with another engine. It was a decision made without any formal agreement between us programmers,

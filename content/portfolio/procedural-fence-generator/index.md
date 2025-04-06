@@ -6,6 +6,7 @@ tags = []
 date = 2025-03-10
 draft = false
 +++
+# Procedural Fence Generator
 I've created a spline-driven fence generator in Houdini with tweakable parameters that let other disciplines create fences from already existing models! All the models used below are from [Quixel Megascans](https://www.fab.com/sellers/Quixel).
 
 {{< fakegif "procedural_fence_generator_01_showcase.webm" >}}

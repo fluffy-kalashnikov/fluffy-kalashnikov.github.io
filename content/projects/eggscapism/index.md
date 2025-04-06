@@ -14,7 +14,7 @@ Eggscapism is a narrative puzzler where you need to restore the power and call f
   *  UI
 '''
 +++
-
+# Eggscapism
 Eggscapism is a narrative puzzler roughly 2 minutes in length. It was the fifth project 
 at [The Game Assembly](https://thegameassembly.com) and it was the first project where 
 we used our own game engine made from scratch. Given that I was the only programmer 
