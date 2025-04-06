@@ -11,7 +11,7 @@ I'm a programmer at heart, but I have great interest in graphics and animation a
 Hope to see you soon!
 
 [ivar@sidorsson.com](mailto:ivar@sidorsson.com)  
-[Resume](/Ivar%20Sidorsson%20Resume.pdf)  
+[Resume](Ivar%20Sidorsson%20Resume.pdf)  
 [LinkedIn](https://www.linkedin.com/in/ivar-sidorsson/)  
 [GitHub](https://github.com/fluffy-kalashnikov)  
 
