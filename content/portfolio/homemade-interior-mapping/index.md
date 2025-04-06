@@ -27,9 +27,9 @@ float PlaneRayIntersection(float3 RayPoint, float3 RayDirection, float3 PlaneNor
     return T;
 }
 ```
-I use this code snippet to calculate intersections between rays and planes. To use it properly it's important to understand what rays and planes are from a purely mathematical standpoint. I wholeheartedly recommend [gamemath.com](https://gamemath.com/book/geomtests.html#intersection_ray_plane) for a proper explanation, but here is at least an explanatory visualization!
+I use this code snippet to calculate intersections between rays and planes. To use it properly it's important to understand what rays and planes are from a purely mathematical standpoint. I'm going to refer to [gamemath.com](https://gamemath.com/book/geomtests.html#intersection_ray_plane) for a proper explanation, but here is a visualization!
 {{< fakegif "01_ray_plane_intersection.webm" >}}
-In my opinion, the key takeaways are that rays are parametrically defined by a point and a direction and planes are implicitly defined by a normal and a distance from the origin. Unlike 3D geometry, rays and planes in mathematics are infinite. Unless the ray is perfectly perpendicular to a plane, it will always intersect in either the positive or negative direction.
+The key takeaways are that rays are parametrically defined by a point and a direction and planes are implicitly defined by a normal and a distance from the origin. Unlike 3D geometry, rays and planes in mathematics are infinite. Unless the ray is perfectly perpendicular to a plane, it will always intersect in either the positive or negative direction.
 
 ### Calculating the planes to raycast against
 {{< fakegif "02_calc_closest_plane.webm" >}}
