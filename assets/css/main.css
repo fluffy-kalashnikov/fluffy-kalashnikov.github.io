@@ -164,6 +164,12 @@ img, video {
     border-radius: var(--pad0);
 }
 
+/** will only work for trailer footage, should probably make explicit tag **/
+video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
 
 
 
