@@ -11,7 +11,7 @@ I've created a spline-driven fence generator in Houdini with tweakable parameter
 
 {{< fakegif "procedural_fence_generator_01_showcase.webm" >}}
 
-For a long time I was intimidated about learning Houdini for game development, but I was very inspired by a lecture from [David Lindberg](https://www.artstation.com/davidlindberg8) to start small in Houdini and develop increasingly sophisticated things over time. During [Spite Parasite](/projects/spite-parasite) I decided to integrate Houdini into our custom engines pipeline, and with all the accumulated experience from producing smaller Houdini Digital Assets during development I've become a lot more confident with Houdini.
+For a long time I was intimidated about learning Houdini for game development, but I was inspired by a lecture from [David Lindberg](https://www.artstation.com/davidlindberg8) to start small in Houdini and develop increasingly sophisticated things over time. During [Spite Parasite](/projects/spite-parasite) I decided to integrate Houdini into our custom engines pipeline, and with all the accumulated experience from producing smaller Houdini Digital Assets during development I've become a lot more confident with Houdini.
 
 With this fence generator I wanted to dive deeper into producing Houdini Digital Assets natively for Unreal Engine with many parameters that users can bend to their will. During testing I discovered many happy accidents that were polished into features in the end!
 
