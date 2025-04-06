@@ -1,6 +1,6 @@
 +++
 title = 'Procedural Fence Generator'
-weight = 1
+weight = 3
 summary = '''
 '''
 tags = []
