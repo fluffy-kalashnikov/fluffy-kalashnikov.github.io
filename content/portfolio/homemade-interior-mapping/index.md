@@ -12,7 +12,7 @@ I implemented an interior mapping material that can be used to render interiors 
 
 {{< fakegif "homemade_interior_mapping_showcase.webm" >}}
 
-I have a big fascination for parallax effects in games and wanted get a better understanding of how these techniques work. I found the [Interior Mapping paper by Joost van Dongen (2008)](https://www.proun-game.com/Oogst3D/CODING/InteriorMapping/InteriorMapping.pdf) during my research and wanted to give an attempt at implementing it myself. 
+I have a big fascination for parallax effects in games and wanted to get a better understanding of how these techniques work. I found the [Interior Mapping paper by Joost van Dongen (2008)](https://www.proun-game.com/Oogst3D/CODING/InteriorMapping/InteriorMapping.pdf) during my research and wanted to give an attempt at implementing it myself. 
 
 The technique uses raycasting to determine where in the cubemap to sample from. By raycasting against a corresponding plane for X, Y, Z and selecting the closest point of intersection, we can sample the cubemap in such a way to give the illusion of volume inside a flat plane!
 
