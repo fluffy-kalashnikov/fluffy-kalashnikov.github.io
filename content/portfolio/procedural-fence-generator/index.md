@@ -10,19 +10,19 @@ draft = false
 # Procedural Fence Generator
 I've created a spline-driven fence generator in Houdini with tweakable parameters that lets the user create fences from already existing models! All the models used below are from [Quixel Megascans](https://www.fab.com/sellers/Quixel).
 
-{{< fakegif "procedural_fence_generator_01_showcase.webm" >}}
+{{< fakegif "procedural_fence_generator_showcase.webm" >}}
 
 For a long time I was intimidated about learning Houdini for game development, but I was inspired by a lecture from [David Lindberg](https://www.artstation.com/davidlindberg8) to start small in Houdini and develop increasingly sophisticated things over time. During [Spite Parasite](/projects/spite-parasite) I decided to integrate Houdini into our custom engines pipeline, and with all the accumulated experience from producing smaller Houdini Digital Assets during development I've become a lot more confident with Houdini.
 
-With this fence generator I wanted to dive deeper into producing Houdini Digital Assets natively for Unreal Engine with many parameters that users can bend to their will. During testing I discovered many happy accidents that were polished into features in the end!
+With this fence generator I wanted to dive deeper into producing Houdini Digital Assets natively for Unreal Engine with many parameters that the users can bend to their will. During testing I discovered many happy accidents that were polished into features in the end!
 
 
 ## Placing fences in the level
-{{< fakegif "procedural-fence-generator-usage.webm" >}}
+{{< fakegif "procedural_fence_generator_building.webm" >}}
 
 When the user drags the Houdini Digital Asset into the level, they are immediately presented with a spline that they can adjust and add control points to. Adjusting control points or parameters automatically causes Houdini Engine to recook the asset.
 
-![](houdini_fence_parameters.png)
+![](procedural_fence_generator_parameters.webp)
 
 This particular fence generates points used for instancing, and instances different models whether the point represents a board, post or rail. Using instancing this way makes the fences very modular and lets users create variations based on individual pieces of the fence rather than a complete fence.
 
