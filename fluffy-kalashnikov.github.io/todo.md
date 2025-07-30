@@ -1,0 +1,2 @@
+- [ ] överväg ta bort pdf från hemsida, gör kort sales pitch och beskriv skills ytligt
+- [ ] asynchronous projection specialization behöver kortas ner väldigt mycket
