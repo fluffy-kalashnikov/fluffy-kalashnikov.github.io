@@ -12,7 +12,7 @@ I created a Maya plugin that lets the user seamlessly update models while the ga
 
 {{< fakegif "live_maya_exporter_showcase.webm" >}}
 
-Since I studied game programming extensively before I dove into technical art I've been very interested in finding unique ways to apply my previous experience for pipeline development. Inspired by the networking course at The Game Assembly, I wanted to create a tool that communicates between processes!
+Since I studied game programming before I dove into technical art I've been very interested in finding unique ways to apply my previous experience for pipeline development. Inspired by the networking course at The Game Assembly, I wanted to create a tool that communicates between processes!
 
 The exporter works by letting an instance of Maya act as a server and the game instances as clients. When the user presses a keybind, Maya exports the current scene to a temporary directory and notifies all connected game instances that a particular model needs to be reloaded. The game clients subsequently searches for the most suitable model to update and imports the file Maya requested. Voilà!
 
