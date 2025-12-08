@@ -4,9 +4,9 @@ date = 2024-01-14T11:40:24+01:00
 draft = false
 type = 'about'
 +++
-Hi! I'm a technical artist and game programmer from Tjörn. I'm a very analytical person with a strong fascination for graphics programming, content pipelines and custom tools development. 
+Hi! I'm a technical artist experienced with game programming from Tjörn. I'm a very analytical person with a fascination for computer graphics, content pipelines and procedural content generation. 
 
-I'm a programmer at heart, but I have taken great interest in graphics and animation as well! I enjoy collaborating with people from a wide variety of disciplines and I'm always eager to learn something new.
+I will always refer to myself as a programmer at heart, but I have taken great interest in graphics and animation as well! I enjoy collaborating with people from a wide variety of disciplines and I'm always eager to learn something new.
 
 Hope to see you soon!
 
