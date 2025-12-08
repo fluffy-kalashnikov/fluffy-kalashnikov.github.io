@@ -5,6 +5,7 @@ summary = '''
 '''
 tags = []
 date = 2024-10-01
+expiryDate = 2025-12-07
 draft = false
 +++
 

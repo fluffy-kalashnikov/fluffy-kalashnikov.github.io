@@ -1,6 +1,6 @@
 +++
 title = 'Live Maya Exporter'
-weight = 2
+weight = 4
 summary = '''
 '''
 tags = []

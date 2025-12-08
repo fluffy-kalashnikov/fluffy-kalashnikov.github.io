@@ -1,6 +1,6 @@
 +++
 title = 'Homemade Interior Mapping'
-weight = 1
+weight = 3
 summary = '''
 '''
 tags = []
