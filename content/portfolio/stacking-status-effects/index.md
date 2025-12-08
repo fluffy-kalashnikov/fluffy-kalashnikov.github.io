@@ -9,7 +9,7 @@ draft = false
 +++
 
 # Stacking Status Effects
-This is my first portfolio from [Birdisland](https://www.birdisland.studio/)! It's from a soon-to-release demo featuring turn-based combat similar to divinity original sin, and a crucial aspect to communicate through VFX are the status effects!
+This is my first portfolio from [Birdisland](https://www.birdisland.studio/)! It's from a soon-to-release demo featuring turn-based combat similar to [Divinity Original Sin](https://store.steampowered.com/app/435150/Divinity_Original_Sin_2__Definitive_Edition/), and a crucial aspect to communicate through VFX are the status effects!
 {{< fakegif "stacking_status_effects_reel.webm" >}}
 
 ## Invidual effects
