@@ -2,16 +2,9 @@
 title = 'Spite Parasite'
 date = 2024-09-02
 draft = false
+roles = ['Technical Artist']
 summary = '''
-**2024-09-30 to 2024-12-06**
-
 Spite Parasite is an ARPG where you use your god-given powers to cleanse an infested ancient civilization deep in the jungle. Inspired by Diablo 3. Made in Tre Rader Kod.
-
-**Technical Art Responsibilities**
-  *  Unreal Engine asset exporter
-  *  Enemy/boss highlight shader
-  *  Vertex paint shader for terrain
-  *  Maya tool requests
 '''
 +++
 # Spite Parasite

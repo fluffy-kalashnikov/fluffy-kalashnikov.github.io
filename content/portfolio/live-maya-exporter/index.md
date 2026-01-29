@@ -2,8 +2,9 @@
 title = 'Live Maya Exporter'
 weight = 4
 summary = '''
+Maya exporter that connects to a running game instance and asks it to reload the exported mesh
 '''
-tags = []
+roles = ['Technical Artist']
 date = 2025-01-03
 draft = false
 +++

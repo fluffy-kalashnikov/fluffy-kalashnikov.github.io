@@ -2,8 +2,9 @@
 title = 'Procedural Fence Generator'
 weight = 2
 summary = '''
+Procedural tool for building fences out of existing meshes in Unreal Engine
 '''
-tags = []
+roles = ['Technical Artist', 'Game Programmer']
 date = 2025-03-10
 draft = false
 +++

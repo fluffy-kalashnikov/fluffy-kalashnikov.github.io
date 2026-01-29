@@ -3,5 +3,7 @@
         {{ .Content }}
     </section>
 
-    {{ partial "display-double.html" .Pages }}
+    {{ range .Pages }}
+        {{ .Render "summary" }}
+    {{ end }}
 {{ end }}

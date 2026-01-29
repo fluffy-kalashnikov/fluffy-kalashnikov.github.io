@@ -2,8 +2,9 @@
 title = 'Stacking Status Effects'
 weight = 1
 summary = '''
+System for overlaying different status effects on top of each other
 '''
-tags = []
+roles = ['Technical Artist', 'Game Programmer']
 date = 2025-11-04
 draft = false
 +++

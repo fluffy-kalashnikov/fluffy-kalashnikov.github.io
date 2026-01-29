@@ -1,0 +1,24 @@
+{{ define "header" }}
+    <a>Portfolio</a>
+    <a>Projects</a>
+    <a>About</a>
+{{ end }}
+
+{{ define "main" }}
+    <section class="content">
+        {{ .Content }}
+    </section>
+
+    {{ range .Pages }}
+        {{ .Render "summary" }}
+    {{ end }}
+{{ end }}
+
+{{ define "footer" }}
+    <i>
+        I am part of The Game Assembly's internship program. As per the agreement 
+        between the Games Industry and The Game Assembly, neither student nor company 
+        may be in contact with one another regarding internships before April 23th.
+        Any internship offers can be made on May 5th, at the earliest.
+    </i>
+{{ end }}

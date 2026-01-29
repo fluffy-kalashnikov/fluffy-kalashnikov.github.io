@@ -2,16 +2,9 @@
 title = 'Sootling Saga'
 date = 2022-09-19
 draft = false
+roles = ['Game Programmer']
 summary = '''
-**2022-09-19 to 2022-10-28**
-
 Sootling Saga is a sidescrolling platformer where you need to run, jump and dash your way through obstacles to lit a bonfire at the top of the mountain. Inspired by Canabalt. Made in Unity.
-
-**Game Programming Responsibilities**
-  *  Checkpoints
-  *  Editor playtest tooling
-  *  UI
-  *  Score/pickups
 '''
 +++
 # Sootling Saga

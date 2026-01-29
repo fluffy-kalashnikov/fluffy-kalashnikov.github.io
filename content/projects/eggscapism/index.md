@@ -2,16 +2,9 @@
 title = 'Eggscapism'
 date = 2023-09-04
 draft = false
+roles = ['Game Programmer']
 summary = '''
-**2023-09-04 to 2023-09-29**
-
 Eggscapism is a narrative puzzler where you need to restore the power and call for help to escape an arctic laboratory from an ominous presence. Inspired by Legend of Grimrock 2. Made in Clockwork Engine.
-
-**Game Programming Responsibilities**
-  *  Engine restructuring
-  *  Graphics engine debugging
-  *  FMOD setup
-  *  UI
 '''
 +++
 # Eggscapism

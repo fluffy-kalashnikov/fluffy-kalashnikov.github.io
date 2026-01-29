@@ -2,8 +2,9 @@
 title = 'Unreal Engine Exporter'
 weight = 4
 summary = '''
+Unreal Engine plugin for playtesting and exporting levels to our game engine with Perforce integration
 '''
-tags = []
+roles = ['Technical Artist', 'Game Programmer']
 date = 2024-10-01
 expiryDate = 2025-12-07
 draft = false
