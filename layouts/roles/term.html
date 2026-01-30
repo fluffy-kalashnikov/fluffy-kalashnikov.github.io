@@ -1,0 +1,31 @@
+{{ define "header" }}
+<header id="navbar" class="flex-row">
+    <h2><a href="#portfolio">Portfolio</a></h2>
+    <h2><a href="#projects">Projects</a></h2>
+    <h2><a href="#about">About</a></h2>
+</header>
+{{ end }}
+
+{{ define "main" }}
+<main class="flex-column gap_l">
+    {{ $old := "" }}
+    {{ range .Pages }}
+        {{ $new := .Type }}    
+        {{ if ne $old $new }}
+            {{ if ne $old "" }}
+            </section>
+            {{ end }}
+            <section id={{$new}} class="flex-column gap_m">
+        {{ end }}
+        {{ $old = $new}}
+
+  
+        {{ .Render "summary" }}
+    {{ end }}
+    </section>
+
+    <section id="about" class="content">
+        {{ .Content }}
+    </section>
+</main>
+{{ end }}

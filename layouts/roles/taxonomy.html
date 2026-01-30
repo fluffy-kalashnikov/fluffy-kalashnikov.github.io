@@ -1,0 +1,8 @@
+{{ define "main" }}
+<main>
+    <h1>Roles</h1>
+    {{ range .Data.Terms }}
+        <a href={{.Page.RelPermalink}}> {{ .Page.LinkTitle }} </a>
+    {{ end }}
+</main>
+{{ end }}

@@ -1,22 +1,7 @@
 {{ define "main" }}
+<main>
     <section class="content">
         {{ .Content }}
     </section>
-
-    <div class="flex-column gap5">
-        <div>
-            {{ with .Site.GetPage "/portfolio" }}
-                {{ range (first 3 .Pages) }}
-                    {{ .Render "summary" }}
-                {{ end }}
-            {{ end }}
-        </div>
-        <div>
-            {{ with .Site.GetPage "/projects" }}
-                {{ range (first 3 .Pages) }}
-                    {{ .Render "summary" }}
-                {{ end }}
-            {{ end }}
-        </div>
-    </div>
+</main>
 {{ end }}

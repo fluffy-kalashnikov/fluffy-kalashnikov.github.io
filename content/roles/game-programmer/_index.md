@@ -1,4 +1,7 @@
 +++
+title = 'Game Programmer'
+date = 2026-01-30
+draft = false
 +++
 
 Hi! I'm a game programmer experienced with tools and pipelines from Tjörn. I'm a very analytical person with a fascination for computer graphics, content pipelines and procedural content generation. 
@@ -8,6 +11,11 @@ I will always refer to myself as a programmer at heart, but I have taken great i
 Hope to see you soon!
 
 [ivar@sidorsson.com](mailto:ivar@sidorsson.com)  
-[Resume](Ivar%20Sidorsson%20Resume.pdf)  
+[CV](Ivar%20Sidorsson%20CV.pdf)  
 [LinkedIn](https://www.linkedin.com/in/ivar-sidorsson/)  
-[GitHub](https://github.com/fluffy-kalashnikov)
+[GitHub](https://github.com/fluffy-kalashnikov)  
+
+*I am part of The Game Assembly's internship program. As per the agreement 
+between the Games Industry and The Game Assembly, neither student nor company 
+may be in contact with one another regarding internships before April 23th.
+Any internship offers can be made on May 5th, at the earliest.*
