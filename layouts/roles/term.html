@@ -1,5 +1,5 @@
 {{ define "header" }}
-<header id="navbar" class="flex-row">
+<header id="navbar" class="flex-row flex-fill sticky_top blur pad_bot_xs pad_top_xxs pad_rgt_xxs pad_lft_xxs mgn_lft_xxs mgn_rgt_xxs">
     <h2><a href="#portfolio">Portfolio</a></h2>
     <h2><a href="#projects">Projects</a></h2>
     <h2><a href="#about">About</a></h2>
@@ -7,7 +7,7 @@
 {{ end }}
 
 {{ define "main" }}
-<main class="flex-column gap_l">
+<main class="flex-col gap_xxl pad_top_l pad_bot_xxl pad_lft_xxs pad_rgt_xxs">
     {{ $old := "" }}
     {{ range .Pages }}
         {{ $new := .Type }}    
@@ -15,7 +15,7 @@
             {{ if ne $old "" }}
             </section>
             {{ end }}
-            <section id={{$new}} class="flex-column gap_m">
+            <section id={{$new}} class="flex-col gap_m">
         {{ end }}
         {{ $old = $new}}
 
@@ -24,7 +24,7 @@
     {{ end }}
     </section>
 
-    <section id="about" class="content">
+    <section id="about" class="markdown">
         {{ .Content }}
     </section>
 </main>

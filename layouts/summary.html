@@ -1,5 +1,5 @@
 <article>
-    <a href="{{ .RelPermalink }}" class="flex-column gap">
+    <a href="{{ .RelPermalink }}" class="flex-col gap">
         {{ with .Resources.Get "summary.webm" }}
             <video autoplay muted loop poster>
                 <source src="{{ .RelPermalink }}" type="video/webm">
