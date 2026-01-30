@@ -158,6 +158,50 @@ video {
 
 
 
+/** content **/
+.content > p {
+    margin: 20px 0;
+}
+.content > ul {
+    margin: 20px 0 20px var(--pad2);
+}
+
+.content > h1:not(:first-child),
+.content > h2:not(:first-child),
+.content > h3:not(:first-child) {
+    margin: 124px 0 16px 0;
+}
+
+.content > h2 + h3 {
+    margin-top: 64px;
+}
+
+.content > p:first-child,
+.content > h1 + p,
+.content > h2 + p,
+.content > h3 + p,
+.content > h1 + ul,
+.content > h2 + ul,
+.content > h3 + ul {
+    margin-top: 0;
+}
+
+.content > p:last-child {
+    margin-bottom: 0;
+}
+
+.content p a, .content li a {
+    color: #178a9c;
+    font-weight: 600;
+}
+
+.content ol {
+    margin-left: 32px;
+}
+
+
+
+
 
 /** misc **/
 #navbar {
