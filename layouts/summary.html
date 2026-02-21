@@ -1,5 +1,5 @@
 <article>
-    <div class="flex-col gap">
+    <div class="flex-col">
         <a href="{{ .RelPermalink }}" >
         {{ with .Resources.Get "summary.webm" }}
             <video autoplay muted loop poster>
@@ -8,18 +8,7 @@
             </video>
         {{ end }}
         </a>
-        <a href="{{ .RelPermalink }}" ><h2>{{ .Title }}</h2></a>
-        <p>{{ .Summary }}</p>
+        <a href="{{ .RelPermalink }}" class="mgn_top_xs"><h2>{{ .Title }}</h2></a>
+        <p class="mgn_top_xxs">{{ .Summary }}</p>
     </div>
-
-    {{/*  <a href="{{ .RelPermalink }}" class="flex-col gap hide_underline">
-        {{ with .Resources.Get "summary.webm" }}
-            <video autoplay muted loop poster>
-                <source src="{{ .RelPermalink }}" type="video/webm">
-                Your browser does not support the video tag.
-            </video>
-        {{ end }}
-        <h2>{{ .Title }}</h2>
-        <p>{{ .Summary }}</p>
-    </a>  */}}
 </article>

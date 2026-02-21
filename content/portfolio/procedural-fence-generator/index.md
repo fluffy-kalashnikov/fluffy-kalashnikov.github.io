@@ -19,23 +19,22 @@ With this fence generator I wanted to dive deeper into producing Houdini Digital
 
 
 ## Placing fences in the level
+When the user drags the Houdini Digital Asset into the level, they are immediately presented with a spline that they can adjust and add control points to. Adjusting control points or parameters automatically causes Houdini Engine to recook the asset.
 {{< fakegif "procedural_fence_generator_building.webm" >}}
 
-When the user drags the Houdini Digital Asset into the level, they are immediately presented with a spline that they can adjust and add control points to. Adjusting control points or parameters automatically causes Houdini Engine to recook the asset.
-
+This particular fence generates points used for instancing, and instances different models whether the point represents a board, post or rail. Using instancing this way makes the fences very modular and lets users create variations based on individual pieces of the fence rather than a complete fence.
 ![](procedural_fence_generator_parameters.webp)
 
-This particular fence generates points used for instancing, and instances different models whether the point represents a board, post or rail. Using instancing this way makes the fences very modular and lets users create variations based on individual pieces of the fence rather than a complete fence.
-
 ## Generating the fence
-{{< fakegif "procedural-fence-generator-breakdown.webm" >}}
-
 The process of generating the fence basically comes down to
 1. Place post points along the input curve.
 2. Place board points and orient them by interpolating between adjacent posts.
 3. Merge board points at special segments into gates instead.
 3. Place rail points based on the median position of the boards, taking their up direction into consideration.
 4. Instantiate static meshes at each point by setting the `s@unreal_instance` attribute, or optionally debug geometry.
+
+{{< fakegif "procedural-fence-generator-breakdown.webm" >}}
+
 
 ## Challenges
 I think one of the more challenging aspects of creating the surface operator was how to handle all the dependencies between boards, posts and rails. I initially tried to separate and avoid all dependencies between the logic for generating points to boards, posts and rails, but this was significantly more fragile than I had expected. Over time I settled on a very monolithic graph with explicit steps where I cleaned up attributes as soon as they were redundant. This way I didn't have to keep track of their lifetime in my head and be afraid to lose them in very aggresive cleanup steps further down the line.

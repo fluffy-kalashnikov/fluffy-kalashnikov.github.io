@@ -62,8 +62,6 @@ body {
     min-height: 100vh;
     background-color: var(--neutral-900);
     margin: auto auto;
-    backdrop-filter: blur(100px);
-    /*mask-image: linear-gradient(to bottom, transparent 0%, black 100%);*/
 }
 
 
@@ -92,7 +90,8 @@ h2 {
 }
 
 h3 {
-    font-size: 1.35rem;
+    font-size: 1.875rem;
+    font-weight: 600;
 }
 
 video {
@@ -194,7 +193,7 @@ video {
 
 
 /** content **/
-.markdown > p {
+/* .markdown > p {
     margin: 20px 0;
 }
 .markdown > ul {
@@ -219,19 +218,38 @@ video {
 .markdown > h2 + ul,
 .markdown > h3 + ul {
     margin-top: 0;
+} */
+.markdown > h2 {
+    margin-top: 4rem;
+}
+.markdown > h3,
+.markdown > h4,
+.markdown > h5,
+.markdown > h6 {
+    margin-top: 2rem;
 }
 
-.markdown > p:last-child {
-    margin-bottom: 0;
+.markdown > p {
+    margin-top: 1rem;
 }
+.markdown > a video, 
+.markdown > p a video, 
+.markdown > p a img {
+    margin-top: 0.5rem;
+}
+
+
+/* .markdown > p:last-child {
+    margin-bottom: 0;
+} */
 
 .markdown p a, .markdown li a {
     color: #178a9c;
     font-weight: 600;
 }
 
-.markdown ol {
-    margin-left: 32px;
+.markdown ol, .markdown ul {
+    margin-left: 2rem;
 }
 
 
