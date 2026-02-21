@@ -47,8 +47,9 @@ img {
     line-height: 1.55;
     scroll-behavior: smooth;
 }
-
-
+:target {
+    scroll-margin-top: var(--xl);
+}
 
 
 
@@ -57,10 +58,12 @@ html {
 }
 
 body {
-    max-width: 80ch;
+    max-width: 78ch;
     min-height: 100vh;
     background-color: var(--neutral-900);
     margin: auto auto;
+    backdrop-filter: blur(100px);
+    /*mask-image: linear-gradient(to bottom, transparent 0%, black 100%);*/
 }
 
 
@@ -71,7 +74,7 @@ a {
     text-decoration: none;
 }
 
-a:not(header > a):hover {
+a:not(.hide_underline):hover {
     text-decoration: underline;
 }
 
@@ -179,10 +182,6 @@ video {
     top: 0;
 }
 
-.blur {
-    backdrop-filter: blur(10px) grayscale(70%);
-}
-
 .line_bot {
     border-bottom: 1px solid var(--neutral-700);
 }
@@ -246,6 +245,7 @@ video {
 .active a {
     color: var(--neutral-100);
 }
+
 
 
 

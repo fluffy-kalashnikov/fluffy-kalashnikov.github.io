@@ -1,5 +1,18 @@
 <article>
-    <a href="{{ .RelPermalink }}" class="flex-col gap">
+    <div class="flex-col gap">
+        <a href="{{ .RelPermalink }}" >
+        {{ with .Resources.Get "summary.webm" }}
+            <video autoplay muted loop poster>
+                <source src="{{ .RelPermalink }}" type="video/webm">
+                Your browser does not support the video tag.
+            </video>
+        {{ end }}
+        </a>
+        <a href="{{ .RelPermalink }}" ><h2>{{ .Title }}</h2></a>
+        <p>{{ .Summary }}</p>
+    </div>
+
+    {{/*  <a href="{{ .RelPermalink }}" class="flex-col gap hide_underline">
         {{ with .Resources.Get "summary.webm" }}
             <video autoplay muted loop poster>
                 <source src="{{ .RelPermalink }}" type="video/webm">
@@ -8,5 +21,5 @@
         {{ end }}
         <h2>{{ .Title }}</h2>
         <p>{{ .Summary }}</p>
-    </a>
+    </a>  */}}
 </article>

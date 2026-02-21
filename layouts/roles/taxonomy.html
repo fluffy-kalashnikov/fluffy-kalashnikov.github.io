@@ -1,8 +1,10 @@
 {{ define "main" }}
-<main>
-    <h1>Roles</h1>
-    {{ range .Data.Terms }}
-        <a href={{.Page.RelPermalink}}> {{ .Page.LinkTitle }} </a>
-    {{ end }}
+<main class="mgn_top_xl mgn_bot_xl">
+    <h2 class="mgn_bot_xs">Portfolio</h2>
+    <nav class="flex-col gap_xxs">
+        {{ range .Data.Terms }}
+            <a href={{.Page.RelPermalink}}> {{ .Page.LinkTitle }} </a>
+        {{ end }}
+    </nav>
 </main>
 {{ end }}

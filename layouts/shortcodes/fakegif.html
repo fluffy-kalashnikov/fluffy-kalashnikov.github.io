@@ -1,4 +1,6 @@
-<video autoplay muted loop poster>
-    <source src="{{ .Get 0 }}" type="video/webm">
-    Your browser does not support the video tag.
-</video>
+<a href="{{ .Get 0 }}">
+    <video autoplay muted loop poster>
+        <source src="{{ .Get 0 }}" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+</a>
