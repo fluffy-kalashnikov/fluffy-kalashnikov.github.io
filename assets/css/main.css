@@ -26,7 +26,8 @@ img {
 
 :root {    
     --neutral-100: #fafafa;
-    --neutral-200: #cacaca;
+    --neutral-200: #e6e5e5;
+    --neutral-300: #d8d8d8;
     --neutral-400: #ccc;
     --neutral-500: #b3b3b3;
     --neutral-600: #777;
@@ -79,6 +80,9 @@ a:not(.hide_underline):hover {
 h1, h2, h3, h4, h5, h6 {
     color: var(--neutral-100);
     line-height: 1;
+}
+p {
+    color: var(--neutral-500);
 }
 
 h1 {
@@ -193,32 +197,6 @@ video {
 
 
 /** content **/
-/* .markdown > p {
-    margin: 20px 0;
-}
-.markdown > ul {
-    margin: 20px 0 20px var(--s);
-}
-
-.markdown > h1:not(:first-child),
-.markdown > h2:not(:first-child),
-.markdown > h3:not(:first-child) {
-    margin: 124px 0 16px 0;
-}
-
-.markdown > h2 + h3 {
-    margin-top: 64px;
-}
-
-.markdown > p:first-child,
-.markdown > h1 + p,
-.markdown > h2 + p,
-.markdown > h3 + p,
-.markdown > h1 + ul,
-.markdown > h2 + ul,
-.markdown > h3 + ul {
-    margin-top: 0;
-} */
 .markdown > h2 {
     margin-top: 4rem;
 }
@@ -227,6 +205,9 @@ video {
 .markdown > h5,
 .markdown > h6 {
     margin-top: 2rem;
+}
+.markdown > h3 a {
+    color: var(--neutral-400);
 }
 
 .markdown > p {
@@ -237,17 +218,10 @@ video {
 .markdown > p a img {
     margin-top: 0.5rem;
 }
-
-
-/* .markdown > p:last-child {
-    margin-bottom: 0;
-} */
-
 .markdown p a, .markdown li a {
     color: #178a9c;
     font-weight: 600;
 }
-
 .markdown ol, .markdown ul {
     margin-left: 2rem;
 }
@@ -256,12 +230,12 @@ video {
 
 /** navbar **/
 .navbar-entry a {
-    color: var(--neutral-500);
+    color: var(--neutral-600);
     transition: all 200ms ease-in-out;
 }
 
 .active a {
-    color: var(--neutral-100);
+    color: var(--neutral-300);
 }
 
 
