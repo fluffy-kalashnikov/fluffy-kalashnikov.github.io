@@ -1,8 +1,10 @@
 {{ define "header" }}
-<header id="navbar" class="flex-row flex-fill sticky_top blur pad_bot_xs pad_top_xxs pad_rgt_xxs pad_lft_xxs mgn_lft_xxs mgn_rgt_xxs">
-    <h2><a href="#portfolio">Portfolio</a></h2>
-    <h2><a href="#projects">Projects</a></h2>
-    <h2><a href="#about">About</a></h2>
+<header class="sticky_top">
+    <nav class="flex-row flex-fill bg_neutral_900 pad_bot_xs pad_top_xxs pad_rgt_xs pad_lft_xs">
+        <h2 class="navbar-entry active"><a href="#portfolio">Portfolio</a></h2>
+        <h2 class="navbar-entry"><a href="#projects">Projects</a></h2>
+        <h2 class="navbar-entry"><a href="#about">About</a></h2>
+    </nav>
 </header>
 {{ end }}
 
@@ -15,7 +17,7 @@
             {{ if ne $old "" }}
             </section>
             {{ end }}
-            <section id={{$new}} class="flex-col gap_m">
+            <section id={{$new}} class="flex-col gap_l">
         {{ end }}
         {{ $old = $new}}
 
