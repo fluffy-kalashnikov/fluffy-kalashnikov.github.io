@@ -1,11 +1,12 @@
 {{ define "main" }}
-<main class="pad_top_l pad_bot_xxl pad_lft_xxs pad_rgt_xxs">
+<main class="flex-col gap_xl pad_top_l pad_bot_xxl pad_lft_xxs pad_rgt_xxs">
     <section class="markdown">
         {{ .Content }}
     </section>
-
-    {{ range .Pages }}
-        {{ .Render "summary" }}
-    {{ end }}
+    <section class="flex-col gap_l">
+        {{ range .Pages }}
+            {{ .Render "summary" }}
+        {{ end }}
+    </section>
 </main>
 {{ end }}

@@ -5,3 +5,16 @@
     </section>
 </main>
 {{ end }}
+
+{{ define "footer" }}
+<footer class="line_top">
+    <nav class="flex-row flex-fill pad_bot_xs pad_top_xxs">
+        {{ with .PrevInSection }}
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }} </a>
+        {{ end }}
+        {{ with .NextInSection }}
+            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        {{ end }}
+    </nav>
+</footer>
+{{ end }}

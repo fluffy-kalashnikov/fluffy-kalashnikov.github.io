@@ -81,7 +81,8 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--neutral-100);
     line-height: 1;
 }
-p {
+
+p, li {
     color: var(--neutral-500);
 }
 
@@ -185,6 +186,11 @@ video {
     top: 0;
 }
 
+.sticky_bot {
+    position: sticky;
+    bottom: 0;
+}
+
 .line_bot {
     border-bottom: 1px solid var(--neutral-700);
 }
@@ -210,7 +216,7 @@ video {
     color: var(--neutral-400);
 }
 
-.markdown > p {
+.markdown > p  {
     margin-top: 1rem;
 }
 .markdown > a video, 

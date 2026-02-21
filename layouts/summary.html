@@ -2,13 +2,13 @@
     <div class="flex-col">
         <a href="{{ .RelPermalink }}" >
         {{ with .Resources.Get "summary.webm" }}
-            <video autoplay muted loop poster>
+            <video class="autoplay-video" muted loop playsinline> 
                 <source src="{{ .RelPermalink }}" type="video/webm">
                 Your browser does not support the video tag.
             </video>
         {{ end }}
         </a>
-        <a href="{{ .RelPermalink }}" class="mgn_top_xs"><h2>{{ .Title }}</h2></a>
+        <h2 class="mgn_top_xs"><a href="{{ .RelPermalink }}" >{{ .Title }}</a></h2>
         <p class="mgn_top_xxs">{{ .Summary }}</p>
     </div>
 </article>
