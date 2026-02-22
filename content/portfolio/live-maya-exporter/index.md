@@ -4,7 +4,7 @@ weight = 4
 summary = '''
 Maya exporter that connects to a running game instance and asks it to reload the exported mesh
 '''
-roles = ['Technical Artist']
+roles = ['Technical Artist', 'Tools Programmer']
 date = 2025-01-03
 draft = false
 +++

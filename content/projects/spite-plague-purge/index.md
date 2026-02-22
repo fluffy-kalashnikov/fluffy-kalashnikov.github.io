@@ -2,7 +2,7 @@
 title = 'Spite Plague Purge'
 date = 2023-10-02
 draft = false
-roles = ['Game Programmer']
+roles = ['Game Programmer', 'Tools Programmer', 'Technical Artist']
 summary = '''
 Spite Plague Purge is an ARPG where you fight the infected with your crossbow and crow companion through gothic-themed levels. Inspired by Diablo 3. Made in Clockwork Engine.
 '''

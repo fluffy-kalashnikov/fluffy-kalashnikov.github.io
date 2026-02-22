@@ -2,7 +2,7 @@
 title = 'Stella & Orbit Take Flight'
 date = 2024-12-16
 draft = false
-roles = ['Technical Artist']
+roles = ['Technical Artist', 'Tools Programmer']
 summary = '''
 Stella & Orbit - Take Flight is a third person platformer where you as Stella cooperate with Orbit to flee the Lunar Police and become a pirate. Inspired by Ratchet & Clank. Made in Tre Rader Kod. Still under development.
 '''

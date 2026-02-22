@@ -2,7 +2,7 @@
 title = 'Spite Parasite'
 date = 2024-09-02
 draft = false
-roles = ['Technical Artist']
+roles = ['Technical Artist', 'Tools Programmer']
 summary = '''
 Spite Parasite is an ARPG where you use your god-given powers to cleanse an infested ancient civilization deep in the jungle. Inspired by Diablo 3. Made in Tre Rader Kod.
 '''

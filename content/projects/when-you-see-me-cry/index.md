@@ -2,7 +2,7 @@
 title = 'When You See Me Cry'
 date = 2023-04-17
 draft = false
-roles = ['Game Programmer']
+roles = ['Game Programmer', 'Tools Programmer']
 summary = '''
 When You See Me Cry is a 3D adventure game where you combat silly archaeologists that stole artifacts and thus ruined the balance of the climate. Inspired by The Legend of Zelda: A Link to the Past. Made in The Game Engine.
 '''

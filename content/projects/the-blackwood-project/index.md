@@ -2,7 +2,7 @@
 title = 'The Blackwood Project'
 date = 2025-04-14
 draft = false
-roles = ['Technical Artist']
+roles = ['Technical Artist', 'Tools Programmer']
 summary = '''
 The Blackwood Project is an isometric action game where you're an agent investigating a distress  distress signal on the inside of a mansion, armed with a flashlight and revolver.
 '''

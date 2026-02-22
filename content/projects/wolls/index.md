@@ -2,7 +2,7 @@
 title = 'Wolls'
 date = 2023-01-16
 draft = false
-roles = ['Game Programmer']
+roles = ['Game Programmer', 'Tools Programmer']
 summary = '''
 Wolls is a 2D platformer where you as a Huldra fight and bounce on trolls, fairies and goblins through viking-themed levels. Inspired by Shovel Knight. Made in The Game Engine.
 '''

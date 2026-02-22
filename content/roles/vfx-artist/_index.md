@@ -1,5 +1,5 @@
 +++
-title = 'Technical Artist'
+title = 'VFX Artist'
 date = 2026-01-30
 draft = false
 +++
