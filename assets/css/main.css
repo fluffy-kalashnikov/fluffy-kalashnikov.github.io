@@ -69,8 +69,13 @@ body {
 
 /** basic formatting **/
 a {
-    color: var(--neutral-100);
+    color: #178a9c;
+    font-weight: 600;
     text-decoration: none;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    font-weight: inherit;
 }
 
 a:not(.hide_underline):hover {
@@ -224,10 +229,10 @@ video {
 .markdown > p a img {
     margin-top: 0.5rem;
 }
-.markdown p a, .markdown li a {
+/* .markdown p a, .markdown li a {
     color: #178a9c;
     font-weight: 600;
-}
+} */
 .markdown ol, .markdown ul {
     margin-left: 2rem;
 }
