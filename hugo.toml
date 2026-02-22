@@ -9,3 +9,7 @@ style = 'gruvbox'
 
 [taxonomies]
 role = 'roles'
+
+[caches]
+[caches.images]
+dir = ':cacheDir/images'
