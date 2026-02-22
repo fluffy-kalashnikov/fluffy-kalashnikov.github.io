@@ -1,6 +1,16 @@
-<a href="{{ .Get 0 }}">
-    <video class="autoplay-video" autoplay muted loop poster playsinline> 
-        <source src="{{ .Get 0 }}" type="video/webm">
+
+{{ $video := .Get 0 }}
+
+ {{ $valid := strings.HasSuffix $video ".webm" }}
+ {{ if ne $valid true }}
+ {{    errorf "%q input must be .webm. See %s" .Name .Position }}
+ {{ end }}
+
+{{ $poster := strings.TrimSuffix ".webm" $video }}
+{{ $poster = printf "%s.webp" $poster }}
+<a href={{$video}}>
+    <video class="autoplay-video" autoplay muted loop poster={{$poster}} playsinline> 
+        <source src={{$video}} type="video/webm">
         Your browser does not support the video tag.
     </video>
 </a>
