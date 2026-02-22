@@ -14,22 +14,22 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     })
-    const autoplayVideoObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            const video = entry.target;
-            if (entry.isIntersecting) {
-                video.play();
-            } else {
-                video.pause();
-            }
-            console.log("video visible")
-        })
-    }, { threshold: 0.6})
+    // const autoplayVideoObserver = new IntersectionObserver(entries => {
+    //     entries.forEach(entry => {
+    //         const video = entry.target;
+    //         if (entry.isIntersecting) {
+    //             video.play();
+    //         } else {
+    //             video.pause();
+    //         }
+    //         console.log("video visible")
+    //     })
+    // }, { threshold: 0.6})
 
     document.querySelectorAll('section[id]').forEach(section => {
         navbarHighlightObserver.observe(section);
     });
-    document.querySelectorAll('video.autoplay-video').forEach(autoplayVideo => {
-        autoplayVideoObserver.observe(autoplayVideo);
-    });
+    // document.querySelectorAll('video.autoplay-video').forEach(autoplayVideo => {
+    //     autoplayVideoObserver.observe(autoplayVideo);
+    // });
 });

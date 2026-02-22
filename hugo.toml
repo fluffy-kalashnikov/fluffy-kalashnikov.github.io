@@ -2,7 +2,6 @@ baseURL = 'https://sidorsson.com/'
 languageCode = 'en-us'
 title = 'Ivar Sidorsson'
 
-
 [markup]
 [markup.highlight]
 style = 'gruvbox'

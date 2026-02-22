@@ -12,7 +12,7 @@
 <main class="flex-col gap_xxl pad_top_l pad_bot_xxl pad_lft_xxs pad_rgt_xxs">
     {{ $old := "" }}
     {{ range .Pages }}
-        {{ $new := .Type }}    
+        {{ $new := .Type }}
         {{ if ne $old $new }}
             {{ if ne $old "" }}
             </section>
@@ -21,7 +21,6 @@
         {{ end }}
         {{ $old = $new}}
 
-  
         {{ .Render "summary" }}
     {{ end }}
     </section>
