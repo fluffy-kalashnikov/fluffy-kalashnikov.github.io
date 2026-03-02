@@ -286,6 +286,8 @@ Converting the packed prims back to a point cloud is done by reading the packedf
 ### Character UV generator for VFX
 The character UV generator was created since some asset packs had models which were UV-mapped for gradient atlas texturing. The HDA simply unwraps the UV set and stores it unnormalized in the second UV-set, so that VFX requiring tiling textures like the blood texture can work across all characters.
 
+![alt text](houdini-character-uv-generator-hda.webp)
+
 To make exporting quick, it's intended to use the batch export button which uses Python to scan the chosen FBX directory and run the export process for each FBX found.
 
 {{< fakegif "houdini-character-uv-generator.webm" >}}
