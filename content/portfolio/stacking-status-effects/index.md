@@ -4,7 +4,7 @@ weight = 1
 summary = '''
 System for overlaying different status effects on top of each other
 '''
-roles = ['Technical Artist', 'Game Programmer']
+roles = ['All', 'Technical Artist', 'Game Programmer']
 date = 2025-11-04
 draft = false
 +++
