@@ -13,9 +13,4 @@ Hope to see you soon!
 [ivar@sidorsson.com](mailto:ivar@sidorsson.com)  
 [CV](Ivar%20Sidorsson%20CV.pdf)  
 [LinkedIn](https://www.linkedin.com/in/ivar-sidorsson/)  
-[GitHub](https://github.com/fluffy-kalashnikov)  
-
-*I am part of The Game Assembly's internship program. As per the agreement 
-between the Games Industry and The Game Assembly, neither student nor company 
-may be in contact with one another regarding internships before April 23rd.
-Any internship offers can be made on May 5th, at the earliest.*
+[GitHub](https://github.com/fluffy-kalashnikov)
