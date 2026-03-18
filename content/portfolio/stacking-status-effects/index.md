@@ -7,6 +7,7 @@ System for overlaying different status effects on top of each other
 roles = ['All', 'Technical Artist', 'Game Programmer']
 date = 2025-11-04
 draft = false
+expiryDate = 2026-03-18
 +++
 
 # Stacking Status Effects
