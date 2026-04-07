@@ -1,7 +1,35 @@
+
+{{ define "header" }}
+<header class="sticky_top mgn_rgt_xxs mgn_lft_xxs">
+    <nav class="flex-row flex-fill bg_neutral_900 pad_bot_xs pad_top_xxs line_bot">
+        <h2 class="navbar-entry"><a href="#portfolio">Portfolio</a></h2>
+        <h2 class="navbar-entry"><a href="#projects">Projects</a></h2>
+        <h2 class="navbar-entry"><a href="#about">About</a></h2>
+    </nav>
+</header>
+{{ end }}
+
 {{ define "main" }}
-<main class="mgn_top_xl mgn_bot_xl ">
-    <section class="markdown">
+<main class="flex-col gap_xxl pad_top_l pad_bot_xxl pad_lft_xxs pad_rgt_xxs">
+    {{ with site.GetPage "roles/game-programmer" }}
+    {{ $old := "" }}
+        {{ range .Pages }}
+            {{ $new := .Type }}
+            {{ if ne $old $new }}
+                {{ if ne $old "" }}
+                </section>
+                {{ end }}
+                <section id={{$new}} class="flex-col gap_l">
+            {{ end }}
+            {{ $old = $new}}
+
+            {{ .Render "summary" }}
+        {{ end }}
+    </section>
+    
+    <section id="about" class="markdown">
         {{ .Content }}
     </section>
+    {{ end }}
 </main>
 {{ end }}
