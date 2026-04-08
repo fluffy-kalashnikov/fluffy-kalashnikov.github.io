@@ -13,6 +13,7 @@ draft = false
 [Taiga](https://taiga.io/) is an open-source project management tool that I find quite neat to use! However, many artists, level designers, and programmers I've collaborated with tend to use it less as deadlines approach.
 
 I think part of the reason is friction, as it's a separate application (or browser tab) and designed more for general software development rather than game development. With this plugin I wanted to reduce that friction, and also take advantage of the fact that issues can be visualized in the game world itself!
+{{< fakegif "summary.webm" >}}
 
 ## Browsing
 Issues are a more ad-hoc variants of tasks and usually have a context or something specific that has broken or could be improved. In Taiga they are visualized in rows with sortable columns like this.
