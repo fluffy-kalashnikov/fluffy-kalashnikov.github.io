@@ -19,32 +19,34 @@ I think part of the reason is friction, as it's a separate application (or brows
 Issues are a more ad-hoc variant of tasks and usually have a context or something specific that has broken or could be improved. In Taiga they are visualized in rows with sortable columns like this.
 ![alt text](image-2.png)
 
-The plugin has an outliner which visualizes issues in a similar way to Taiga with columns for different issue proprties. It also shows issues inside the world itself, and when an issue is hovered in either of them a camera frustum shows where the camera was facing when the screenshot was taken.
+The plugin has an outliner which visualizes issues in a similar way to Taiga with columns for different issue properties. It also shows issues inside the world itself, and when an issue is hovered in either of them a camera frustum shows where the camera was facing when the screenshot was taken.
 {{< fakegif "browsing-v2.webm" >}}
 
 ## Navigation
 Issues can be teleported to by double clicking either in 3D or in the outliner. 
 {{< fakegif "clicknav-v2.webm" >}}
 
-You can also teleport by looking in first person directly at an issue, and when the right mouse button is released, the camera selects and teleports to the issue. Issues are highlighted to make sure you don't teleport by suprise.
+You can also teleport by looking in first person directly at an issue, and when the right mouse button is released, the camera selects and teleports to the issue. Issues are highlighted to make sure you don't teleport by surprise.
 {{< fakegif "looknav-v2.webm" >}}
 
 Teleporting to an issue automatically enables a focus mode where the screenshot is overlaid on top of the screen. The screenshot then pingpongs between getting displayed and hidden, with a status indicated in the bottom right corner. This is intended to make it easier to compare the images with the current state of the editor.
 {{< fakegif "compare-v2.webm" >}}
 
 ## Filters
-Taiga allows issues to be filtered, and custom filters can be saved.
+Taiga allows issues to be filtered, and custom filters can be saved to allow the user to create custom views for different scenarios.
 ![alt text](image-4.png)
 
-The plugin also implements filters, unfortunatly these weren't exposed from the [Taiga REST API](https://docs.taiga.io/api.html) and thus can only be saved/edited locally.
+The plugin also implements filters, unfortunately these weren't exposed from the [Taiga REST API](https://docs.taiga.io/api.html) and thus can only be saved/edited locally. It works in a similar way, though it uses a dropdown menu instead where it is more obvious that the **Include** options cancel out the **Exclude** options.
 {{< fakegif "filter-v2.webm" >}}
 
 ## Reporting
 Issues are reported by clicking **Create Issue**, which automatically takes a screenshot from the current editor camera perspective. These are automatically stored locally, and are uploaded to Taiga by clicking **Submit**. When the screenshot is taken, some additional metadata is appended on the PNG itself to make navigation work.
+
+The submit button is also used to update the issues if properties have been changed locally.
 {{< fakegif "submit-v2.webm" >}}
 
 ## REST API abstraction
-The REST API abstraction is a glorified wrapper over Unreals internal JSON parser and HTTP API, but it integrates nicely with the [Tasks System](https://dev.epicgames.com/documentation/unreal-engine/tasks-systems-in-unreal-engine) to accomodate for the cases where there's a complex dependency chain between multiple tasks.
+The REST API abstraction is a glorified wrapper over Unreals internal JSON parser and HTTP API, but it integrates nicely with the [Tasks System](https://dev.epicgames.com/documentation/unreal-engine/tasks-systems-in-unreal-engine) to accommodate for the cases where there's a complex dependency chain between multiple tasks.
 
 One example of that is when issues are refreshed. To be snappy the plugin fetches all outdated data and caches the result for subsequent refreshes, but the list issues request of the REST API won't return certain data like the description or attachments. Thus more runs with get issue and get issue attachment requests are required to fetch the complete issue data for all issues.
 ![alt text](image-8.png)
@@ -326,9 +328,9 @@ void UKTSession::RefreshIssues()
 
 
 ## Custom editor mode
-As this editor mode is a bit unorthodox to how the custom editor toolkit framework in Unreal usually is used, most of the default setup  is overriden. Normally a toolkit creates a tool panel to the left with a toolbar and brush settings, but this toolkit instead creates additional tabs in-place of where the regular world outliner/details panel used to be. 
+As this editor mode is a bit unorthodox to how the custom editor toolkit framework in Unreal usually is used, most of the default setup  is overridden. Normally a toolkit creates a tool panel to the left with a toolbar and brush settings, but this toolkit instead creates additional tabs in-place of where the regular world outliner/details panel used to be. 
 
-To do this `Super::RequestModeUITabs()` is explicilty left out as it creates a lot of default widgets.
+To do this `Super::RequestModeUITabs()` is explicitly left out as it creates a lot of default widgets.
 ![alt text](image-12.png)
 
 To create the custom outliner/details tabs, they are invoked later similarly to how the built-in Animation Mode works. 
@@ -339,7 +341,7 @@ The toolkit also manages additional widgets that are drawn on top of the editor 
 
 
 ## Slate Stuff
-Almost all properties in Taiga can customized to the teams liking, thus most of the widgets are custom and need to be built dynamically. 
+Almost all properties in Taiga can be customized to the teams liking, thus most of the widgets are custom and need to be built dynamically. 
 ![alt text](image-13.png)
 
 One example is the filter property widgets, which needs to fetch the list of available statuses, priorities, severities, and types from the current project.
@@ -794,10 +796,10 @@ private:
 ## Digging source code
 I used Visual Studio during development as the RAM consumption of [10x](https://10xeditor.com/) is too heavy to use for Unreal Engine projects on my personal PC, but I missed the speed and search functionality. 
 
-I think a bandaid that worked suprisingly well was to make some shell scripts that wrapped [ripgrep](https://github.com/BurntSushi/ripgrep) to search for fixed strings specifically in the Unreal Engine Source/Plugin directories. When searching for engine strings it doesn't miss anything, and it's incomprehensibly much faster than searching through Visual Studio!
+I think a bandaid that worked surprisingly well was to make some shell scripts that wrapped [ripgrep](https://github.com/BurntSushi/ripgrep) to search for fixed strings specifically in the Unreal Engine Source/Plugin directories. When searching for engine strings it doesn't miss anything, and it's incomprehensibly much faster than searching through Visual Studio!
 
 ![alt text](image-7.png)
 
-PureRef was also quite useful when trying to reverse-engineer bugs and how undocumented stuff works, usually when I reverse engineer something it's like building a tree/graph out of possible solutions and eleminating the branches one by one until something works nicely. During those times it's nice to be able to draw ad-hoc annotations, and by using text it can also become a spatial string clipboard.
+PureRef was also quite useful when trying to reverse-engineer bugs and how undocumented stuff works, usually when I reverse engineer something it's like building a tree/graph out of possible solutions and eliminating the branches one by one until something works nicely. During those times it's nice to be able to draw ad-hoc annotations, and by using text it can also become a spatial string clipboard.
 
 ![alt text](image-6.png)
