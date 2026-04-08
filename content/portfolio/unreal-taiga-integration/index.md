@@ -16,17 +16,21 @@ I think part of the reason is friction, as it's a separate application (or brows
 {{< fakegif "summary.webm" >}}
 
 ## Browsing
-Issues are a more ad-hoc variants of tasks and usually have a context or something specific that has broken or could be improved. In Taiga they are visualized in rows with sortable columns like this.
+Issues are a more ad-hoc variant of tasks and usually have a context or something specific that has broken or could be improved. In Taiga they are visualized in rows with sortable columns like this.
 ![alt text](image-2.png)
 
 The plugin has an outliner which visualizes issues in a similar way to Taiga with columns for different issue proprties. It also shows issues inside the world itself, and when an issue is hovered in either of them a camera frustum shows where the camera was facing when the screenshot was taken.
-![alt text](image-1.png)
+{{< fakegif "Browsing.webm" >}}
 
 ## Navigation
-Issues can be teleported to by double clicking either in 3D or in the outliner. You can also teleport by looking in first person directly at an issue, and when the right mouse button is released, the camera selects and teleports to the issue.
+Issues can be teleported to by double clicking either in 3D or in the outliner. 
+{{< fakegif "ClickNav.webm" >}}
+
+You can also teleport by looking in first person directly at an issue, and when the right mouse button is released, the camera selects and teleports to the issue. Issues are highlighted to make sure you don't teleport by suprise.
+{{< fakegif "LookNav.webm" >}}
 
 Teleporting to an issue automatically enables a focus mode where the screenshot is overlaid on top of the screen. The screenshot then pingpongs between getting displayed and hidden, with a status indicated in the bottom right corner. This is intended to make it easier to compare the images with the current state of the editor.
-![alt text](image-16.png)
+{{< fakegif "Compare.webm" >}}
 
 ## Filters
 Taiga allows issues to be filtered, and custom filters can be saved.
@@ -37,7 +41,7 @@ The plugin also implements filters, unfortunatly these weren't exposed from the 
 
 ## Reporting
 Issues are reported by clicking **Create Issue**, which automatically takes a screenshot from the current editor camera perspective. These are automatically stored locally, and are uploaded to Taiga by clicking **Submit**. When the screenshot is taken, some additional metadata is appended on the PNG itself to make navigation work.
-![alt text](image-5.png)
+{{< fakegif "Reporting.webm" >}}
 
 ## REST API abstraction
 The REST API abstraction is a glorified wrapper over Unreals internal JSON parser and HTTP API, but it integrates nicely with the [Tasks System](https://dev.epicgames.com/documentation/unreal-engine/tasks-systems-in-unreal-engine) to accomodate for the cases where there's a complex dependency chain between multiple tasks.
