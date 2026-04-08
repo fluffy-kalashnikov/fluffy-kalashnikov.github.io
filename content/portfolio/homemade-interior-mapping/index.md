@@ -4,7 +4,7 @@ weight = 3
 summary = '''
 Interior mapping material implemented from scratch using HLSL in Unreal Engine
 '''
-roles = ['All', 'Technical Artist']
+roles = ['All']
 date = 2025-02-10
 draft = false
 +++

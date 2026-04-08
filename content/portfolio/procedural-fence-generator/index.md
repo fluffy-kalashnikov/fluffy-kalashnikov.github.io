@@ -4,7 +4,7 @@ weight = 2
 summary = '''
 Procedural tool for building fences out of existing meshes in Unreal Engine
 '''
-roles = ['All', 'Technical Artist', 'Procedural Technical Artist', 'Game Programmer', 'Tools Programmer']
+roles = ['All']
 date = 2025-03-10
 draft = false
 +++
