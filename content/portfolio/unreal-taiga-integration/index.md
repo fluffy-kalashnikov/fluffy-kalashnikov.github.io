@@ -47,9 +47,9 @@ The submit button is also used to update the issues if properties have been chan
 
 ## REST API abstraction
 The REST API abstraction is a glorified wrapper over Unreals internal JSON parser and HTTP API, but it integrates nicely with the [Tasks System](https://dev.epicgames.com/documentation/unreal-engine/tasks-systems-in-unreal-engine) to accommodate for the cases where there's a complex dependency chain between multiple tasks.
-
-One example of that is when issues are refreshed. To be snappy the plugin fetches all outdated data and caches the result for subsequent refreshes, but the list issues request of the REST API won't return certain data like the description or attachments. Thus more runs with get issue and get issue attachment requests are required to fetch the complete issue data for all issues.
 ![alt text](image-8.png)
+
+One example of that is when issues are refreshed. To be snappy the plugin fetches all outdated data and caches the result for subsequent refreshes, but the [list issues request](https://docs.taiga.io/api.html#issues-list) of the REST API won't return certain data like the description or attachments. Thus more runs with get issue and get issue attachment requests are required to fetch the complete issue data for all issues.
 ```cpp
 void UKTSession::RefreshIssues()
 {
@@ -326,6 +326,202 @@ void UKTSession::RefreshIssues()
 }
 ```
 
+This is an example of how an implementation of a request can look like. Almost all requests return JSON data, and asynchronously parsing the JSON data is handled by the `HandleResponseLambda` function.
+
+```cpp
+namespace KT::TaigaAPI::Project
+{
+	TResponseRef<TArray<FListEntry>> List(const FListInfo& ListInfo)
+	{
+		namespace c = Constants;
+		TResponseRef<TArray<FListEntry>> Response = MakeResponseError<TArray<FListEntry>>();
+		
+		FKTUrlBuilder Url(TEXT("https://api.taiga.io/api/v1/projects"));
+		Url.Param(c::member, ListInfo.Member);
+		Url.Param(c::members, ListInfo.Members);
+		Url.Param(c::is_looking_for_people, ListInfo.IsLookingForPeople);
+		Url.Param(c::is_featured, ListInfo.IsFeatured);
+		Url.Param(c::is_backlog_activated, ListInfo.IsBacklogActivated);
+		Url.Param(c::is_kanban_activated, ListInfo.IsKanbanActivated);
+		Url.Param(c::order_by, ListInfo.OrderBy);
+
+		FHttpRequestInfo RequestInfo{
+			.AuthToken = ListInfo.AuthToken,
+			.Verb = EVerb::Get,
+			.URL = Url.ToString(),
+			.OnRequestCompleteDelegate = HandleResponseLambda(TEXT("Project::List"), Response)
+		};
+		HttpRequest(RequestInfo);
+
+		return Response;
+	}
+
+
+	TResponseRef<FDetail> Get(const FGetInfo& GetInfo)
+	{
+		namespace c = Constants;
+		TResponseRef<FDetail> Response = MakeShared<TResponse<FDetail>>(MakeError());
+
+		TStringBuilder<256> URL;
+		URL = TEXT("https://api.taiga.io/api/v1/projects/");
+		URL << (GetInfo.Id);
+
+		FHttpRequestInfo RequestInfo{
+			.AuthToken = GetInfo.AuthToken,
+			.Verb = EVerb::Get,
+			.URL = URL.ToString(),
+			.OnRequestCompleteDelegate = HandleResponseLambda(TEXT("Project::Get"), Response)
+		};
+		HttpRequest(RequestInfo);
+
+		return Response;
+	}
+}
+```
+The `HandleResponseLambda` function generates a lambda that asynchronously parses the data either as an array of objects or a single object, depending on whether the callback expects an array of objects or not.
+
+Before it returns it registers a nested task event, which makes sure the task only is marked as completed when the lambda has been executed. This lets Unreals task system to continue executing other tasks while dependencies of this task are waiting. 
+
+```cpp
+template<class T>
+struct TParseAsJsonArrayDocument : std::false_type {};
+
+template<class T>
+struct TParseAsJsonArrayDocument<TArray<T>> : std::true_type {};
+
+template<class ParseType>
+static FHttpRequestCompleteDelegate HandleResponseLambda(const TCHAR* Context, TResponseRef<ParseType> OutResponse)
+{
+	TSharedRef<UE::Tasks::FTaskEvent> NestedEvent = MakeShared<UE::Tasks::FTaskEvent>(UE_SOURCE_LOCATION);
+	UE::Tasks::AddNested(*NestedEvent);
+
+	return FHttpRequestCompleteDelegate::CreateLambda(
+	[Context, OutResponse, NestedEvent](FHttpRequestPtr Request, FHttpResponsePtr Response, bool bProcessedSuccessfully) {
+			
+		if (!CheckOk(Context, Request, Response))
+		{
+			*OutResponse = MakeError(Response->GetContentAsString());
+			NestedEvent->Trigger();
+			return;
+		}
+
+		ParseType Parsed = ParseType();
+		if constexpr (TParseAsJsonArrayDocument<ParseType>::value)
+		{
+			JsonParser::ParseArrayDocument(Response->GetContentAsUtf8StringView(), Parsed);
+		}
+		else
+		{
+			JsonParser::ParseObjectDocument(Response->GetContentAsUtf8StringView(), Parsed);
+		}
+			
+		*OutResponse = MakeValue(Parsed);
+		NestedEvent->Trigger();
+	});
+}
+```
+
+The JSON parsing itself uses function overloads, function recursion, and templates to parse nested structs. It's a bit manual, but it gives full control, is easier to debug, and doesn't carry the same overhead as reflection.
+```cpp
+static bool ParseValue(const FJsonValue& JsonValue, FNumber& Number)
+{
+	return JsonValue.TryGetNumber(Number);
+}
+
+
+static bool ParseValue(const FJsonValue& JsonValue, FString& String)
+{
+	return JsonValue.TryGetString(String);
+}
+
+
+static bool ParseValue(const FJsonValue& JsonValue, bool& Boolean)
+{
+	return JsonValue.TryGetBool(Boolean);
+}
+
+
+template<class T>
+static bool ParseValue(const FJsonValue& JsonValue, TArray<T>& Array)
+{
+	bool bSuccess = true;
+	const TArray<TSharedPtr<FJsonValue>>* JsonArrayPtr;
+	if (JsonValue.TryGetArray(JsonArrayPtr) && JsonArrayPtr != nullptr)
+	{
+		const TArray<TSharedPtr<FJsonValue>>& JsonArray = *JsonArrayPtr;
+
+		Array.SetNum(JsonArray.Num());
+		for (int32 N = 0; N < JsonArray.Num(); ++N)
+		{
+			const TSharedPtr<FJsonValue>& Value = JsonArray[N];
+			ParseValue(*Value, Array[N]);
+		}
+	}
+	return bSuccess;
+}
+
+
+static bool ParseValue(const FJsonValue& JsonValue, Auth::FUserAuthDetail& UserAuthDetail)
+{
+	namespace c = Constants;
+
+	bool bSuccess = false;
+	const TSharedPtr<FJsonObject>* ObjectPtr = nullptr;
+	if (JsonValue.TryGetObject(ObjectPtr))
+	{
+		const FJsonObject& Object = **ObjectPtr;
+		bSuccess = ParseField(Object, c::id, UserAuthDetail.Id)
+			&& ParseField(Object, c::username, UserAuthDetail.Username)
+			&& ParseField(Object, c::photo, UserAuthDetail.Photo)
+			&& ParseField(Object, c::full_name_display, UserAuthDetail.FullNameDisplay)
+			&& ParseField(Object, c::auth_token, UserAuthDetail.AuthToken)
+			&& ParseField(Object, c::refresh, UserAuthDetail.Refresh);
+	}
+
+	return bSuccess;
+}
+
+
+template<class T>
+static bool ParseObjectDocument(FUtf8StringView JsonString, T& Object)
+{
+	bool bSuccess = false;
+	TSharedPtr<FJsonObject> JsonObject = MakeShared<FJsonObject>();
+	TSharedRef<TJsonReader<UTF8CHAR>> Reader = TJsonReaderFactory<UTF8CHAR>::CreateFromView(JsonString);
+	bSuccess = FJsonSerializer::Deserialize(Reader, JsonObject);
+	if (bSuccess)
+	{
+		TSharedPtr<FJsonValueObject> JsonValue = MakeShared<FJsonValueObject>(JsonObject);
+		ParseValue(*JsonValue, Object);
+	}
+	return bSuccess;
+}
+
+
+template<class T>
+static bool ParseArrayDocument(FUtf8StringView JsonString, TArray<T>& ObjectArray)
+{
+	bool bSuccess = false;
+	TArray<TSharedPtr<FJsonValue>> JsonArray;
+	TSharedRef<TJsonReader<UTF8CHAR>> Reader = TJsonReaderFactory<UTF8CHAR>::CreateFromView(JsonString);
+	bSuccess = FJsonSerializer::Deserialize(Reader, JsonArray);
+	if (bSuccess)
+	{
+		ObjectArray.SetNum(JsonArray.Num());
+		for (int32 N = 0; N < JsonArray.Num(); ++N)
+		{
+			const TSharedPtr<FJsonValue>& JsonValue = JsonArray[N];
+			if (!ParseValue(*JsonValue, ObjectArray[N]))
+			{
+				bSuccess = false;
+				break;
+			}
+		}
+	}
+	return bSuccess;
+}
+```
+It would be interesting to create the parsing with source generation from a schema or something that could be tested and validated in the future.
 
 ## Custom editor mode
 As this editor mode is a bit unorthodox to how the custom editor toolkit framework in Unreal usually is used, most of the default setup  is overridden. Normally a toolkit creates a tool panel to the left with a toolbar and brush settings, but this toolkit instead creates additional tabs in-place of where the regular world outliner/details panel used to be. 
@@ -793,7 +989,7 @@ private:
 ```
 
 
-## Digging source code
+## Some tricks I learned
 I used Visual Studio during development as the RAM consumption of [10x](https://10xeditor.com/) is too heavy to use for Unreal Engine projects on my personal PC, but I missed the speed and search functionality. 
 
 I think a bandaid that worked surprisingly well was to make some shell scripts that wrapped [ripgrep](https://github.com/BurntSushi/ripgrep) to search for fixed strings specifically in the Unreal Engine Source/Plugin directories. When searching for engine strings it doesn't miss anything, and it's incomprehensibly much faster than searching through Visual Studio!
