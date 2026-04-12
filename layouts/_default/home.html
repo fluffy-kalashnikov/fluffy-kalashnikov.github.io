@@ -10,26 +10,26 @@
 {{ end }}
 
 {{ define "main" }}
+<main class="flex-col gap_xxl pad_top_l pad_bot_xxl pad_lft_xxs pad_rgt_xxs">
     {{ with site.GetPage "roles/game-programmer" }}
-    <main class="flex-col gap_xxl pad_top_l pad_bot_xxl pad_lft_xxs pad_rgt_xxs">
-        {{ $old := "" }}
-            {{ range .Pages }}
-                {{ $new := .Type }}
-                {{ if ne $old $new }}
-                    {{ if ne $old "" }}
-                    </section>
-                    {{ end }}
-                    <section id={{$new}} class="flex-col gap_l">
+    {{ $old := "" }}
+        {{ range .Pages }}
+            {{ $new := .Type }}
+            {{ if ne $old $new }}
+                {{ if ne $old "" }}
+                </section>
                 {{ end }}
-                {{ $old = $new}}
-
-                {{ .Render "summary" }}
-            </section>
-            
-            <section id="about" class="markdown">
-                {{ .Content }}
-            </section>
+                <section id={{$new}} class="flex-col gap_l">
             {{ end }}
-        </main>
+            {{ $old = $new}}
+
+            {{ .Render "summary" }}
+        {{ end }}
+    </section>
+    
+    <section id="about" class="markdown">
+        {{ .Content }}
+    </section>
     {{ end }}
+</main>
 {{ end }}
